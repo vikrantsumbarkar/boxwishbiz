@@ -19,4 +19,194 @@ header {
     justify-content:space-between;
     align-items:center;
 }
-header h1 {font-size:22px; lett
+header h1 {font-size:22px; letter-spacing:2px;}
+
+.btn {
+    display:inline-block;
+    padding:14px 28px;
+    background:#00032e;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:600;
+    transition:.3s;
+}
+.btn:hover {background:#00bcd4;}
+
+.hero {
+    background:#00032e;
+    color:white;
+    text-align:center;
+    padding:140px 8%;
+}
+.hero h2 {
+    font-size:54px;
+    max-width:900px;
+    margin:auto;
+}
+.hero p {
+    margin-top:25px;
+    font-size:20px;
+    opacity:.9;
+}
+.hero .btn {margin-top:35px;}
+
+.grid-3 {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+    margin-top:60px;
+}
+.card {
+    padding:40px;
+    border:1px solid #eee;
+    transition:.3s;
+}
+.card:hover {
+    transform:translateY(-8px);
+    border-color:#00032e;
+}
+
+.image-split {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+.image-split img {
+    width:100%;
+    border-radius:8px;
+}
+
+.process {
+    background:#f5f7fa;
+}
+.steps {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+.step {
+    border-left:4px solid #00032e;
+    padding-left:20px;
+}
+
+.cta {
+    background:#00032e;
+    color:white;
+    text-align:center;
+}
+.cta h2 {font-size:38px;}
+
+footer {
+    background:#111;
+    color:#aaa;
+    padding:50px 8%;
+    font-size:14px;
+}
+
+.whatsapp-btn {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:16px 20px;
+    border-radius:50%;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+@media(max-width:768px){
+    .hero h2 {font-size:34px;}
+    .image-split {grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>BOXWISH</h1>
+    <div>Corporate Gifting, Simplified.</div>
+</header>
+
+<section class="hero">
+    <h2>Bulk Corporate Gifting Solutions For Modern Businesses</h2>
+    <p>Premium branded gifts. Structured execution. Reliable delivery.</p>
+    <a href="https://wa.me/917020470119" class="btn">Start Your Order</a>
+</section>
+
+<section>
+    <h2 style="text-align:center; font-size:40px;">Our Core Services</h2>
+    <div class="grid-3">
+        <div class="card">
+            <h3>Corporate Gift Hampers</h3>
+            <p>Curated gifting solutions for clients, employees and events.</p>
+        </div>
+        <div class="card">
+            <h3>Custom Logo Printing</h3>
+            <p>Professional branding on bottles, notebooks and merchandise.</p>
+        </div>
+        <div class="card">
+            <h3>Bulk Order Handling</h3>
+            <p>Efficient management of 100+ quantity corporate orders.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="image-split">
+        <div>
+            <h2 style="font-size:42px;">Built For Businesses That Value Professionalism</h2>
+            <p style="margin-top:20px;">
+            We simplify corporate gifting with clear processes, strong quality control and dependable timelines.
+            </p>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+        </div>
+    </div>
+</section>
+
+<section class="process">
+    <h2 style="text-align:center; font-size:40px;">Our Process</h2>
+    <div class="steps">
+        <div class="step">
+            <h3>01 Consultation</h3>
+            <p>Understand brand, budget and quantity.</p>
+        </div>
+        <div class="step">
+            <h3>02 Customization</h3>
+            <p>Mockups and final product approval.</p>
+        </div>
+        <div class="step">
+            <h3>03 Production</h3>
+            <p>Bulk execution and quality checks.</p>
+        </div>
+        <div class="step">
+            <h3>04 Delivery</h3>
+            <p>On-time dispatch and smooth fulfillment.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Let’s Simplify Your Corporate Gifting</h2>
+    <p style="margin-top:15px;">Nagpur based. Serving businesses across India.</p>
+    <br>
+    <a href="mailto:boxwishbiz@gmail.com" class="btn">Contact Us</a>
+</section>
+
+<footer>
+    <p>📍 Nagpur</p>
+    <p>📧 boxwishbiz@gmail.com</p>
+    <p>📱 7020470119</p>
+    <p>© 2026 BOXWISH. All Rights Reserved.</p>
+</footer>
+
+<a href="https://wa.me/917020470119" class="whatsapp-btn">W</a>
+
+</body>
+</html>
