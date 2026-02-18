@@ -20,20 +20,34 @@ a{text-decoration:none;color:inherit;}
 position:fixed;
 top:0;
 width:100%;
-background:#fff;
-padding:18px 0;
-box-shadow:0 2px 15px rgba(0,0,0,0.05);
+padding:22px 0;
 z-index:1000;
+transition:all 0.3s ease;
+background:transparent;
 }
+
 .nav-inner{
 display:flex;
 justify-content:space-between;
 align-items:center;
 }
+
 .nav-links a{
 margin-left:35px;
 font-weight:600;
 font-size:14px;
+color:#fff;
+transition:0.3s;
+}
+
+/* Scroll Effect */
+.navbar.scrolled{
+background:#fff;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+padding:18px 0;
+}
+
+.navbar.scrolled .nav-links a{
 color:#00032e;
 }
 
@@ -292,6 +306,13 @@ every order follows a defined execution system ensuring timely delivery.
 <p>📍 Nagpur | 📧 info@boxwishbiz.com | 📱 +91 7020470119</p>
 <p>© 2026 BOXWISH BIZ. All Rights Reserved.</p>
 </footer>
+
+  <script>
+window.addEventListener("scroll", function(){
+var navbar = document.querySelector(".navbar");
+navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
 
 </body>
 </html>
