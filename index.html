@@ -55,10 +55,7 @@ font-size:14px;
 .btn:hover{background:#0097a7;}
 
 /* LOGO STRIP */
-.logo-strip{
-background:#f5f7fa;
-padding:55px 0;
-}
+.logo-strip{background:#f5f7fa;padding:55px 0;}
 .logo-row{
 display:flex;
 justify-content:space-between;
@@ -107,6 +104,32 @@ font-size:17px;
 color:#00032e;
 }
 .service-box p{font-size:14px;color:#555;}
+
+/* PRODUCT SHOWCASE */
+.showcase-large img{
+width:100%;
+height:420px;
+object-fit:cover;
+border-radius:8px;
+}
+.showcase-caption{
+margin-top:20px;
+text-align:center;
+font-weight:600;
+color:#00032e;
+}
+.showcase-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:50px;
+}
+.showcase-grid img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:8px;
+}
 
 /* PROCESS */
 .process-grid{
@@ -162,6 +185,7 @@ font-size:13px;
 .hero h1{font-size:34px;}
 .nav-links{display:none;}
 .logo-row{flex-direction:column;}
+.showcase-large img{height:300px;}
 }
 </style>
 </head>
@@ -219,6 +243,29 @@ font-size:13px;
 <div class="service-box"><h3>Custom Logo Printing</h3><p>Professional branding on merchandise.</p></div>
 <div class="service-box"><h3>Bulk Corporate Orders</h3><p>Structured handling of large-scale requirements.</p></div>
 </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="section-title">Signature Gifting Collections</h2>
+
+<div class="showcase-large">
+<img src="https://images.unsplash.com/photo-1585386959984-a4155223168c">
+<div class="showcase-caption">Premium Curated Corporate Hampers</div>
+</div>
+
+<div class="showcase-grid">
+<div>
+<img src="https://images.unsplash.com/photo-1555529771-35a8c4c9c0b6">
+<div class="showcase-caption">Custom Branded Merchandise</div>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1556741533-974f8e62a92d">
+<div class="showcase-caption">Executive Gift Sets</div>
+</div>
+</div>
+
 </div>
 </section>
 
