@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Corporate Gifting in Nagpur | Boxwish Biz</title>
-<meta name="description" content="Boxwish Biz provides structured and reliable corporate gifting in Nagpur. Bulk branded gifts executed with clear process and timely delivery.">
+<meta name="description" content="Structured and reliable corporate gifting in Nagpur. Bulk branded gifts with clear execution and timely delivery.">
 <link rel="canonical" href="https://www.boxwishbiz.com/">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,10 +13,10 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.7;}
-.container{max-width:1100px;margin:auto;padding:0 30px;}
-section{padding:110px 0;}
+.container{max-width:1150px;margin:auto;padding:0 30px;}
+section{padding:120px 0;}
 h1,h2,h3{font-weight:700;}
-.section-title{text-align:center;font-size:34px;margin-bottom:60px;}
+.section-title{text-align:center;font-size:36px;margin-bottom:60px;}
 a{text-decoration:none;color:inherit;}
 html{scroll-behavior:smooth;}
 
@@ -24,38 +24,57 @@ html{scroll-behavior:smooth;}
 .navbar{
 position:fixed;
 width:100%;
-background:#00032e;
+background:#fff;
 padding:18px 0;
 z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
 }
 .nav-inner{display:flex;justify-content:space-between;align-items:center;}
-.nav-links a{margin-left:30px;color:#fff;font-weight:500;font-size:14px;}
+.nav-links a{
+margin-left:30px;
+font-weight:500;
+font-size:14px;
+color:#00032e;
+}
 
 /* HERO */
 .hero{
-height:85vh;
+height:90vh;
 display:flex;
 align-items:center;
-background:#00032e;
-color:white;
+background:#fff;
 }
-.hero h1{font-size:52px;max-width:750px;}
-.hero p{margin-top:25px;font-size:18px;color:#ccc;max-width:550px;}
+.hero h1{
+font-size:58px;
+max-width:750px;
+color:#00032e;
+}
+.hero p{
+margin-top:25px;
+font-size:18px;
+max-width:550px;
+color:#555;
+}
 .btn{
 display:inline-block;
 margin-top:35px;
 padding:14px 38px;
-background:#00bcd4;
+background:#00032e;
 color:white;
 font-weight:600;
 border-radius:4px;
 transition:.3s;
 font-size:14px;
 }
-.btn:hover{background:#0097a7;}
+.btn:hover{
+background:#001a5c;
+}
 
-/* LOGO STRIP */
-.logo-strip{background:#f5f7fa;padding:55px 0;}
+/* TRUST STRIP */
+.logo-strip{
+background:#f5f7fa;
+padding:60px 0;
+}
 .logo-row{
 display:flex;
 justify-content:space-between;
@@ -72,24 +91,54 @@ flex:1;
 min-width:150px;
 }
 
-/* WHY SECTION */
-.value-grid{
+/* SPLIT FEATURE */
+.split{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:35px;
-text-align:center;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
 }
-.value-box{
-padding:30px;
-border:1px solid #eee;
-border-radius:6px;
+.split img{
+width:100%;
+border-radius:8px;
 }
-.value-box h3{
-margin-bottom:12px;
+.split h3{
+font-size:28px;
+color:#00032e;
+margin-bottom:15px;
+}
+.split p{
+font-size:15px;
+color:#555;
+}
+
+/* FULL WIDTH IMAGE */
+.full-image{
+width:100%;
+height:450px;
+background:url('https://images.unsplash.com/photo-1585386959984-a4155223168c') center/cover no-repeat;
+border-radius:8px;
+margin-top:40px;
+}
+
+/* TILES */
+.tiles{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:60px;
+}
+.tile img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:8px;
+}
+.tile h4{
+margin-top:15px;
 font-size:16px;
 color:#00032e;
 }
-.value-box p{font-size:14px;color:#555;}
 
 /* SERVICES */
 .services-grid{
@@ -103,32 +152,9 @@ margin-bottom:10px;
 font-size:17px;
 color:#00032e;
 }
-.service-box p{font-size:14px;color:#555;}
-
-/* PRODUCT SHOWCASE */
-.showcase-large img{
-width:100%;
-height:420px;
-object-fit:cover;
-border-radius:8px;
-}
-.showcase-caption{
-margin-top:20px;
-text-align:center;
-font-weight:600;
-color:#00032e;
-}
-.showcase-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-margin-top:50px;
-}
-.showcase-grid img{
-width:100%;
-height:320px;
-object-fit:cover;
-border-radius:8px;
+.service-box p{
+font-size:14px;
+color:#555;
 }
 
 /* PROCESS */
@@ -155,7 +181,10 @@ background:#f7f9fb;
 padding:25px;
 border-radius:6px;
 }
-.testimonial-card p{font-size:14px;color:#444;}
+.testimonial-card p{
+font-size:14px;
+color:#444;
+}
 .testimonial-card h4{
 margin-top:15px;
 font-size:13px;
@@ -167,25 +196,25 @@ color:#00032e;
 background:#00032e;
 color:white;
 text-align:center;
-padding:80px 20px;
+padding:100px 20px;
 }
-.cta h2{font-size:28px;}
-.cta .btn{margin-top:25px;}
+.cta h2{
+font-size:30px;
+}
 
 /* FOOTER */
 footer{
 background:#111;
 color:#aaa;
-padding:50px 0;
+padding:60px 0;
 text-align:center;
 font-size:13px;
 }
 
 @media(max-width:900px){
-.hero h1{font-size:34px;}
-.nav-links{display:none;}
+.split{grid-template-columns:1fr;}
+.hero h1{font-size:36px;}
 .logo-row{flex-direction:column;}
-.showcase-large img{height:300px;}
 }
 </style>
 </head>
@@ -196,8 +225,8 @@ font-size:13px;
 <div class="container nav-inner">
 <img src="logo.png" height="40">
 <div class="nav-links">
-<a href="#why">Why Us</a>
 <a href="#services">Services</a>
+<a href="#process">Process</a>
 <a href="#contact">Contact</a>
 </div>
 </div>
@@ -206,7 +235,7 @@ font-size:13px;
 <section class="hero">
 <div class="container">
 <h1>Corporate Gifting.<br>Planned. Branded. Delivered.</h1>
-<p>Reliable corporate gifting in Nagpur with structured execution and professional coordination.</p>
+<p>Reliable corporate gifting in Nagpur executed with structured workflow and professional coordination.</p>
 <a href="#contact" class="btn">Request a Quote</a>
 </div>
 </section>
@@ -223,14 +252,29 @@ font-size:13px;
 </div>
 </section>
 
-<section id="why">
+<section>
+<div class="container split">
+<div>
+<h3>Premium Curated Corporate Hampers</h3>
+<p>Thoughtfully assembled gifting collections designed for employees, partners and corporate events with consistent quality and presentation.</p>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1555529771-35a8c4c9c0b6">
+</div>
+</div>
+
 <div class="container">
-<h2 class="section-title">Why Boxwish Biz</h2>
-<div class="value-grid">
-<div class="value-box"><h3>Structured Execution</h3><p>Clear workflow for every corporate order.</p></div>
-<div class="value-box"><h3>Bulk Capability</h3><p>Organized handling of large quantities.</p></div>
-<div class="value-box"><h3>Timely Dispatch</h3><p>Commitment to delivery schedules.</p></div>
-<div class="value-box"><h3>Quality Assurance</h3><p>Products verified before final dispatch.</p></div>
+<div class="full-image"></div>
+
+<div class="tiles">
+<div class="tile">
+<img src="https://images.unsplash.com/photo-1556741533-974f8e62a92d">
+<h4>Custom Branded Merchandise</h4>
+</div>
+<div class="tile">
+<img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da">
+<h4>Executive Gift Sets</h4>
+</div>
 </div>
 </div>
 </section>
@@ -239,44 +283,30 @@ font-size:13px;
 <div class="container">
 <h2 class="section-title">Core Services</h2>
 <div class="services-grid">
-<div class="service-box"><h3>Corporate Gift Hampers</h3><p>Curated gifting for employees and clients.</p></div>
-<div class="service-box"><h3>Custom Logo Printing</h3><p>Professional branding on merchandise.</p></div>
-<div class="service-box"><h3>Bulk Corporate Orders</h3><p>Structured handling of large-scale requirements.</p></div>
+<div class="service-box">
+<h3>Corporate Gift Hampers</h3>
+<p>Structured gifting solutions for businesses and organizations.</p>
+</div>
+<div class="service-box">
+<h3>Custom Logo Printing</h3>
+<p>Professional branding with consistent quality control.</p>
+</div>
+<div class="service-box">
+<h3>Bulk Order Execution</h3>
+<p>Organized handling of large-scale corporate quantities.</p>
 </div>
 </div>
-</section>
-
-<section>
-<div class="container">
-<h2 class="section-title">Signature Gifting Collections</h2>
-
-<div class="showcase-large">
-<img src="https://images.unsplash.com/photo-1585386959984-a4155223168c">
-<div class="showcase-caption">Premium Curated Corporate Hampers</div>
-</div>
-
-<div class="showcase-grid">
-<div>
-<img src="https://images.unsplash.com/photo-1555529771-35a8c4c9c0b6">
-<div class="showcase-caption">Custom Branded Merchandise</div>
-</div>
-<div>
-<img src="https://images.unsplash.com/photo-1556741533-974f8e62a92d">
-<div class="showcase-caption">Executive Gift Sets</div>
-</div>
-</div>
-
 </div>
 </section>
 
-<section>
+<section id="process">
 <div class="container">
 <h2 class="section-title">Our Process</h2>
 <div class="process-grid">
 <div class="process-step"><h3>01 Requirement Mapping</h3><p>Understanding quantity and timeline.</p></div>
 <div class="process-step"><h3>02 Branding Approval</h3><p>Mockups shared for confirmation.</p></div>
-<div class="process-step"><h3>03 Production</h3><p>Controlled bulk execution.</p></div>
-<div class="process-step"><h3>04 Timely Delivery</h3><p>Committed dispatch schedule.</p></div>
+<div class="process-step"><h3>03 Controlled Production</h3><p>Managed bulk execution.</p></div>
+<div class="process-step"><h3>04 Timely Dispatch</h3><p>Committed delivery schedule.</p></div>
 </div>
 </div>
 </section>
@@ -290,11 +320,11 @@ font-size:13px;
 <h4>— HR Manager</h4>
 </div>
 <div class="testimonial-card">
-<p>“Smooth execution from branding approval to dispatch.”</p>
+<p>“Smooth coordination from approval to dispatch.”</p>
 <h4>— Operations Head</h4>
 </div>
 <div class="testimonial-card">
-<p>“Reliable partner for bulk corporate hampers.”</p>
+<p>“Reliable partner for bulk corporate gifting.”</p>
 <h4>— Admin Team</h4>
 </div>
 </div>
