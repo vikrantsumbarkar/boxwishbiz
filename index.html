@@ -74,15 +74,8 @@ align-items:center;
 color:white;
 }
 .hero-content{max-width:800px;}
-.hero h1{
-font-size:60px;
-line-height:1.1;
-}
-.hero p{
-margin-top:25px;
-font-size:20px;
-color:#eee;
-}
+.hero h1{font-size:60px;line-height:1.1;}
+.hero p{margin-top:25px;font-size:20px;color:#eee;}
 .btn{
 display:inline-block;
 margin-top:40px;
@@ -93,16 +86,31 @@ font-weight:600;
 border-radius:4px;
 transition:.3s;
 }
-.btn:hover{
-background:#0097a7;
-transform:translateY(-3px);
-}
+.btn:hover{background:#0097a7;transform:translateY(-3px);}
 
 /* SECTION TITLES */
-.section-title{
+.section-title{text-align:center;font-size:36px;margin-bottom:70px;}
+
+/* CLIENT LOGO STRIP */
+.logo-strip{
+background:#f4f6f8;
+padding:60px 0;
+}
+.logo-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:40px;
 text-align:center;
-font-size:36px;
-margin-bottom:70px;
+}
+.logo-item{
+font-weight:600;
+color:#999;
+letter-spacing:1px;
+font-size:14px;
+flex:1;
+min-width:150px;
 }
 
 /* SERVICES */
@@ -114,9 +122,7 @@ text-align:center;
 }
 
 /* TRUST */
-.trust{
-background:#f7f9fb;
-}
+.trust{background:#f7f9fb;}
 .trust-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -137,20 +143,6 @@ object-fit:cover;
 border-radius:8px;
 }
 
-/* PROCESS */
-.dark{
-background:#00032e;
-color:#fff;
-text-align:center;
-}
-.dark p{color:#ccc;}
-.process{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:40px;
-margin-top:50px;
-}
-
 /* TESTIMONIALS */
 .testimonial-grid{
 display:grid;
@@ -164,40 +156,30 @@ border-radius:8px;
 box-shadow:0 10px 25px rgba(0,0,0,.05);
 transition:.3s;
 }
-.testimonial-card:hover{
-transform:translateY(-5px);
-}
-.testimonial-card p{
-font-size:15px;
-line-height:1.7;
-color:#444;
-}
-.testimonial-card h4{
-margin-top:20px;
-font-size:14px;
-font-weight:600;
-color:#00032e;
+.testimonial-card:hover{transform:translateY(-5px);}
+.testimonial-card p{font-size:15px;line-height:1.7;color:#444;}
+.testimonial-card h4{margin-top:20px;font-size:14px;font-weight:600;color:#00032e;}
+
+/* PROCESS */
+.dark{background:#00032e;color:#fff;text-align:center;}
+.dark p{color:#ccc;}
+.process{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+margin-top:50px;
 }
 
 /* FORM */
-.inquiry-form{
-max-width:900px;
-margin:auto;
-}
+.inquiry-form{max-width:900px;margin:auto;}
 .form-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 margin-top:30px;
 }
-.form-group{
-display:flex;
-flex-direction:column;
-}
-.form-group label{
-margin-bottom:8px;
-font-weight:500;
-}
+.form-group{display:flex;flex-direction:column;}
+.form-group label{margin-bottom:8px;font-weight:500;}
 .form-group input,
 .form-group textarea{
 padding:12px;
@@ -210,9 +192,7 @@ font-size:14px;
 border-color:#00bcd4;
 outline:none;
 }
-.full-width{
-grid-column:1 / -1;
-}
+.full-width{grid-column:1 / -1;}
 
 /* FOOTER */
 footer{
@@ -237,6 +217,7 @@ font-weight:bold;
 @media(max-width:900px){
 .hero h1{font-size:36px;}
 .nav-links{display:none;}
+.logo-row{flex-direction:column;}
 }
 </style>
 </head>
@@ -263,156 +244,15 @@ font-weight:bold;
 </div>
 </section>
 
-<section id="services">
+<!-- CLIENT LOGO STRIP -->
+<section class="logo-strip">
 <div class="container">
-<h2 class="section-title">What We Do</h2>
-<div class="grid-3">
-<div>
-<h3>Corporate Gift Hampers</h3>
-<p>Curated gifting solutions for employees and clients.</p>
-</div>
-<div>
-<h3>Custom Logo Printing</h3>
-<p>Professional branding on merchandise with quality finish.</p>
-</div>
-<div>
-<h3>Bulk Order Execution</h3>
-<p>Organized handling of large corporate quantities.</p>
-</div>
+<div class="logo-row">
+<div class="logo-item">TECH SOLUTIONS PVT LTD</div>
+<div class="logo-item">NAGPUR INDUSTRIES</div>
+<div class="logo-item">URBAN CONSULTING GROUP</div>
+<div class="logo-item">MIDLAND MANUFACTURING</div>
+<div class="logo-item">NEXTGEN ENTERPRISES</div>
 </div>
 </div>
 </section>
-
-<section class="trust">
-<div class="container">
-<h2 class="section-title">Why Businesses Choose Boxwish</h2>
-<div class="trust-grid">
-<div>
-<h3>Structured Workflow</h3>
-<p>Every order follows a defined execution process.</p>
-</div>
-<div>
-<h3>Clear Communication</h3>
-<p>Dedicated coordination from briefing to dispatch.</p>
-</div>
-<div>
-<h3>Timely Delivery</h3>
-<p>Commitment to agreed delivery schedules.</p>
-</div>
-<div>
-<h3>Quality Checks</h3>
-<p>Products reviewed before final dispatch.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section id="products">
-<div class="container">
-<h2 class="section-title">Featured Products</h2>
-<div class="products">
-<div class="product"><img src="https://images.unsplash.com/photo-1585386959984-a4155223168c"></div>
-<div class="product"><img src="https://images.unsplash.com/photo-1555529771-35a8c4c9c0b6"></div>
-<div class="product"><img src="https://images.unsplash.com/photo-1556741533-974f8e62a92d"></div>
-<div class="product"><img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da"></div>
-</div>
-</div>
-</section>
-
-<section id="testimonials">
-<div class="container">
-<h2 class="section-title">What Our Clients Say</h2>
-<div class="testimonial-grid">
-<div class="testimonial-card">
-<p>“Boxwish handled our corporate gifting requirement in a structured manner and delivered on time.”</p>
-<h4>— HR Manager, IT Company</h4>
-</div>
-<div class="testimonial-card">
-<p>“Smooth process from branding approval to final dispatch. Professional coordination.”</p>
-<h4>— Operations Head, Manufacturing Firm</h4>
-</div>
-<div class="testimonial-card">
-<p>“Reliable partner for bulk corporate hampers. Quality and timelines were maintained.”</p>
-<h4>— Admin Team, Consulting Business</h4>
-</div>
-</div>
-</div>
-</section>
-
-<section class="dark" id="process">
-<div class="container">
-<h2 class="section-title">Our Process</h2>
-<div class="process">
-<div>
-<h3>01 Requirement Mapping</h3>
-<p>Understanding quantity, branding and timeline.</p>
-</div>
-<div>
-<h3>02 Branding & Approval</h3>
-<p>Mockups shared for structured approval.</p>
-</div>
-<div>
-<h3>03 Controlled Production</h3>
-<p>Bulk execution with internal quality checks.</p>
-</div>
-<div>
-<h3>04 Timely Dispatch</h3>
-<p>Committed delivery schedule across locations.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section id="inquiry" style="background:#f7f9fb;">
-<div class="container">
-<h2 class="section-title">Request a Corporate Quote</h2>
-<form action="https://formspree.io/f/mvzbqzbo" method="POST" class="inquiry-form">
-<div class="form-grid">
-<div class="form-group">
-<label>Company Name</label>
-<input type="text" name="company" required>
-</div>
-<div class="form-group">
-<label>Contact Person</label>
-<input type="text" name="name" required>
-</div>
-<div class="form-group">
-<label>Email Address</label>
-<input type="email" name="email" required>
-</div>
-<div class="form-group">
-<label>Phone Number</label>
-<input type="tel" name="phone" required>
-</div>
-<div class="form-group">
-<label>Approx Quantity</label>
-<input type="number" name="quantity">
-</div>
-<div class="form-group full-width">
-<label>Project Details</label>
-<textarea name="message" rows="5" required></textarea>
-</div>
-</div>
-<button type="submit" class="btn">Submit Inquiry</button>
-</form>
-</div>
-</section>
-
-<footer>
-<p>📍 Nagpur</p>
-<p>📧 info@boxwishbiz.com</p>
-<p>📱 +91 7020470119</p>
-<p>© 2026 BOXWISH BIZ. All Rights Reserved.</p>
-</footer>
-
-<a href="https://wa.me/917020470119" class="whatsapp-btn">W</a>
-
-<script>
-window.addEventListener("scroll", function(){
-var navbar = document.getElementById("navbar");
-navbar.classList.toggle("scrolled", window.scrollY > 50);
-});
-</script>
-
-</body>
-</html>
