@@ -11,7 +11,7 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.6;}
+body{font-family:'Inter',sans-serif;background:#fff;color:#111;line-height:1.6;}
 a{text-decoration:none;color:inherit;}
 .container{width:90%;max-width:1200px;margin:auto;}
 html{scroll-behavior:smooth;}
@@ -34,25 +34,21 @@ justify-content:space-between;
 align-items:center;
 }
 
-.logo img{
-height:45px;
-transition:0.3s;
-}
-
-.logo-dark{display:none;}
-.logo-white{display:block;}
-
 .nav-links a{
 margin-left:35px;
 font-weight:600;
 font-size:14px;
-color:#ffffff;
+color:#fff;
 transition:0.3s;
 }
 
-/* On Scroll */
+.nav-links a:hover{opacity:0.7;}
+
+.logo-dark{display:none;}
+.logo-white{display:block;}
+
 .navbar.scrolled{
-background:#ffffff;
+background:#fff;
 box-shadow:0 5px 20px rgba(0,0,0,0.08);
 padding:18px 0;
 }
@@ -61,80 +57,99 @@ padding:18px 0;
 color:#00032e;
 }
 
-.navbar.scrolled .logo-white{
-display:none;
-}
-
-.navbar.scrolled .logo-dark{
-display:block;
-}
+.navbar.scrolled .logo-white{display:none;}
+.navbar.scrolled .logo-dark{display:block;}
 
 /* ================= HERO ================= */
 
 .hero{
-margin-top:0;
-height:90vh;
-min-height:700px;
-background:url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da') center/cover no-repeat;
 position:relative;
+height:100vh;
+min-height:750px;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 color:#fff;
+overflow:hidden;
 }
 
-.hero-overlay{
+.hero::before{
+content:"";
 position:absolute;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:linear-gradient(120deg, rgba(0,3,46,0.85), rgba(0,0,0,0.75));
+background:url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da') center/cover no-repeat;
+animation:zoomBg 20s ease-in-out infinite alternate;
 z-index:1;
+}
+
+@keyframes zoomBg{
+0%{transform:scale(1);}
+100%{transform:scale(1.08);}
+}
+
+.hero::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(120deg, rgba(0,3,46,0.85), rgba(0,0,0,0.7));
+z-index:2;
 }
 
 .hero-content{
 position:relative;
-z-index:2;
-max-width:900px;
+z-index:3;
+max-width:950px;
 padding:0 20px;
+animation:fadeUp 1.2s ease forwards;
+opacity:0;
+}
+
+@keyframes fadeUp{
+0%{transform:translateY(40px);opacity:0;}
+100%{transform:translateY(0);opacity:1;}
 }
 
 .hero h1{
-font-size:68px;
+font-size:70px;
 font-weight:800;
 line-height:1.1;
 letter-spacing:-1px;
-margin-bottom:25px;
+margin-bottom:30px;
 }
 
 .hero p{
-font-size:20px;
+font-size:22px;
 opacity:0.9;
-margin-bottom:40px;
+margin-bottom:50px;
 }
 
 .btn{
 display:inline-block;
-background:#ffffff;
+background:#fff;
 color:#00032e;
-padding:16px 42px;
+padding:18px 50px;
 font-weight:700;
 border-radius:6px;
 transition:0.3s;
+box-shadow:0 15px 40px rgba(0,0,0,0.25);
 }
 
 .btn:hover{
 background:#00032e;
 color:#fff;
+transform:translateY(-3px);
 }
 
 /* ================= SECTIONS ================= */
 
-.section{
-padding:110px 0;
-}
+.section{padding:110px 0;}
 
 .split-container{
 display:flex;
@@ -163,18 +178,18 @@ background:#00032e;
 color:#fff;
 padding:14px 30px;
 font-weight:600;
-border-radius:4px;
+border-radius:3px;
 }
 
 .split-image{flex:1;}
 
 .split-image img{
 width:100%;
-border-radius:8px;
+border-radius:6px;
 box-shadow:0 20px 40px rgba(0,0,0,0.1);
 }
 
-/* ================= CLIENT STRIP ================= */
+/* CLIENT STRIP */
 
 .client-strip{
 background:#f8f9fb;
@@ -183,8 +198,8 @@ text-align:center;
 }
 
 .client-strip h3{
-color:#00032e;
 margin-bottom:35px;
+color:#00032e;
 }
 
 .client-logos{
@@ -199,7 +214,7 @@ font-size:14px;
 text-transform:uppercase;
 }
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 
 .contact{
 background:#00032e;
@@ -238,7 +253,7 @@ border-radius:4px;
 font-weight:600;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
 background:#111;
@@ -248,39 +263,32 @@ padding:40px 0;
 font-size:14px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 
 @media(max-width:900px){
 .split-container{flex-direction:column;}
 .nav-links{display:none;}
 .hero h1{font-size:38px;}
+.hero p{font-size:16px;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
 <div class="container nav-inner">
-
-<div class="logo">
-<img src="logo-white.png" class="logo-white">
-<img src="logo-dark.png" class="logo-dark">
-</div>
-
+<img src="logo-white.png" class="logo-white" height="45">
+<img src="logo-dark.png" class="logo-dark" height="45">
 <nav class="nav-links">
 <a href="#solutions">Solutions</a>
 <a href="#workflow">Workflow</a>
 <a href="#contact">Contact</a>
 </nav>
-
 </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-<div class="hero-overlay"></div>
 <div class="hero-content">
 <h1>Corporate Gifting.<br>Structured. Reliable. Premium.</h1>
 <p>Professional corporate gifting in Nagpur with structured workflow and reliable bulk execution.</p>
@@ -288,15 +296,11 @@ font-size:14px;
 </div>
 </section>
 
-<!-- SPLIT 1 -->
 <section id="solutions" class="section">
 <div class="container split-container">
 <div class="split-text">
 <h2>Custom Branded Corporate Gifts</h2>
-<p>
-Premium merchandise, festive hampers and custom logo printing 
-for businesses seeking structured corporate gifting solutions.
-</p>
+<p>Premium merchandise, festive hampers and custom logo printing for businesses seeking structured corporate gifting solutions.</p>
 <a href="#contact" class="dark-btn">Start Your Project</a>
 </div>
 <div class="split-image">
@@ -305,7 +309,6 @@ for businesses seeking structured corporate gifting solutions.
 </div>
 </section>
 
-<!-- SPLIT 2 -->
 <section id="workflow" class="section" style="background:#f8f9fb;">
 <div class="container split-container">
 <div class="split-image">
@@ -313,16 +316,12 @@ for businesses seeking structured corporate gifting solutions.
 </div>
 <div class="split-text">
 <h2>Bulk Execution with Structured Workflow</h2>
-<p>
-From requirement mapping to branding approval and quality checks,
-every order follows a defined execution system ensuring timely delivery.
-</p>
+<p>From requirement mapping to branding approval and quality checks, every order follows a defined execution system ensuring timely delivery.</p>
 <a href="#contact" class="dark-btn">Discuss Requirements</a>
 </div>
 </div>
 </section>
 
-<!-- CLIENT STRIP -->
 <section class="client-strip">
 <div class="container">
 <h3>Trusted by Growing Businesses</h3>
@@ -336,7 +335,6 @@ every order follows a defined execution system ensuring timely delivery.
 </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact">
 <div class="container">
 <h2>Request a Corporate Quote</h2>
