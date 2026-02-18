@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BOXWISH BIZ | Premium Corporate Gifting</title>
+<title>BOXWISH BIZ | Reliable Corporate Gifting</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
@@ -14,12 +14,12 @@ html{scroll-behavior:smooth;}
 
 .container{max-width:1150px;margin:auto;padding:0 25px;}
 section{padding:160px 0;}
-
 h1,h2,h3{font-weight:800;}
 p{color:#666;}
 
-a{text-decoration:none;}
+a{text-decoration:none;color:inherit;}
 
+/* NAVBAR */
 .navbar{
 position:fixed;
 top:0;
@@ -29,19 +29,16 @@ z-index:1000;
 padding:30px 0;
 transition:all .4s ease;
 }
-
 .navbar.scrolled{
 background:#fff;
 box-shadow:0 4px 20px rgba(0,0,0,.06);
 padding:18px 0;
 }
-
 .nav-inner{
 display:flex;
 justify-content:space-between;
 align-items:center;
 }
-
 .nav-links a{
 margin-left:40px;
 font-weight:500;
@@ -49,13 +46,12 @@ color:#fff;
 opacity:.85;
 transition:.3s;
 }
-
 .navbar.scrolled .nav-links a{
 color:#111;
 }
-
 .nav-links a:hover{opacity:1;}
 
+/* HERO */
 .hero{
 height:100vh;
 background:
@@ -67,26 +63,17 @@ display:flex;
 align-items:center;
 color:white;
 }
-
-.hero-content{
-max-width:850px;
-animation:fadeUp 1s ease forwards;
-opacity:0;
-}
-
+.hero-content{max-width:850px;}
 .hero h1{
 font-size:76px;
 line-height:1.05;
 letter-spacing:-1.5px;
-font-weight:800;
 }
-
 .hero p{
 margin-top:30px;
 font-size:20px;
 color:#eee;
 }
-
 .btn{
 display:inline-block;
 margin-top:50px;
@@ -97,81 +84,86 @@ font-weight:600;
 border-radius:3px;
 transition:.3s;
 }
-
 .btn:hover{
 background:#0097a7;
 transform:translateY(-3px);
 }
 
+/* TITLES */
 .section-title{
 text-align:center;
 font-size:44px;
 margin-bottom:90px;
-letter-spacing:-.5px;
 }
 
+/* SERVICES */
 .grid-3{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:70px;
-}
-
-.card{
 text-align:center;
-animation:fadeUp 1s ease forwards;
-opacity:0;
 }
-
 .card h3{
 margin-bottom:20px;
 font-size:22px;
 }
 
+/* TRUST SECTION */
+.trust{
+background:#f7f9fb;
+}
+.trust-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:60px;
+text-align:center;
+}
+.trust-item h3{
+margin-bottom:15px;
+font-size:20px;
+}
+
+/* SPLIT */
 .split{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:100px;
 align-items:center;
 }
-
 .split img{
 width:100%;
 border-radius:8px;
 }
 
+/* PRODUCTS */
 .products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:50px;
 }
-
 .product img{
 width:100%;
 height:360px;
 object-fit:cover;
 border-radius:8px;
-transition:.4s;
 }
 
-.product img:hover{
-transform:scale(1.07);
-}
-
+/* DARK PROCESS */
 .dark{
 background:#00032e;
 color:#fff;
 text-align:center;
 }
-
 .dark p{color:#ccc;}
-
 .process{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:60px;
 margin-top:70px;
 }
+.process h3{margin-bottom:15px;}
 
+/* FOOTER */
 footer{
 background:#111;
 color:#aaa;
@@ -189,11 +181,6 @@ color:white;
 padding:16px 20px;
 border-radius:50%;
 font-weight:bold;
-}
-
-@keyframes fadeUp{
-0%{transform:translateY(40px);opacity:0;}
-100%{transform:translateY(0);opacity:1;}
 }
 
 @media(max-width:900px){
@@ -221,42 +208,52 @@ font-weight:bold;
 
 <section class="hero" id="home">
 <div class="container hero-content">
-<h1>Premium Corporate Gifting<br>With Elegant Execution</h1>
-<p>Custom branded gifts. Structured processes. Reliable nationwide delivery.</p>
-<a href="https://wa.me/917020470119" class="btn">Start Your Order</a>
+<h1>Corporate Gifting.<br>Planned. Branded. Delivered.</h1>
+<p>Structured processes. Clear timelines. Reliable bulk execution across India.</p>
+<a href="https://wa.me/917020470119" class="btn">Request a Quote</a>
 </div>
 </section>
 
 <section id="services">
 <div class="container">
-<h2 class="section-title">Our Core Services</h2>
+<h2 class="section-title">What We Do</h2>
 <div class="grid-3">
 <div class="card">
 <h3>Corporate Gift Hampers</h3>
-<p>Curated gifting solutions for clients and employees.</p>
+<p>Curated gifting solutions for employees, clients and corporate events.</p>
 </div>
 <div class="card">
 <h3>Custom Logo Printing</h3>
-<p>Professional branding across premium merchandise.</p>
+<p>Professional branding on merchandise with consistent finish quality.</p>
 </div>
 <div class="card">
 <h3>Bulk Order Execution</h3>
-<p>Seamless handling of large corporate requirements.</p>
+<p>Organized handling of large corporate quantities with timeline commitment.</p>
 </div>
 </div>
 </div>
 </section>
 
-<section>
-<div class="container split">
-<div>
-<h2 style="font-size:40px;">Built For Companies That Value Detail</h2>
-<p style="margin-top:30px;">
-We simplify gifting through precision, quality control and dependable execution timelines.
-</p>
+<section class="trust">
+<div class="container">
+<h2 class="section-title">Why Businesses Choose Boxwish</h2>
+<div class="trust-grid">
+<div class="trust-item">
+<h3>Structured Workflow</h3>
+<p>Every order follows a defined execution process.</p>
 </div>
-<div>
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+<div class="trust-item">
+<h3>Clear Communication</h3>
+<p>Dedicated coordination from briefing to dispatch.</p>
+</div>
+<div class="trust-item">
+<h3>Timely Delivery</h3>
+<p>Commitment to agreed delivery schedules.</p>
+</div>
+<div class="trust-item">
+<h3>Quality Checks</h3>
+<p>Products reviewed before final dispatch.</p>
+</div>
 </div>
 </div>
 </section>
@@ -278,20 +275,20 @@ We simplify gifting through precision, quality control and dependable execution 
 <h2 class="section-title">Our Process</h2>
 <div class="process">
 <div>
-<h3>01 Consultation</h3>
-<p>Understanding brand & quantity requirements.</p>
+<h3>01 Requirement Mapping</h3>
+<p>Understanding quantity, branding and delivery timeline.</p>
 </div>
 <div>
-<h3>02 Customization</h3>
-<p>Mockups & final approvals.</p>
+<h3>02 Branding & Approval</h3>
+<p>Mockups shared with structured approval workflow.</p>
 </div>
 <div>
-<h3>03 Production</h3>
-<p>Quality-controlled bulk execution.</p>
+<h3>03 Controlled Production</h3>
+<p>Bulk execution with internal quality checks.</p>
 </div>
 <div>
-<h3>04 Delivery</h3>
-<p>Timely dispatch across India.</p>
+<h3>04 Timely Dispatch</h3>
+<p>Committed delivery schedule across locations.</p>
 </div>
 </div>
 </div>
@@ -300,6 +297,7 @@ We simplify gifting through precision, quality control and dependable execution 
 <section id="contact">
 <div class="container" style="text-align:center;">
 <h2 class="section-title">Let’s Simplify Your Corporate Gifting</h2>
+<p>Serving businesses in Nagpur & across India.</p>
 <a href="mailto:boxwishbiz@gmail.com" class="btn">Get A Quote</a>
 </div>
 </section>
