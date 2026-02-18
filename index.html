@@ -3,32 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BOXWISH BIZ | Corporate Gifting, Simplified.</title>
+<title>BOXWISH BIZ | Premium Corporate Gifting</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;color:#111;line-height:1.6;background:#fff;}
+body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.6;}
 html{scroll-behavior:smooth;}
 
 .container{max-width:1150px;margin:auto;padding:0 25px;}
-
-section{padding:140px 0;}
+section{padding:160px 0;}
 
 h1,h2,h3{font-weight:800;}
-p{color:#666;font-weight:400;}
+p{color:#666;}
 
-a{text-decoration:none;color:inherit;}
+a{text-decoration:none;}
 
-/* NAVBAR */
 .navbar{
-position:absolute;
+position:fixed;
 top:0;
 left:0;
 width:100%;
 z-index:1000;
 padding:30px 0;
+transition:all .4s ease;
+}
+
+.navbar.scrolled{
+background:#fff;
+box-shadow:0 4px 20px rgba(0,0,0,.06);
+padding:18px 0;
 }
 
 .nav-inner{
@@ -45,13 +50,16 @@ opacity:.85;
 transition:.3s;
 }
 
+.navbar.scrolled .nav-links a{
+color:#111;
+}
+
 .nav-links a:hover{opacity:1;}
 
-/* HERO */
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,3,46,.55),rgba(0,3,46,.55)),
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
 url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da');
 background-size:cover;
 background-position:center;
@@ -62,24 +70,27 @@ color:white;
 
 .hero-content{
 max-width:850px;
+animation:fadeUp 1s ease forwards;
+opacity:0;
 }
 
 .hero h1{
-font-size:72px;
-line-height:1.1;
-letter-spacing:-1px;
+font-size:76px;
+line-height:1.05;
+letter-spacing:-1.5px;
+font-weight:800;
 }
 
 .hero p{
 margin-top:30px;
 font-size:20px;
-color:#e0e0e0;
+color:#eee;
 }
 
 .btn{
 display:inline-block;
-margin-top:45px;
-padding:16px 38px;
+margin-top:50px;
+padding:16px 42px;
 background:#00bcd4;
 color:#fff;
 font-weight:600;
@@ -87,26 +98,28 @@ border-radius:3px;
 transition:.3s;
 }
 
-.btn:hover{background:#0097a7;}
+.btn:hover{
+background:#0097a7;
+transform:translateY(-3px);
+}
 
-/* SECTION TITLES */
 .section-title{
 text-align:center;
-font-size:42px;
-margin-bottom:80px;
+font-size:44px;
+margin-bottom:90px;
 letter-spacing:-.5px;
 }
 
-/* SERVICES */
 .grid-3{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:60px;
+gap:70px;
 }
 
 .card{
 text-align:center;
-padding:10px 20px;
+animation:fadeUp 1s ease forwards;
+opacity:0;
 }
 
 .card h3{
@@ -114,39 +127,36 @@ margin-bottom:20px;
 font-size:22px;
 }
 
-/* SPLIT */
 .split{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:80px;
+gap:100px;
 align-items:center;
 }
 
 .split img{
 width:100%;
-border-radius:6px;
+border-radius:8px;
 }
 
-/* PRODUCTS */
 .products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:40px;
+gap:50px;
 }
 
 .product img{
 width:100%;
-height:350px;
+height:360px;
 object-fit:cover;
-border-radius:6px;
+border-radius:8px;
 transition:.4s;
 }
 
 .product img:hover{
-transform:scale(1.05);
+transform:scale(1.07);
 }
 
-/* DARK SECTION */
 .dark{
 background:#00032e;
 color:#fff;
@@ -158,19 +168,14 @@ text-align:center;
 .process{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:50px;
+gap:60px;
 margin-top:70px;
 }
 
-.step h3{
-margin-bottom:15px;
-}
-
-/* FOOTER */
 footer{
 background:#111;
 color:#aaa;
-padding:80px 0;
+padding:90px 0;
 text-align:center;
 font-size:14px;
 }
@@ -186,7 +191,11 @@ border-radius:50%;
 font-weight:bold;
 }
 
-/* RESPONSIVE */
+@keyframes fadeUp{
+0%{transform:translateY(40px);opacity:0;}
+100%{transform:translateY(0);opacity:1;}
+}
+
 @media(max-width:900px){
 .hero h1{font-size:40px;}
 .split{grid-template-columns:1fr;}
@@ -197,8 +206,7 @@ font-weight:bold;
 
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
+<div class="navbar" id="navbar">
 <div class="container nav-inner">
 <img src="logo.png" height="45">
 <div class="nav-links">
@@ -211,43 +219,40 @@ font-weight:bold;
 </div>
 </div>
 
-<!-- HERO -->
 <section class="hero" id="home">
 <div class="container hero-content">
-<h1>Premium Corporate Gifting<br>For Modern Businesses</h1>
-<p>Custom branded gifts. Bulk execution. Reliable delivery across India.</p>
+<h1>Premium Corporate Gifting<br>With Elegant Execution</h1>
+<p>Custom branded gifts. Structured processes. Reliable nationwide delivery.</p>
 <a href="https://wa.me/917020470119" class="btn">Start Your Order</a>
 </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
 <div class="container">
 <h2 class="section-title">Our Core Services</h2>
 <div class="grid-3">
 <div class="card">
 <h3>Corporate Gift Hampers</h3>
-<p>Curated gifting solutions for employees, clients and corporate events.</p>
+<p>Curated gifting solutions for clients and employees.</p>
 </div>
 <div class="card">
 <h3>Custom Logo Printing</h3>
-<p>Professional branding on bottles, notebooks and promotional merchandise.</p>
+<p>Professional branding across premium merchandise.</p>
 </div>
 <div class="card">
 <h3>Bulk Order Execution</h3>
-<p>Efficient handling of large corporate quantity requirements.</p>
+<p>Seamless handling of large corporate requirements.</p>
 </div>
 </div>
 </div>
 </section>
 
-<!-- SPLIT -->
 <section>
 <div class="container split">
 <div>
-<h2 style="font-size:38px;">Built For Companies That Value Professionalism</h2>
-<p style="margin-top:25px;">
-We simplify corporate gifting with structured processes, quality control and dependable timelines.
+<h2 style="font-size:40px;">Built For Companies That Value Detail</h2>
+<p style="margin-top:30px;">
+We simplify gifting through precision, quality control and dependable execution timelines.
 </p>
 </div>
 <div>
@@ -256,7 +261,6 @@ We simplify corporate gifting with structured processes, quality control and dep
 </div>
 </section>
 
-<!-- PRODUCTS -->
 <section id="products">
 <div class="container">
 <h2 class="section-title">Featured Products</h2>
@@ -269,32 +273,30 @@ We simplify corporate gifting with structured processes, quality control and dep
 </div>
 </section>
 
-<!-- PROCESS -->
 <section class="dark" id="process">
 <div class="container">
 <h2 class="section-title">Our Process</h2>
 <div class="process">
-<div class="step">
+<div>
 <h3>01 Consultation</h3>
-<p>Understand your brand & quantity requirements.</p>
+<p>Understanding brand & quantity requirements.</p>
 </div>
-<div class="step">
+<div>
 <h3>02 Customization</h3>
 <p>Mockups & final approvals.</p>
 </div>
-<div class="step">
+<div>
 <h3>03 Production</h3>
-<p>Bulk execution with quality control.</p>
+<p>Quality-controlled bulk execution.</p>
 </div>
-<div class="step">
+<div>
 <h3>04 Delivery</h3>
-<p>On-time dispatch across India.</p>
+<p>Timely dispatch across India.</p>
 </div>
 </div>
 </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
 <div class="container" style="text-align:center;">
 <h2 class="section-title">Let’s Simplify Your Corporate Gifting</h2>
@@ -310,6 +312,13 @@ We simplify corporate gifting with structured processes, quality control and dep
 </footer>
 
 <a href="https://wa.me/917020470119" class="whatsapp-btn">W</a>
+
+<script>
+window.addEventListener("scroll", function(){
+var navbar = document.getElementById("navbar");
+navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
 
 </body>
 </html>
