@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BOXWISH BIZ | Reliable Corporate Gifting</title>
+<title>BOXWISH BIZ | Corporate Gifting. Planned. Branded. Delivered.</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
@@ -11,12 +11,10 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.6;}
 html{scroll-behavior:smooth;}
-
 .container{max-width:1150px;margin:auto;padding:0 25px;}
-section{padding:160px 0;}
+section{padding:140px 0;}
 h1,h2,h3{font-weight:800;}
 p{color:#666;}
-
 a{text-decoration:none;color:inherit;}
 
 /* NAVBAR */
@@ -26,13 +24,13 @@ top:0;
 left:0;
 width:100%;
 z-index:1000;
-padding:30px 0;
-transition:all .4s ease;
+padding:25px 0;
+transition:.4s;
 }
 .navbar.scrolled{
 background:#fff;
 box-shadow:0 4px 20px rgba(0,0,0,.06);
-padding:18px 0;
+padding:15px 0;
 }
 .nav-inner{
 display:flex;
@@ -40,10 +38,10 @@ justify-content:space-between;
 align-items:center;
 }
 .nav-links a{
-margin-left:40px;
+margin-left:35px;
 font-weight:500;
 color:#fff;
-opacity:.85;
+opacity:.9;
 transition:.3s;
 }
 .navbar.scrolled .nav-links a{
@@ -55,7 +53,7 @@ color:#111;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
 url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da');
 background-size:cover;
 background-position:center;
@@ -63,20 +61,20 @@ display:flex;
 align-items:center;
 color:white;
 }
-.hero-content{max-width:850px;}
+.hero-content{max-width:800px;}
 .hero h1{
-font-size:76px;
+font-size:70px;
 line-height:1.05;
-letter-spacing:-1.5px;
+letter-spacing:-1px;
 }
 .hero p{
-margin-top:30px;
+margin-top:25px;
 font-size:20px;
 color:#eee;
 }
 .btn{
 display:inline-block;
-margin-top:50px;
+margin-top:40px;
 padding:16px 42px;
 background:#00bcd4;
 color:#fff;
@@ -92,63 +90,47 @@ transform:translateY(-3px);
 /* TITLES */
 .section-title{
 text-align:center;
-font-size:44px;
-margin-bottom:90px;
+font-size:40px;
+margin-bottom:80px;
 }
 
 /* SERVICES */
 .grid-3{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:70px;
+gap:60px;
 text-align:center;
 }
 .card h3{
-margin-bottom:20px;
+margin-bottom:15px;
 font-size:22px;
 }
 
-/* TRUST SECTION */
+/* TRUST */
 .trust{
 background:#f7f9fb;
 }
 .trust-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:60px;
+gap:50px;
 text-align:center;
-}
-.trust-item h3{
-margin-bottom:15px;
-font-size:20px;
-}
-
-/* SPLIT */
-.split{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:100px;
-align-items:center;
-}
-.split img{
-width:100%;
-border-radius:8px;
 }
 
 /* PRODUCTS */
 .products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:50px;
+gap:40px;
 }
 .product img{
 width:100%;
-height:360px;
+height:320px;
 object-fit:cover;
 border-radius:8px;
 }
 
-/* DARK PROCESS */
+/* PROCESS */
 .dark{
 background:#00032e;
 color:#fff;
@@ -158,16 +140,53 @@ text-align:center;
 .process{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:60px;
-margin-top:70px;
+gap:50px;
+margin-top:60px;
 }
-.process h3{margin-bottom:15px;}
+
+/* FORM */
+.inquiry-form{
+max-width:900px;
+margin:auto;
+}
+.form-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:40px;
+}
+.form-group{
+display:flex;
+flex-direction:column;
+}
+.form-group label{
+margin-bottom:8px;
+font-weight:500;
+color:#333;
+}
+.form-group input,
+.form-group textarea{
+padding:14px;
+border:1px solid #ddd;
+border-radius:4px;
+font-size:15px;
+font-family:'Inter',sans-serif;
+transition:.3s;
+}
+.form-group input:focus,
+.form-group textarea:focus{
+border-color:#00bcd4;
+outline:none;
+}
+.full-width{
+grid-column:1 / -1;
+}
 
 /* FOOTER */
 footer{
 background:#111;
 color:#aaa;
-padding:90px 0;
+padding:70px 0;
 text-align:center;
 font-size:14px;
 }
@@ -184,8 +203,7 @@ font-weight:bold;
 }
 
 @media(max-width:900px){
-.hero h1{font-size:40px;}
-.split{grid-template-columns:1fr;}
+.hero h1{font-size:38px;}
 .nav-links{display:none;}
 }
 </style>
@@ -197,20 +215,19 @@ font-weight:bold;
 <div class="container nav-inner">
 <img src="logo.png" height="45">
 <div class="nav-links">
-<a href="#home">Home</a>
 <a href="#services">Services</a>
 <a href="#products">Products</a>
 <a href="#process">Process</a>
-<a href="#contact">Contact</a>
+<a href="#inquiry">Get Quote</a>
 </div>
 </div>
 </div>
 
-<section class="hero" id="home">
+<section class="hero">
 <div class="container hero-content">
 <h1>Corporate Gifting.<br>Planned. Branded. Delivered.</h1>
 <p>Structured processes. Clear timelines. Reliable bulk execution across India.</p>
-<a href="https://wa.me/917020470119" class="btn">Request a Quote</a>
+<a href="#inquiry" class="btn">Request a Quote</a>
 </div>
 </section>
 
@@ -220,15 +237,15 @@ font-weight:bold;
 <div class="grid-3">
 <div class="card">
 <h3>Corporate Gift Hampers</h3>
-<p>Curated gifting solutions for employees, clients and corporate events.</p>
+<p>Curated gifting solutions for employees and clients.</p>
 </div>
 <div class="card">
 <h3>Custom Logo Printing</h3>
-<p>Professional branding on merchandise with consistent finish quality.</p>
+<p>Professional branding on merchandise with quality finish.</p>
 </div>
 <div class="card">
 <h3>Bulk Order Execution</h3>
-<p>Organized handling of large corporate quantities with timeline commitment.</p>
+<p>Organized handling of large corporate quantities.</p>
 </div>
 </div>
 </div>
@@ -238,19 +255,19 @@ font-weight:bold;
 <div class="container">
 <h2 class="section-title">Why Businesses Choose Boxwish</h2>
 <div class="trust-grid">
-<div class="trust-item">
+<div>
 <h3>Structured Workflow</h3>
 <p>Every order follows a defined execution process.</p>
 </div>
-<div class="trust-item">
+<div>
 <h3>Clear Communication</h3>
 <p>Dedicated coordination from briefing to dispatch.</p>
 </div>
-<div class="trust-item">
+<div>
 <h3>Timely Delivery</h3>
 <p>Commitment to agreed delivery schedules.</p>
 </div>
-<div class="trust-item">
+<div>
 <h3>Quality Checks</h3>
 <p>Products reviewed before final dispatch.</p>
 </div>
@@ -276,11 +293,11 @@ font-weight:bold;
 <div class="process">
 <div>
 <h3>01 Requirement Mapping</h3>
-<p>Understanding quantity, branding and delivery timeline.</p>
+<p>Understanding quantity, branding and timeline.</p>
 </div>
 <div>
 <h3>02 Branding & Approval</h3>
-<p>Mockups shared with structured approval workflow.</p>
+<p>Mockups shared for structured approval.</p>
 </div>
 <div>
 <h3>03 Controlled Production</h3>
@@ -294,18 +311,47 @@ font-weight:bold;
 </div>
 </section>
 
-<section id="contact">
-<div class="container" style="text-align:center;">
-<h2 class="section-title">Let’s Simplify Your Corporate Gifting</h2>
-<p>Serving businesses in Nagpur & across India.</p>
-<a href="mailto:boxwishbiz@gmail.com" class="btn">Get A Quote</a>
+<section id="inquiry" style="background:#f7f9fb;">
+<div class="container">
+<h2 class="section-title">Request a Corporate Quote</h2>
+
+<form action="https://formspree.io/f/mvzbqzbo" method="POST" class="inquiry-form">
+<div class="form-grid">
+<div class="form-group">
+<label>Company Name</label>
+<input type="text" name="company" required>
+</div>
+<div class="form-group">
+<label>Contact Person</label>
+<input type="text" name="name" required>
+</div>
+<div class="form-group">
+<label>Email Address</label>
+<input type="email" name="email" required>
+</div>
+<div class="form-group">
+<label>Phone Number</label>
+<input type="tel" name="phone" required>
+</div>
+<div class="form-group">
+<label>Approx Quantity</label>
+<input type="number" name="quantity">
+</div>
+<div class="form-group full-width">
+<label>Project Details</label>
+<textarea name="message" rows="5" required></textarea>
+</div>
+</div>
+<button type="submit" class="btn">Submit Inquiry</button>
+</form>
+
 </div>
 </section>
 
 <footer>
 <p>📍 Nagpur</p>
-<p>📧 boxwishbiz@gmail.com</p>
-<p>📱 7020470119</p>
+<p>📧 info@boxwishbiz.com</p>
+<p>📱 +91 7020470119</p>
 <p>© 2026 BOXWISH BIZ. All Rights Reserved.</p>
 </footer>
 
