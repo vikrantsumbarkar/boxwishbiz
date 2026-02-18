@@ -4,16 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Corporate Gifting in Nagpur | Boxwish Biz</title>
-<meta name="description" content="Professional corporate gifting in Nagpur. Custom branded gifts, bulk corporate hampers and structured execution for businesses.">
+<title>Corporate Gifting in Nagpur | Bulk Corporate Gifts | Boxwish Biz</title>
+
+<meta name="description" content="Boxwish Biz provides professional corporate gifting in Nagpur and across India. Bulk corporate gifts, custom branded merchandise, festive hampers and reliable structured execution.">
+
+<meta name="keywords" content="Corporate gifting in Nagpur, bulk corporate gifts Nagpur, corporate gift suppliers Nagpur, custom branded gifts India, corporate hampers Nagpur">
+
+<link rel="canonical" href="https://www.boxwishbiz.com/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Corporate Gifting in Nagpur | Boxwish Biz">
+<meta property="og:description" content="Reliable bulk corporate gifting solutions in Nagpur and across India.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.boxwishbiz.com/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.6;}
-a{text-decoration:none;color:inherit;}
+body{font-family:'Inter',sans-serif;color:#111;background:#fff;}
 .container{width:90%;max-width:1200px;margin:auto;}
+a{text-decoration:none;color:inherit;}
 html{scroll-behavior:smooth;}
 
 /* NAVBAR */
@@ -21,9 +33,9 @@ html{scroll-behavior:smooth;}
 position:fixed;
 top:0;
 width:100%;
-padding:22px 0;
+padding:20px 0;
 z-index:1000;
-transition:all 0.3s ease;
+transition:0.3s;
 background:transparent;
 }
 .nav-inner{
@@ -32,22 +44,18 @@ justify-content:space-between;
 align-items:center;
 }
 .nav-links a{
-margin-left:35px;
+margin-left:30px;
 font-weight:600;
-font-size:14px;
 color:#fff;
-transition:0.3s;
 }
 
-/* Logo Switching */
+/* Logo Switch */
 .logo-dark{display:none;}
 .logo-white{display:block;}
 
-/* On Scroll */
 .navbar.scrolled{
 background:#fff;
 box-shadow:0 5px 20px rgba(0,0,0,0.08);
-padding:18px 0;
 }
 .navbar.scrolled .nav-links a{color:#00032e;}
 .navbar.scrolled .logo-white{display:none;}
@@ -55,48 +63,45 @@ padding:18px 0;
 
 /* HERO */
 .hero{
-height:100vh;
-min-height:700px;
+height:90vh;
 background:url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da') center/cover no-repeat;
-position:relative;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 color:#fff;
+position:relative;
 }
 .hero::before{
 content:'';
 position:absolute;
 top:0;left:0;
 width:100%;height:100%;
-background:linear-gradient(120deg, rgba(0,3,46,0.85), rgba(0,0,0,0.7));
+background:rgba(0,3,46,0.8);
 }
 .hero-content{
 position:relative;
 z-index:2;
 max-width:900px;
-padding:0 20px;
+padding:20px;
 }
 .hero h1{
-font-size:68px;
+font-size:56px;
 font-weight:800;
-line-height:1.1;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 .hero p{
 font-size:20px;
+margin-bottom:35px;
 opacity:0.9;
-margin-bottom:40px;
 }
 .btn{
-display:inline-block;
 background:#fff;
 color:#00032e;
-padding:16px 42px;
-font-weight:700;
-border-radius:6px;
-transition:0.3s;
+padding:15px 35px;
+border-radius:5px;
+font-weight:600;
+display:inline-block;
 }
 .btn:hover{
 background:#00032e;
@@ -105,94 +110,60 @@ color:#fff;
 
 /* SECTION */
 .section{
-padding:110px 0;
+padding:100px 0;
 }
-.split-container{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:60px;
-}
-.split-text{flex:1;}
-.split-text h2{
-font-size:38px;
-margin-bottom:20px;
+.section-title{
+text-align:center;
+font-size:32px;
+margin-bottom:60px;
 color:#00032e;
-}
-.split-text p{
-font-size:18px;
-color:#555;
-margin-bottom:25px;
-}
-.dark-btn{
-display:inline-block;
-background:#00032e;
-color:#fff;
-padding:14px 30px;
-font-weight:600;
-border-radius:4px;
-}
-.split-image{flex:1;}
-.split-image img{
-width:100%;
-border-radius:6px;
-box-shadow:0 20px 40px rgba(0,0,0,0.1);
 }
 
-/* CLIENT STRIP */
-.client-strip{
-background:#f8f9fb;
-padding:70px 0;
-text-align:center;
+/* PRODUCT GRID */
+.product-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
 }
-.client-strip h3{
-color:#00032e;
-margin-bottom:35px;
+.product-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:6px;
 }
-.client-logos{
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-gap:30px;
+.product-card p{
+margin-top:10px;
 font-weight:600;
-letter-spacing:2px;
-color:#999;
-font-size:14px;
-text-transform:uppercase;
 }
 
 /* CONTACT */
 .contact{
 background:#00032e;
 color:#fff;
-padding:110px 0;
+padding:100px 0;
 text-align:center;
 }
-.contact h2{
-font-size:36px;
-margin-bottom:35px;
-}
-form{
+.contact form{
 max-width:600px;
 margin:auto;
 display:flex;
 flex-direction:column;
 }
-input,textarea{
+.contact input,
+.contact textarea{
 padding:14px;
-margin-bottom:18px;
+margin-bottom:15px;
 border:none;
 border-radius:4px;
-font-family:inherit;
 }
-button{
+.contact button{
 background:#fff;
 color:#00032e;
-padding:16px;
+padding:15px;
 border:none;
-cursor:pointer;
 border-radius:4px;
 font-weight:600;
+cursor:pointer;
 }
 
 /* FOOTER */
@@ -204,101 +175,112 @@ padding:40px 0;
 font-size:14px;
 }
 
+/* WHATSAPP */
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:15px 18px;
+border-radius:50%;
+font-weight:bold;
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
 /* RESPONSIVE */
 @media(max-width:900px){
-.split-container{flex-direction:column;}
+.product-grid{grid-template-columns:repeat(2,1fr);}
 .nav-links{display:none;}
-.hero h1{font-size:38px;}
+.hero h1{font-size:36px;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
 <div class="container nav-inner">
-
 <img src="logo-white.png" class="logo-white" height="45">
 <img src="logo-dark.png" class="logo-dark" height="45">
-
 <nav class="nav-links">
-<a href="#solutions">Solutions</a>
-<a href="#workflow">Workflow</a>
-<a href="#contact">Contact</a>
+<a href="#products">Products</a>
+<a href="#contact">Get Quote</a>
 </nav>
 </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
 <div class="hero-content">
-<h1>Corporate Gifting.<br>Structured. Reliable. Premium.</h1>
-<p>Professional corporate gifting in Nagpur with structured workflow and reliable bulk execution.</p>
+<h1>Corporate Gifting in Nagpur.<br>Structured. Reliable. Premium.</h1>
+<p>Bulk corporate gifts, custom branded merchandise and festive hampers delivered across Nagpur and all India.</p>
 <a href="#contact" class="btn">Request a Quote</a>
 </div>
 </section>
 
-<!-- SOLUTIONS -->
-<section id="solutions" class="section">
-<div class="container split-container">
-<div class="split-text">
-<h2>Custom Branded Corporate Gifts</h2>
-<p>
-Premium merchandise, festive hampers and custom logo printing 
-for businesses seeking structured corporate gifting solutions.
-</p>
-<a href="#contact" class="dark-btn">Start Your Project</a>
-</div>
-<div class="split-image">
-<img src="https://images.unsplash.com/photo-1585386959984-a4155223168c">
-</div>
-</div>
-</section>
-
-<!-- WORKFLOW -->
-<section id="workflow" class="section" style="background:#f8f9fb;">
-<div class="container split-container">
-<div class="split-image">
-<img src="https://images.unsplash.com/photo-1556741533-974f8e62a92d">
-</div>
-<div class="split-text">
-<h2>Bulk Execution with Structured Workflow</h2>
-<p>
-From requirement mapping to branding approval and quality checks,
-every order follows a defined execution system ensuring timely delivery.
-</p>
-<a href="#contact" class="dark-btn">Discuss Requirements</a>
-</div>
-</div>
-</section>
-
-<!-- CLIENT STRIP -->
-<section class="client-strip">
+<section id="products" class="section">
 <div class="container">
-<h3>Trusted by Growing Businesses</h3>
-<div class="client-logos">
-<span>Tech Solutions Pvt Ltd</span>
-<span>Nagpur Industries</span>
-<span>Urban Consulting Group</span>
-<span>Midland Manufacturing</span>
-<span>NextGen Enterprises</span>
+<h2 class="section-title">Our Corporate Gifting Solutions</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1585386959984-a4155223168c" alt="Corporate gift hampers in Nagpur">
+<p>Corporate Gift Hampers</p>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1555529771-35a8c4c9c0b6" alt="Custom branded bottles for corporate gifting">
+<p>Branded Bottles</p>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1556741533-974f8e62a92d" alt="Corporate branded notebooks">
+<p>Custom Notebooks</p>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da" alt="Bulk corporate gift packaging">
+<p>Bulk Packaging Solutions</p>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1593113598332-cd288d649433" alt="Corporate promotional merchandise">
+<p>Promotional Merchandise</p>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1607083206173-90a12f0a4c63" alt="Premium corporate gift boxes">
+<p>Premium Gift Boxes</p>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1585386959984-a4155223168c" alt="Festival corporate hampers">
+<p>Festive Hampers</p>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62" alt="Employee welcome kits corporate gifting">
+<p>Employee Welcome Kits</p>
+</div>
+
 </div>
 </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact">
 <div class="container">
 <h2>Request a Corporate Quote</h2>
+
 <form action="https://formspree.io/f/mvzbqzbo" method="POST">
 <input type="text" name="company" placeholder="Company Name" required>
 <input type="text" name="name" placeholder="Contact Person" required>
 <input type="email" name="email" placeholder="Email Address" required>
 <input type="tel" name="phone" placeholder="Phone Number" required>
-<textarea name="message" placeholder="Project Details" rows="5" required></textarea>
+<textarea name="message" rows="5" placeholder="Project Details" required></textarea>
 <button type="submit">Submit Inquiry</button>
 </form>
+
 </div>
 </section>
 
@@ -307,10 +289,11 @@ every order follows a defined execution system ensuring timely delivery.
 <p>© 2026 BOXWISH BIZ. All Rights Reserved.</p>
 </footer>
 
+<a href="https://wa.me/917020470119" class="whatsapp-btn">W</a>
+
 <script>
 window.addEventListener("scroll", function(){
-var navbar = document.querySelector(".navbar");
-navbar.classList.toggle("scrolled", window.scrollY > 50);
+document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 50);
 });
 </script>
 
