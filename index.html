@@ -16,7 +16,8 @@ a{text-decoration:none;color:inherit;}
 .container{width:90%;max-width:1200px;margin:auto;}
 html{scroll-behavior:smooth;}
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
+
 .navbar{
 position:fixed;
 top:0;
@@ -33,21 +34,25 @@ justify-content:space-between;
 align-items:center;
 }
 
+.logo img{
+height:45px;
+transition:0.3s;
+}
+
+.logo-dark{display:none;}
+.logo-white{display:block;}
+
 .nav-links a{
 margin-left:35px;
 font-weight:600;
 font-size:14px;
-color:#fff;
+color:#ffffff;
 transition:0.3s;
 }
 
-/* Logo Switching */
-.logo-dark{display:none;}
-.logo-white{display:block;}
-
 /* On Scroll */
 .navbar.scrolled{
-background:#fff;
+background:#ffffff;
 box-shadow:0 5px 20px rgba(0,0,0,0.08);
 padding:18px 0;
 }
@@ -64,11 +69,12 @@ display:none;
 display:block;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero{
-margin-top:80px;
-height:85vh;
-min-height:650px;
+margin-top:0;
+height:90vh;
+min-height:700px;
 background:url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da') center/cover no-repeat;
 position:relative;
 display:flex;
@@ -84,7 +90,8 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:linear-gradient(120deg, rgba(0,3,46,0.85), rgba(0,0,0,0.7));
+background:linear-gradient(120deg, rgba(0,3,46,0.85), rgba(0,0,0,0.75));
+z-index:1;
 }
 
 .hero-content{
@@ -123,12 +130,12 @@ background:#00032e;
 color:#fff;
 }
 
-/* SECTION */
+/* ================= SECTIONS ================= */
+
 .section{
 padding:110px 0;
 }
 
-/* SPLIT SECTION */
 .split-container{
 display:flex;
 align-items:center;
@@ -156,18 +163,19 @@ background:#00032e;
 color:#fff;
 padding:14px 30px;
 font-weight:600;
-border-radius:3px;
+border-radius:4px;
 }
 
 .split-image{flex:1;}
 
 .split-image img{
 width:100%;
-border-radius:6px;
+border-radius:8px;
 box-shadow:0 20px 40px rgba(0,0,0,0.1);
 }
 
-/* CLIENT STRIP */
+/* ================= CLIENT STRIP ================= */
+
 .client-strip{
 background:#f8f9fb;
 padding:70px 0;
@@ -191,7 +199,8 @@ font-size:14px;
 text-transform:uppercase;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
+
 .contact{
 background:#00032e;
 color:#fff;
@@ -229,7 +238,8 @@ border-radius:4px;
 font-weight:600;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer{
 background:#111;
 color:#ccc;
@@ -238,7 +248,8 @@ padding:40px 0;
 font-size:14px;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
+
 @media(max-width:900px){
 .split-container{flex-direction:column;}
 .nav-links{display:none;}
@@ -253,19 +264,23 @@ font-size:14px;
 <header class="navbar">
 <div class="container nav-inner">
 
-<img src="logo-white.png" class="logo-white" height="45">
-<img src="logo-dark.png" class="logo-dark" height="45">
+<div class="logo">
+<img src="logo-white.png" class="logo-white">
+<img src="logo-dark.png" class="logo-dark">
+</div>
 
 <nav class="nav-links">
 <a href="#solutions">Solutions</a>
 <a href="#workflow">Workflow</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
+<div class="hero-overlay"></div>
 <div class="hero-content">
 <h1>Corporate Gifting.<br>Structured. Reliable. Premium.</h1>
 <p>Professional corporate gifting in Nagpur with structured workflow and reliable bulk execution.</p>
@@ -273,7 +288,7 @@ font-size:14px;
 </div>
 </section>
 
-<!-- SPLIT SECTION 1 -->
+<!-- SPLIT 1 -->
 <section id="solutions" class="section">
 <div class="container split-container">
 <div class="split-text">
@@ -290,7 +305,7 @@ for businesses seeking structured corporate gifting solutions.
 </div>
 </section>
 
-<!-- SPLIT SECTION 2 -->
+<!-- SPLIT 2 -->
 <section id="workflow" class="section" style="background:#f8f9fb;">
 <div class="container split-container">
 <div class="split-image">
