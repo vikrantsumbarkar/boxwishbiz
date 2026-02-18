@@ -3,33 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BOXWISH | Premium Corporate Gifting</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+<title>BOXWISH BIZ | Corporate Gifting, Simplified.</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Montserrat',sans-serif;color:#111;background:#fff;}
-
-section{padding:100px 8%;}
+body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.6;}
+.container{max-width:1200px;margin:auto;padding:0 20px;}
+section{padding:100px 0;}
 h1,h2,h3{font-weight:800;}
+p{color:#555;}
 
-header{
+a{text-decoration:none;}
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#fff;
+box-shadow:0 2px 8px rgba(0,0,0,.05);
+z-index:1000;
+}
+.nav-inner{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:25px 8%;
-position:absolute;
-width:100%;
-color:#fff;
-z-index:10;
+height:80px;
 }
-header h1{letter-spacing:3px;font-size:22px;}
+.nav-links a{
+margin-left:30px;
+font-weight:500;
+color:#111;
+}
+.nav-links a:hover{color:#00bcd4;}
 
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da');
+linear-gradient(rgba(0,3,46,.75),rgba(0,3,46,.75)),
+url('https://images.unsplash.com/photo-1607083206869-4c7672e72a8a');
 background-size:cover;
 background-position:center;
 display:flex;
@@ -37,89 +51,103 @@ align-items:center;
 justify-content:center;
 text-align:center;
 color:white;
+padding-top:80px;
 }
-
-.hero h2{
-font-size:64px;
+.hero h1{
+font-size:60px;
 max-width:900px;
 margin:auto;
 }
-
 .hero p{
 margin-top:25px;
-font-size:22px;
-opacity:.9;
+font-size:20px;
+color:#ddd;
 }
-
 .btn{
 display:inline-block;
 margin-top:40px;
-padding:15px 35px;
-background:#00032e;
-color:white;
-text-decoration:none;
+padding:14px 32px;
+background:#00bcd4;
+color:#fff;
+border-radius:4px;
 font-weight:600;
-border-radius:3px;
 transition:.3s;
 }
-.btn:hover{background:#00bcd4;}
+.btn:hover{background:#0097a7;}
 
 .section-title{
 text-align:center;
-font-size:42px;
+font-size:40px;
 margin-bottom:60px;
 }
+
+.grid-3{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
+}
+.card{
+padding:40px;
+border:1px solid #eee;
+transition:.3s;
+background:#fff;
+}
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.split{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+.split img{
+width:100%;
+border-radius:8px;
+}
+
+.dark-section{
+background:#00032e;
+color:#fff;
+text-align:center;
+}
+.dark-section p{color:#ddd;}
 
 .products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
-
 .product{
 position:relative;
 overflow:hidden;
 }
-
 .product img{
 width:100%;
 height:350px;
 object-fit:cover;
-transition:.5s;
+transition:.4s;
 }
-
-.product:hover img{
-transform:scale(1.1);
-}
-
+.product:hover img{transform:scale(1.1);}
 .product span{
 position:absolute;
 bottom:20px;
 left:20px;
 background:rgba(0,0,0,.7);
-color:white;
-padding:8px 15px;
-font-size:14px;
+color:#fff;
+padding:6px 14px;
+font-size:13px;
 letter-spacing:1px;
-}
-
-.dark{
-background:#00032e;
-color:white;
-text-align:center;
-}
-
-.dark h2{
-font-size:42px;
 }
 
 .process{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:40px;
-margin-top:60px;
+margin-top:50px;
 }
-
 .step{
 border-top:3px solid #00bcd4;
 padding-top:20px;
@@ -128,7 +156,7 @@ padding-top:20px;
 footer{
 background:#111;
 color:#aaa;
-padding:50px 8%;
+padding:60px 0;
 text-align:center;
 font-size:14px;
 }
@@ -141,106 +169,129 @@ background:#25D366;
 color:white;
 padding:16px 20px;
 border-radius:50%;
-text-decoration:none;
 font-weight:bold;
 }
 
 @media(max-width:768px){
-.hero h2{font-size:38px;}
+.hero h1{font-size:34px;}
+.split{grid-template-columns:1fr;}
+.nav-links{display:none;}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>BOXWISH</h1>
-<div>Corporate Gifting, Simplified.</div>
-</header>
+<!-- NAVBAR -->
+<div class="navbar">
+<div class="container nav-inner">
+<img src="logo.png" alt="Boxwish Logo" height="45">
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#products">Products</a>
+<a href="#process">Process</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</div>
 
-<section class="hero">
-<div>
-<h2>Premium Corporate Gifting For Modern Businesses</h2>
-<p>Custom Branded Gifts. Bulk Execution. Reliable Delivery.</p>
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container">
+<h1>Premium Corporate Gifting For Modern Businesses</h1>
+<p>Custom branded gifts. Bulk execution. Reliable delivery across India.</p>
 <a href="https://wa.me/917020470119" class="btn">Start Your Order</a>
 </div>
 </section>
 
-<section>
-<h2 class="section-title">Featured Corporate Products</h2>
-
-<div class="products">
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1585386959984-a4155223168c">
-<span>Premium Gift Hampers</span>
+<!-- SERVICES -->
+<section id="services">
+<div class="container">
+<h2 class="section-title">Our Core Services</h2>
+<div class="grid-3">
+<div class="card">
+<h3>Corporate Gift Hampers</h3>
+<p>Curated gifting solutions for clients, employees and corporate events.</p>
 </div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1555529771-35a8c4c9c0b6">
-<span>Custom Branded Bottles</span>
+<div class="card">
+<h3>Custom Logo Printing</h3>
+<p>Branding on bottles, notebooks, merchandise and promotional products.</p>
 </div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1556741533-974f8e62a92d">
-<span>Executive Merchandise</span>
+<div class="card">
+<h3>Bulk Order Handling</h3>
+<p>Efficient management of large quantity corporate orders.</p>
 </div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-<span>Corporate Kits</span>
 </div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a">
-<span>Bulk Event Gifting</span>
-</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1556742045-417c8d9d1f3a">
-<span>Premium Packaging</span>
-</div>
-
 </div>
 </section>
 
-<section class="dark">
-<h2>How We Work</h2>
+<!-- ABOUT SPLIT -->
+<section>
+<div class="container split">
+<div>
+<h2>Built For Companies That Value Professionalism</h2>
+<p style="margin-top:20px;">
+We simplify corporate gifting with structured execution, quality control and dependable timelines.
+</p>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+</div>
+</div>
+</section>
 
+<!-- PRODUCTS -->
+<section id="products">
+<div class="container">
+<h2 class="section-title">Featured Products</h2>
+<div class="products">
+<div class="product"><img src="https://images.unsplash.com/photo-1585386959984-a4155223168c"><span>Premium Hampers</span></div>
+<div class="product"><img src="https://images.unsplash.com/photo-1555529771-35a8c4c9c0b6"><span>Branded Bottles</span></div>
+<div class="product"><img src="https://images.unsplash.com/photo-1556741533-974f8e62a92d"><span>Executive Kits</span></div>
+<div class="product"><img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da"><span>Bulk Event Gifts</span></div>
+</div>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section class="dark-section" id="process">
+<div class="container">
+<h2>Our Process</h2>
 <div class="process">
-
 <div class="step">
 <h3>01 Consultation</h3>
-<p>Understand your brand & bulk requirements.</p>
+<p>Understand your brand, budget & quantity.</p>
 </div>
-
 <div class="step">
 <h3>02 Customization</h3>
-<p>Mockups & final design approval.</p>
+<p>Mockups & final product approval.</p>
 </div>
-
 <div class="step">
 <h3>03 Production</h3>
-<p>Bulk execution with strict quality control.</p>
+<p>Bulk execution with quality control.</p>
 </div>
-
 <div class="step">
 <h3>04 Delivery</h3>
 <p>On-time dispatch across India.</p>
 </div>
-
 </div>
+</div>
+</section>
 
-<br><br>
+<!-- CONTACT -->
+<section id="contact">
+<div class="container" style="text-align:center;">
+<h2 class="section-title">Let’s Simplify Your Corporate Gifting</h2>
 <a href="mailto:boxwishbiz@gmail.com" class="btn">Get A Quote</a>
-
+</div>
 </section>
 
 <footer>
 <p>📍 Nagpur</p>
 <p>📧 boxwishbiz@gmail.com</p>
 <p>📱 7020470119</p>
-<p>© 2026 BOXWISH. All Rights Reserved.</p>
+<p>© 2026 BOXWISH BIZ. All Rights Reserved.</p>
 </footer>
 
 <a href="https://wa.me/917020470119" class="whatsapp-btn">W</a>
