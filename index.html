@@ -50,21 +50,18 @@ justify-content:center;
 text-align:center;
 color:#fff;
 }
-
 .hero-overlay{
 position:absolute;
 top:0;left:0;
 width:100%;height:100%;
 background:linear-gradient(135deg, rgba(0,0,46,0.85), rgba(0,0,0,0.6));
 }
-
 .hero-content{
 position:relative;
 z-index:2;
 max-width:900px;
 padding:20px;
 }
-
 .hero h1{
 font-size:72px;
 font-weight:800;
@@ -72,12 +69,10 @@ letter-spacing:-2px;
 line-height:1.05;
 margin-bottom:25px;
 }
-
 .hero p{
 font-size:20px;
 opacity:0.9;
 }
-
 .btn{
 display:inline-block;
 margin-top:40px;
@@ -88,22 +83,44 @@ font-weight:700;
 border-radius:4px;
 transition:0.3s;
 }
-
 .btn:hover{
 background:#00032e;
 color:#fff;
 }
 
+/* SPLIT SECTIONS */
+.split-section{
+padding:120px 0;
+}
+.split{
+display:flex;
+align-items:center;
+gap:60px;
+}
+.split img{
+width:100%;
+border-radius:8px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+.split-text h2{
+font-size:36px;
+margin-bottom:20px;
+color:#00032e;
+}
+.split-text p{
+color:#555;
+margin-bottom:25px;
+}
+.alt{
+background:#f8f9fb;
+}
+
 /* CLIENT STRIP */
 .client-strip{
 padding:70px 0;
-background:#f8f9fb;
+background:#fff;
 text-align:center;
-}
-.client-strip h3{
-font-weight:700;
-color:#00032e;
-margin-bottom:35px;
+border-top:1px solid #f0f0f0;
 }
 .client-logos{
 display:flex;
@@ -117,84 +134,19 @@ font-size:14px;
 text-transform:uppercase;
 }
 
-/* SECTION */
-.section{
-padding:120px 0;
-border-bottom:1px solid #f0f0f0;
-}
-.section-title{
-text-align:center;
-margin-bottom:80px;
-font-size:40px;
-font-weight:800;
-letter-spacing:-1px;
-color:#00032e;
-}
-
-/* PRODUCT GRID */
-.product-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-}
-.product-card{
-background:#fff;
-border-radius:8px;
-overflow:hidden;
-transition:all 0.4s ease;
-box-shadow:0 10px 40px rgba(0,0,0,0.06);
-}
-.product-card:hover{
-transform:translateY(-12px);
-box-shadow:0 20px 60px rgba(0,0,0,0.1);
-}
-.product-card img{
-width:100%;
-height:280px;
-object-fit:cover;
-transition:0.4s;
-}
-.product-card:hover img{
-transform:scale(1.05);
-}
-
-/* TRUST */
-.trust{
-background:#00032e;
-color:#fff;
-text-align:center;
-padding:120px 0;
-}
-.trust h2{
-font-size:38px;
-margin-bottom:20px;
-}
-.trust p{
-max-width:750px;
-margin:auto;
-opacity:0.85;
-}
-
-/* TESTIMONIAL */
-.testimonial{
-background:#f8f9fb;
-padding:120px 0;
-text-align:center;
-}
-.testimonial-card{
-max-width:750px;
-margin:auto;
-font-style:italic;
-color:#444;
-font-size:18px;
-}
-
 /* CONTACT */
 .contact{
 padding:120px 0;
+background:#00032e;
+color:#fff;
+text-align:center;
+}
+.contact h2{
+font-size:40px;
+margin-bottom:30px;
 }
 form{
-max-width:650px;
+max-width:600px;
 margin:auto;
 display:flex;
 flex-direction:column;
@@ -202,13 +154,13 @@ flex-direction:column;
 input,textarea{
 padding:14px;
 margin-bottom:18px;
-border:1px solid #ddd;
+border:none;
 border-radius:4px;
 font-family:inherit;
 }
 button{
-background:#00032e;
-color:#fff;
+background:#fff;
+color:#00032e;
 padding:16px;
 border:none;
 cursor:pointer;
@@ -227,7 +179,7 @@ font-size:14px;
 
 /* RESPONSIVE */
 @media(max-width:900px){
-.product-grid{grid-template-columns:1fr;}
+.split{flex-direction:column;}
 .nav-links{display:none;}
 .hero h1{font-size:38px;}
 }
@@ -236,19 +188,17 @@ font-size:14px;
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
 <div class="container nav-inner">
 <img src="logo.png" height="45">
 <nav class="nav-links">
-<a href="#products">Solutions</a>
-<a href="#testimonials">Testimonials</a>
+<a href="#solutions">Solutions</a>
+<a href="#workflow">Workflow</a>
 <a href="#contact">Contact</a>
 </nav>
 </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
 <div class="hero-overlay"></div>
 <div class="hero-content">
@@ -258,10 +208,37 @@ font-size:14px;
 </div>
 </section>
 
+<!-- SPLIT 1 -->
+<section id="solutions" class="split-section">
+<div class="container split">
+<div>
+<img src="https://images.unsplash.com/photo-1585386959984-a4155223168c">
+</div>
+<div class="split-text">
+<h2>Custom Branded Corporate Gifts</h2>
+<p>Premium merchandise, festive hampers and custom logo printing for businesses seeking professional gifting solutions.</p>
+<a href="#contact" class="btn">Start Your Project</a>
+</div>
+</div>
+</section>
+
+<!-- SPLIT 2 -->
+<section class="split-section alt">
+<div class="container split">
+<div class="split-text">
+<h2>Bulk Execution with Structured Workflow</h2>
+<p>From requirement mapping to branding approvals and quality checks, every order follows a defined execution system.</p>
+<a href="#contact" class="btn">Discuss Requirements</a>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1555529771-35a8c4c9c0b6">
+</div>
+</div>
+</section>
+
 <!-- CLIENT STRIP -->
 <section class="client-strip">
 <div class="container">
-<h3>Trusted by Growing Businesses</h3>
 <div class="client-logos">
 <span>Tech Solutions Pvt Ltd</span>
 <span>Nagpur Industries</span>
@@ -272,46 +249,9 @@ font-size:14px;
 </div>
 </section>
 
-<!-- PRODUCTS -->
-<section id="products" class="section">
-<div class="container">
-<h2 class="section-title">Corporate Solutions</h2>
-<div class="product-grid">
-<div class="product-card">
-<img src="https://images.unsplash.com/photo-1585386959984-a4155223168c">
-</div>
-<div class="product-card">
-<img src="https://images.unsplash.com/photo-1555529771-35a8c4c9c0b6">
-</div>
-<div class="product-card">
-<img src="https://images.unsplash.com/photo-1556741533-974f8e62a92d">
-</div>
-</div>
-</div>
-</section>
-
-<!-- TRUST -->
-<section class="trust">
-<div class="container">
-<h2>Structured Corporate Execution</h2>
-<p>From requirement mapping to branding approval and timely dispatch — every order follows a defined execution system.</p>
-</div>
-</section>
-
-<!-- TESTIMONIAL -->
-<section id="testimonials" class="testimonial">
-<div class="container">
-<h2 class="section-title">Client Feedback</h2>
-<div class="testimonial-card">
-“Boxwish Biz handled our 800+ festive hampers with professional execution and on-time delivery.”
-</div>
-</div>
-</section>
-
-<!-- CONTACT -->
 <section id="contact" class="contact">
 <div class="container">
-<h2 class="section-title">Request a Corporate Quote</h2>
+<h2>Request a Corporate Quote</h2>
 <form action="https://formspree.io/f/mvzbqzbo" method="POST">
 <input type="text" name="company" placeholder="Company Name" required>
 <input type="text" name="name" placeholder="Contact Person" required>
@@ -323,7 +263,6 @@ font-size:14px;
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
 <p>📍 Nagpur | 📧 info@boxwishbiz.com | 📱 +91 7020470119</p>
 <p>© 2026 BOXWISH BIZ. All Rights Reserved.</p>
