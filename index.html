@@ -5,216 +5,192 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Corporate Gifting in Nagpur | Boxwish Biz</title>
-<meta name="description" content="Structured and reliable corporate gifting in Nagpur. Bulk branded gifts with clear execution and timely delivery.">
-<link rel="canonical" href="https://www.boxwishbiz.com/">
+<meta name="description" content="Structured and reliable corporate gifting in Nagpur. Premium corporate hampers, branded merchandise and executive gifting solutions.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.7;}
-.container{max-width:1150px;margin:auto;padding:0 30px;}
-section{padding:120px 0;}
+body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.8;}
+.container{max-width:1200px;margin:auto;padding:0 40px;}
+section{padding:160px 0;}
 h1,h2,h3{font-weight:700;}
-.section-title{text-align:center;font-size:36px;margin-bottom:60px;}
 a{text-decoration:none;color:inherit;}
 html{scroll-behavior:smooth;}
 
-/* NAVBAR */
+/* NAV */
 .navbar{
 position:fixed;
 width:100%;
 background:#fff;
-padding:18px 0;
+padding:22px 0;
+box-shadow:0 2px 15px rgba(0,0,0,.05);
 z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,.05);
 }
 .nav-inner{display:flex;justify-content:space-between;align-items:center;}
 .nav-links a{
-margin-left:30px;
-font-weight:500;
+margin-left:35px;
 font-size:14px;
+font-weight:500;
 color:#00032e;
 }
 
 /* HERO */
 .hero{
-height:90vh;
+min-height:95vh;
 display:flex;
 align-items:center;
 background:#fff;
 }
 .hero h1{
-font-size:58px;
-max-width:750px;
+font-size:64px;
+max-width:850px;
 color:#00032e;
+line-height:1.1;
 }
 .hero p{
-margin-top:25px;
-font-size:18px;
-max-width:550px;
+margin-top:30px;
+font-size:20px;
+max-width:600px;
 color:#555;
 }
 .btn{
 display:inline-block;
-margin-top:35px;
-padding:14px 38px;
+margin-top:40px;
+padding:16px 45px;
 background:#00032e;
-color:white;
+color:#fff;
 font-weight:600;
 border-radius:4px;
 transition:.3s;
-font-size:14px;
 }
-.btn:hover{
-background:#001a5c;
-}
+.btn:hover{background:#001a5c;}
 
-/* TRUST STRIP */
-.logo-strip{
-background:#f5f7fa;
-padding:60px 0;
+/* TRUST */
+.trust{
+background:#f7f9fb;
+padding:70px 0;
 }
-.logo-row{
+.trust-row{
 display:flex;
 justify-content:space-between;
 flex-wrap:wrap;
 gap:30px;
 text-align:center;
 }
-.logo-item{
+.trust-item{
 font-size:13px;
-font-weight:600;
-color:#999;
 letter-spacing:1px;
-flex:1;
-min-width:150px;
+color:#999;
+font-weight:600;
 }
 
-/* SPLIT FEATURE */
-.split{
+/* FEATURE BLOCK */
+.feature{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:60px;
+gap:80px;
 align-items:center;
 }
-.split img{
+.feature img{
 width:100%;
-border-radius:8px;
+border-radius:10px;
 }
-.split h3{
-font-size:28px;
+.feature h2{
+font-size:38px;
+margin-bottom:20px;
 color:#00032e;
-margin-bottom:15px;
 }
-.split p{
-font-size:15px;
+.feature p{
+font-size:16px;
 color:#555;
 }
 
-/* FULL WIDTH IMAGE */
-.full-image{
+/* FULL SHOWCASE */
+.showcase{
+text-align:center;
+}
+.showcase img{
 width:100%;
-height:450px;
-background:url('https://images.unsplash.com/photo-1585386959984-a4155223168c') center/cover no-repeat;
-border-radius:8px;
+border-radius:10px;
 margin-top:40px;
 }
-
-/* TILES */
-.tiles{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-margin-top:60px;
-}
-.tile img{
-width:100%;
-height:280px;
-object-fit:cover;
-border-radius:8px;
-}
-.tile h4{
-margin-top:15px;
-font-size:16px;
+.showcase h2{
+font-size:42px;
 color:#00032e;
 }
 
 /* SERVICES */
+.services{
+background:#f7f9fb;
+}
 .services-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:40px;
+gap:50px;
 text-align:center;
 }
-.service-box h3{
-margin-bottom:10px;
-font-size:17px;
+.services-grid h3{
+margin-bottom:12px;
 color:#00032e;
-}
-.service-box p{
-font-size:14px;
-color:#555;
 }
 
 /* PROCESS */
 .process-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:35px;
+gap:50px;
 text-align:center;
 }
-.process-step h3{
-margin-bottom:10px;
-font-size:15px;
+.process-grid h3{
+margin-bottom:12px;
 color:#00032e;
 }
 
 /* TESTIMONIALS */
+.testimonials{
+background:#f7f9fb;
+}
 .testimonial-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
 }
-.testimonial-card{
-background:#f7f9fb;
-padding:25px;
-border-radius:6px;
+.testimonial{
+background:#fff;
+padding:30px;
+border-radius:8px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
 }
-.testimonial-card p{
+.testimonial h4{
+margin-top:20px;
 font-size:14px;
-color:#444;
-}
-.testimonial-card h4{
-margin-top:15px;
-font-size:13px;
 color:#00032e;
 }
 
 /* CTA */
 .cta{
 background:#00032e;
-color:white;
+color:#fff;
 text-align:center;
-padding:100px 20px;
+padding:120px 20px;
 }
 .cta h2{
-font-size:30px;
+font-size:36px;
 }
 
 /* FOOTER */
 footer{
 background:#111;
 color:#aaa;
-padding:60px 0;
+padding:70px 0;
 text-align:center;
 font-size:13px;
 }
 
 @media(max-width:900px){
-.split{grid-template-columns:1fr;}
-.hero h1{font-size:36px;}
-.logo-row{flex-direction:column;}
+.feature{grid-template-columns:1fr;}
+.hero h1{font-size:40px;}
 }
 </style>
 </head>
@@ -235,66 +211,61 @@ font-size:13px;
 <section class="hero">
 <div class="container">
 <h1>Corporate Gifting.<br>Planned. Branded. Delivered.</h1>
-<p>Reliable corporate gifting in Nagpur executed with structured workflow and professional coordination.</p>
+<p>Premium corporate hampers, branded merchandise and executive gifting solutions in Nagpur — executed with structured workflow and timely delivery.</p>
 <a href="#contact" class="btn">Request a Quote</a>
 </div>
 </section>
 
-<section class="logo-strip">
+<section class="trust">
 <div class="container">
-<div class="logo-row">
-<div class="logo-item">TECH SOLUTIONS PVT LTD</div>
-<div class="logo-item">NAGPUR INDUSTRIES</div>
-<div class="logo-item">URBAN CONSULTING GROUP</div>
-<div class="logo-item">MIDLAND MANUFACTURING</div>
-<div class="logo-item">NEXTGEN ENTERPRISES</div>
+<div class="trust-row">
+<div class="trust-item">TECH SOLUTIONS PVT LTD</div>
+<div class="trust-item">NAGPUR INDUSTRIES</div>
+<div class="trust-item">URBAN CONSULTING GROUP</div>
+<div class="trust-item">MIDLAND MANUFACTURING</div>
+<div class="trust-item">NEXTGEN ENTERPRISES</div>
 </div>
 </div>
 </section>
 
 <section>
-<div class="container split">
+<div class="container feature">
 <div>
-<h3>Premium Curated Corporate Hampers</h3>
-<p>Thoughtfully assembled gifting collections designed for employees, partners and corporate events with consistent quality and presentation.</p>
+<h2>Premium Corporate Hampers</h2>
+<p>Thoughtfully curated gifting collections designed for employees, clients and corporate events with structured execution and consistent presentation.</p>
 </div>
 <div>
 <img src="https://images.unsplash.com/photo-1555529771-35a8c4c9c0b6">
 </div>
 </div>
+</section>
 
-<div class="container">
-<div class="full-image"></div>
-
-<div class="tiles">
-<div class="tile">
+<section>
+<div class="container feature">
+<div>
 <img src="https://images.unsplash.com/photo-1556741533-974f8e62a92d">
-<h4>Custom Branded Merchandise</h4>
 </div>
-<div class="tile">
-<img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da">
-<h4>Executive Gift Sets</h4>
-</div>
+<div>
+<h2>Custom Branded Merchandise</h2>
+<p>Professional logo printing and merchandise branding handled with defined quality checks and delivery schedules.</p>
 </div>
 </div>
 </section>
 
-<section id="services">
+<section class="showcase">
+<div class="container">
+<h2>Executive Gift Collections</h2>
+<img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da">
+</div>
+</section>
+
+<section class="services" id="services">
 <div class="container">
 <h2 class="section-title">Core Services</h2>
 <div class="services-grid">
-<div class="service-box">
-<h3>Corporate Gift Hampers</h3>
-<p>Structured gifting solutions for businesses and organizations.</p>
-</div>
-<div class="service-box">
-<h3>Custom Logo Printing</h3>
-<p>Professional branding with consistent quality control.</p>
-</div>
-<div class="service-box">
-<h3>Bulk Order Execution</h3>
-<p>Organized handling of large-scale corporate quantities.</p>
-</div>
+<div><h3>Corporate Gift Hampers</h3><p>Structured gifting solutions for businesses.</p></div>
+<div><h3>Custom Logo Printing</h3><p>Professional branded merchandise execution.</p></div>
+<div><h3>Bulk Order Handling</h3><p>Organized management of large corporate quantities.</p></div>
 </div>
 </div>
 </section>
@@ -303,27 +274,27 @@ font-size:13px;
 <div class="container">
 <h2 class="section-title">Our Process</h2>
 <div class="process-grid">
-<div class="process-step"><h3>01 Requirement Mapping</h3><p>Understanding quantity and timeline.</p></div>
-<div class="process-step"><h3>02 Branding Approval</h3><p>Mockups shared for confirmation.</p></div>
-<div class="process-step"><h3>03 Controlled Production</h3><p>Managed bulk execution.</p></div>
-<div class="process-step"><h3>04 Timely Dispatch</h3><p>Committed delivery schedule.</p></div>
+<div><h3>01 Requirement Mapping</h3><p>Understanding quantity and timeline.</p></div>
+<div><h3>02 Branding Approval</h3><p>Mockups shared for confirmation.</p></div>
+<div><h3>03 Controlled Production</h3><p>Managed bulk execution.</p></div>
+<div><h3>04 Timely Dispatch</h3><p>Committed delivery schedule.</p></div>
 </div>
 </div>
 </section>
 
-<section>
+<section class="testimonials">
 <div class="container">
 <h2 class="section-title">Client Testimonials</h2>
 <div class="testimonial-grid">
-<div class="testimonial-card">
+<div class="testimonial">
 <p>“Boxwish handled our corporate gifting professionally and delivered on time.”</p>
 <h4>— HR Manager</h4>
 </div>
-<div class="testimonial-card">
+<div class="testimonial">
 <p>“Smooth coordination from approval to dispatch.”</p>
 <h4>— Operations Head</h4>
 </div>
-<div class="testimonial-card">
+<div class="testimonial">
 <p>“Reliable partner for bulk corporate gifting.”</p>
 <h4>— Admin Team</h4>
 </div>
