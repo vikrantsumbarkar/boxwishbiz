@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,21 +10,216 @@
 <meta name="keywords" content="Corporate gifting in Nagpur, corporate gift suppliers Nagpur, bulk corporate gifts Nagpur, custom corporate gifts Nagpur, branded gift hampers Nagpur">
 <meta name="author" content="Boxwish Biz">
 
-<!-- Open Graph (For WhatsApp & Social Sharing) -->
 <meta property="og:title" content="Corporate Gifting in Nagpur | Boxwish Biz">
-<meta property="og:description" content="Reliable corporate gifting in Nagpur. Structured processes, bulk execution and timely delivery for businesses.">
+<meta property="og:description" content="Reliable corporate gifting in Nagpur. Structured processes, bulk execution and timely delivery.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.boxwishbiz.com">
 <meta property="og:image" content="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Corporate Gifting in Nagpur | Boxwish Biz">
-<meta name="twitter:description" content="Custom branded gifts and bulk corporate gifting solutions in Nagpur.">
+
+<link rel="canonical" href="https://www.boxwishbiz.com/">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
-<link rel="canonical" href="https://www.boxwishbiz.com/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.6;}
+html{scroll-behavior:smooth;}
+.container{max-width:1150px;margin:auto;padding:0 25px;}
+section{padding:140px 0;}
+h1,h2,h3{font-weight:800;}
+p{color:#666;}
+a{text-decoration:none;color:inherit;}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+padding:25px 0;
+transition:.4s;
+}
+.navbar.scrolled{
+background:#fff;
+box-shadow:0 4px 20px rgba(0,0,0,.06);
+padding:15px 0;
+}
+.nav-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.nav-links a{
+margin-left:35px;
+font-weight:500;
+color:#fff;
+opacity:.9;
+transition:.3s;
+}
+.navbar.scrolled .nav-links a{
+color:#111;
+}
+.nav-links a:hover{opacity:1;}
+
+/* HERO */
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+color:white;
+}
+.hero-content{max-width:800px;}
+.hero h1{
+font-size:65px;
+line-height:1.1;
+}
+.hero p{
+margin-top:25px;
+font-size:20px;
+color:#eee;
+}
+.btn{
+display:inline-block;
+margin-top:40px;
+padding:16px 42px;
+background:#00bcd4;
+color:#fff;
+font-weight:600;
+border-radius:3px;
+transition:.3s;
+}
+.btn:hover{
+background:#0097a7;
+transform:translateY(-3px);
+}
+
+/* TITLES */
+.section-title{
+text-align:center;
+font-size:38px;
+margin-bottom:80px;
+}
+
+/* SERVICES */
+.grid-3{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:60px;
+text-align:center;
+}
+.card h3{
+margin-bottom:15px;
+}
+
+/* TRUST */
+.trust{
+background:#f7f9fb;
+}
+.trust-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:50px;
+text-align:center;
+}
+
+/* PRODUCTS */
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
+}
+.product img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:8px;
+}
+
+/* PROCESS */
+.dark{
+background:#00032e;
+color:#fff;
+text-align:center;
+}
+.dark p{color:#ccc;}
+.process{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:50px;
+margin-top:60px;
+}
+
+/* FORM */
+.inquiry-form{
+max-width:900px;
+margin:auto;
+}
+.form-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:40px;
+}
+.form-group{
+display:flex;
+flex-direction:column;
+}
+.form-group label{
+margin-bottom:8px;
+font-weight:500;
+color:#333;
+}
+.form-group input,
+.form-group textarea{
+padding:14px;
+border:1px solid #ddd;
+border-radius:4px;
+font-size:15px;
+font-family:'Inter',sans-serif;
+transition:.3s;
+}
+.form-group input:focus,
+.form-group textarea:focus{
+border-color:#00bcd4;
+outline:none;
+}
+.full-width{
+grid-column:1 / -1;
+}
+
+/* FOOTER */
+footer{
+background:#111;
+color:#aaa;
+padding:70px 0;
+text-align:center;
+font-size:14px;
+}
+
+.whatsapp-btn{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:16px 20px;
+border-radius:50%;
+font-weight:bold;
+}
+
+@media(max-width:900px){
+.hero h1{font-size:38px;}
+.nav-links{display:none;}
+}
+</style>
 
 </head>
 
@@ -46,7 +240,7 @@
 <section class="hero">
 <div class="container hero-content">
 <h1>Corporate Gifting.<br>Planned. Branded. Delivered.</h1>
-<p>Structured processes. Clear timelines. Reliable bulk execution across India.</p>
+<p>Reliable corporate gifting in Nagpur with structured processes and timely bulk execution.</p>
 <a href="#inquiry" class="btn">Request a Quote</a>
 </div>
 </section>
