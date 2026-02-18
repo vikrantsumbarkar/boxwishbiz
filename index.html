@@ -11,6 +11,7 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;color:#111;line-height:1.6;background:#fff;}
 a{text-decoration:none;color:inherit;}
 .container{width:90%;max-width:1200px;margin:auto;}
@@ -20,13 +21,10 @@ a{text-decoration:none;color:inherit;}
 position:fixed;
 top:0;
 width:100%;
-padding:22px 0;
+background:#fff;
+padding:18px 0;
+box-shadow:0 2px 15px rgba(0,0,0,0.05);
 z-index:1000;
-transition:0.3s ease;
-}
-.navbar.scrolled{
-background:#ffffff;
-box-shadow:0 2px 15px rgba(0,0,0,0.08);
 }
 .nav-inner{
 display:flex;
@@ -37,15 +35,12 @@ align-items:center;
 margin-left:35px;
 font-weight:600;
 font-size:14px;
-color:#fff;
-transition:0.3s;
-}
-.navbar.scrolled .nav-links a{
 color:#00032e;
 }
 
 /* HERO */
 .hero{
+margin-top:85px;
 height:100vh;
 background:url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da') center/cover no-repeat;
 position:relative;
@@ -55,39 +50,45 @@ justify-content:center;
 text-align:center;
 color:#fff;
 }
+
 .hero-overlay{
 position:absolute;
 top:0;left:0;
 width:100%;height:100%;
 background:linear-gradient(135deg, rgba(0,0,46,0.85), rgba(0,0,0,0.6));
 }
+
 .hero-content{
 position:relative;
 z-index:2;
 max-width:900px;
-padding:0 20px;
+padding:20px;
 }
+
 .hero h1{
-font-size:64px;
+font-size:72px;
 font-weight:800;
-letter-spacing:-1px;
-line-height:1.1;
+letter-spacing:-2px;
+line-height:1.05;
 margin-bottom:25px;
 }
+
 .hero p{
 font-size:20px;
 opacity:0.9;
-margin-bottom:35px;
 }
+
 .btn{
 display:inline-block;
+margin-top:40px;
 background:#ffffff;
 color:#00032e;
-padding:16px 38px;
+padding:15px 40px;
 font-weight:700;
 border-radius:4px;
 transition:0.3s;
 }
+
 .btn:hover{
 background:#00032e;
 color:#fff;
@@ -95,63 +96,66 @@ color:#fff;
 
 /* CLIENT STRIP */
 .client-strip{
-padding:80px 0;
+padding:70px 0;
 background:#f8f9fb;
 text-align:center;
 }
 .client-strip h3{
+font-weight:700;
 color:#00032e;
-margin-bottom:40px;
+margin-bottom:35px;
 }
 .client-logos{
 display:flex;
 justify-content:space-between;
 flex-wrap:wrap;
-color:#777;
+gap:30px;
 font-weight:600;
-letter-spacing:1px;
+letter-spacing:2px;
+color:#999;
+font-size:14px;
+text-transform:uppercase;
 }
 
 /* SECTION */
 .section{
-padding:100px 0;
+padding:120px 0;
+border-bottom:1px solid #f0f0f0;
 }
 .section-title{
 text-align:center;
-margin-bottom:70px;
-font-size:34px;
-font-weight:700;
+margin-bottom:80px;
+font-size:40px;
+font-weight:800;
+letter-spacing:-1px;
 color:#00032e;
 }
 
-/* PRODUCTS */
+/* PRODUCT GRID */
 .product-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:40px;
+gap:30px;
 }
 .product-card{
 background:#fff;
-box-shadow:0 8px 30px rgba(0,0,0,0.05);
-border-radius:6px;
+border-radius:8px;
 overflow:hidden;
-transition:0.3s;
+transition:all 0.4s ease;
+box-shadow:0 10px 40px rgba(0,0,0,0.06);
+}
+.product-card:hover{
+transform:translateY(-12px);
+box-shadow:0 20px 60px rgba(0,0,0,0.1);
 }
 .product-card img{
 width:100%;
-height:260px;
+height:280px;
 object-fit:cover;
+transition:0.4s;
 }
-.product-card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 35px rgba(0,0,0,0.08);
-}
-.product-content{
-padding:20px;
-}
-.product-content h4{
-color:#00032e;
-margin-bottom:8px;
+.product-card:hover img{
+transform:scale(1.05);
 }
 
 /* TRUST */
@@ -159,31 +163,38 @@ margin-bottom:8px;
 background:#00032e;
 color:#fff;
 text-align:center;
-padding:100px 0;
+padding:120px 0;
 }
-.trust h2{margin-bottom:25px;}
-.trust p{max-width:700px;margin:auto;opacity:0.85;font-size:18px;}
+.trust h2{
+font-size:38px;
+margin-bottom:20px;
+}
+.trust p{
+max-width:750px;
+margin:auto;
+opacity:0.85;
+}
 
 /* TESTIMONIAL */
 .testimonial{
 background:#f8f9fb;
+padding:120px 0;
 text-align:center;
-padding:100px 0;
 }
 .testimonial-card{
-max-width:700px;
+max-width:750px;
 margin:auto;
-font-size:20px;
 font-style:italic;
 color:#444;
+font-size:18px;
 }
 
 /* CONTACT */
 .contact{
-padding:100px 0;
+padding:120px 0;
 }
 form{
-max-width:600px;
+max-width:650px;
 margin:auto;
 display:flex;
 flex-direction:column;
@@ -198,7 +209,7 @@ font-family:inherit;
 button{
 background:#00032e;
 color:#fff;
-padding:15px;
+padding:16px;
 border:none;
 cursor:pointer;
 border-radius:4px;
@@ -218,7 +229,7 @@ font-size:14px;
 @media(max-width:900px){
 .product-grid{grid-template-columns:1fr;}
 .nav-links{display:none;}
-.hero h1{font-size:36px;}
+.hero h1{font-size:38px;}
 }
 </style>
 </head>
@@ -226,7 +237,7 @@ font-size:14px;
 <body>
 
 <!-- NAVBAR -->
-<header class="navbar" id="navbar">
+<header class="navbar">
 <div class="container nav-inner">
 <img src="logo.png" height="45">
 <nav class="nav-links">
@@ -241,7 +252,7 @@ font-size:14px;
 <section class="hero">
 <div class="hero-overlay"></div>
 <div class="hero-content">
-<h1>Structured. Reliable. Premium.</h1>
+<h1>Corporate Gifting.<br>Structured. Reliable. Premium.</h1>
 <p>Professional corporate gifting in Nagpur with structured workflow and reliable bulk execution.</p>
 <a href="#contact" class="btn">Request a Quote</a>
 </div>
@@ -268,24 +279,12 @@ font-size:14px;
 <div class="product-grid">
 <div class="product-card">
 <img src="https://images.unsplash.com/photo-1585386959984-a4155223168c">
-<div class="product-content">
-<h4>Corporate Hampers</h4>
-<p>Premium festive gifting collections.</p>
-</div>
 </div>
 <div class="product-card">
 <img src="https://images.unsplash.com/photo-1555529771-35a8c4c9c0b6">
-<div class="product-content">
-<h4>Custom Merchandise</h4>
-<p>Branded merchandise with quality finish.</p>
-</div>
 </div>
 <div class="product-card">
 <img src="https://images.unsplash.com/photo-1556741533-974f8e62a92d">
-<div class="product-content">
-<h4>Bulk Gifting Solutions</h4>
-<p>Organized large-scale corporate execution.</p>
-</div>
 </div>
 </div>
 </div>
@@ -324,17 +323,11 @@ font-size:14px;
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
 <p>📍 Nagpur | 📧 info@boxwishbiz.com | 📱 +91 7020470119</p>
 <p>© 2026 BOXWISH BIZ. All Rights Reserved.</p>
 </footer>
-
-<script>
-window.addEventListener("scroll", function(){
-var navbar = document.getElementById("navbar");
-navbar.classList.toggle("scrolled", window.scrollY > 50);
-});
-</script>
 
 </body>
 </html>
