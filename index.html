@@ -5,28 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Corporate Gifting in Nagpur | Boxwish Biz</title>
-<meta name="description" content="Premium corporate gifting in Nagpur and across India. Custom branded gifts, bulk corporate hampers and structured corporate execution for businesses.">
-<meta name="keywords" content="Corporate gifting in Nagpur, bulk corporate gifts India, branded corporate gifts Nagpur, business gift suppliers Nagpur">
+
+<meta name="description" content="Boxwish Biz provides premium corporate gifting in Nagpur and across India. Custom branded gifts, bulk corporate hampers and reliable execution for businesses.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
+<!-- ✅ GOOGLE ANALYTICS (PASTE YOUR ID LATER) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
+</script>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.7;}
+body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.6;}
+html{scroll-behavior:smooth;}
 a{text-decoration:none;color:inherit;}
 .container{width:90%;max-width:1200px;margin:auto;}
-html{scroll-behavior:smooth;}
-
-/* Fade Animation */
-.fade-up{
-opacity:0;
-transform:translateY(40px);
-transition:0.8s ease;
-}
-.fade-up.show{
-opacity:1;
-transform:translateY(0);
-}
 
 /* NAVBAR */
 .navbar{
@@ -34,9 +32,9 @@ position:fixed;
 top:0;
 width:100%;
 background:#fff;
-padding:20px 0;
+padding:18px 0;
+box-shadow:0 2px 12px rgba(0,0,0,0.06);
 z-index:1000;
-border-bottom:1px solid #eee;
 }
 .nav-inner{
 display:flex;
@@ -44,162 +42,161 @@ justify-content:space-between;
 align-items:center;
 }
 .nav-links a{
-margin-left:35px;
+margin-left:30px;
 font-weight:600;
-font-size:14px;
 color:#00032e;
 }
 
 /* HERO */
 .hero{
-margin-top:85px;
-height:85vh;
+margin-top:80px;
+min-height:88vh;
+background:url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da') center/cover no-repeat;
+position:relative;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-background:#00032e;
 color:#fff;
-padding:0 20px;
 }
-.hero-content{max-width:900px;}
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(120deg, rgba(0,3,46,0.85), rgba(0,0,0,0.7));
+}
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
+padding:40px 20px;
+animation:fadeUp 1s ease;
+}
 .hero h1{
-font-size:62px;
+font-size:60px;
 font-weight:800;
-line-height:1.15;
-margin-bottom:25px;
+line-height:1.1;
+margin-bottom:20px;
 }
 .hero p{
 font-size:20px;
-opacity:0.9;
-margin-bottom:30px;
-}
-.hero small{
-display:block;
-opacity:0.7;
-margin-bottom:40px;
+opacity:0.95;
+margin-bottom:35px;
 }
 .btn{
 display:inline-block;
-background:#fff;
+background:#ffffff;
 color:#00032e;
-padding:16px 45px;
-font-weight:600;
-border-radius:4px;
-transition:0.3s;
+padding:16px 42px;
+font-weight:700;
+border-radius:6px;
+transition:0.25s;
 }
 .btn:hover{
-background:#eaeaea;
-transform:translateY(-3px);
+background:#00032e;
+color:#fff;
+transform:translateY(-2px);
 }
 
-/* SECTION */
-.section{padding:120px 0;}
-.section-title{
+/* WHY US */
+.features{
+padding:90px 0;
+background:#f7f9fc;
+}
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
 text-align:center;
-font-size:34px;
-font-weight:700;
-margin-bottom:70px;
+}
+.feature-box{
+padding:25px;
+transition:.25s;
+}
+.feature-box:hover{
+transform:translateY(-6px);
+}
+.feature-box h3{
 color:#00032e;
+margin-bottom:8px;
 }
 
 /* PRODUCTS */
 .products{
+padding:100px 0;
+}
+.product-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:40px;
+gap:28px;
 }
 .product-card{
 overflow:hidden;
-border-radius:6px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
-transition:0.4s ease;
+border-radius:8px;
+box-shadow:0 8px 30px rgba(0,0,0,0.08);
 }
 .product-card img{
 width:100%;
-height:320px;
+height:260px;
 object-fit:cover;
-transition:0.4s ease;
-}
-.product-card:hover{
-transform:translateY(-8px);
+transition:.4s;
 }
 .product-card:hover img{
 transform:scale(1.08);
 }
 
-/* WHY */
-.why{background:#f9f9fb;}
-.why-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:40px;
+/* CLIENT LOGOS */
+.client-strip{
+background:#f3f5f9;
+padding:70px 0;
 text-align:center;
 }
-.why h3{margin-bottom:10px;color:#00032e;}
-.why p{color:#666;font-size:15px;}
+.client-logos{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+gap:40px;
+margin-top:30px;
+}
+.client-logos img{
+height:40px;
+opacity:.7;
+filter:grayscale(100%);
+transition:.25s;
+}
+.client-logos img:hover{
+opacity:1;
+filter:none;
+}
 
 /* TESTIMONIAL */
 .testimonial{
-background:#fff;
+padding:90px 0;
 text-align:center;
-padding:120px 0;
-border-top:1px solid #eee;
 }
-.testimonial-card{
+.testimonial-box{
 max-width:750px;
 margin:auto;
 font-style:italic;
-font-size:18px;
 color:#444;
-position:relative;
-}
-.testimonial-card strong{
-display:block;
-margin-top:20px;
-font-weight:600;
-color:#00032e;
-}
-
-/* TRUST */
-.trust{
-text-align:center;
-padding:90px 0;
-border-top:1px solid #eee;
-}
-.trust h4{
-font-weight:600;
-margin-bottom:40px;
-color:#00032e;
-}
-.trust-logos{
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-gap:25px;
-color:#999;
-font-weight:600;
-letter-spacing:1px;
 }
 
 /* CONTACT */
 .contact{
 background:#00032e;
 color:#fff;
+padding:100px 0;
 text-align:center;
-padding:120px 0;
 }
-.contact h2{margin-bottom:20px;}
-.contact p{opacity:0.8;margin-bottom:40px;}
 form{
-max-width:600px;
+max-width:520px;
 margin:auto;
 display:flex;
 flex-direction:column;
 }
 input,textarea{
 padding:14px;
-margin-bottom:18px;
+margin-bottom:16px;
 border:none;
 border-radius:4px;
 font-family:inherit;
@@ -207,32 +204,30 @@ font-family:inherit;
 button{
 background:#fff;
 color:#00032e;
-padding:16px;
+padding:15px;
 border:none;
-cursor:pointer;
+font-weight:700;
 border-radius:4px;
+cursor:pointer;
+}
+
+/* SUCCESS MESSAGE */
+.success-message{
+display:none;
+background:#e6ffed;
+color:#067647;
+padding:12px;
+margin-bottom:15px;
+border-radius:6px;
 font-weight:600;
-transition:0.3s;
-}
-button:hover{
-background:#eaeaea;
-transform:translateY(-3px);
 }
 
-/* FOOTER */
-footer{
-text-align:center;
-padding:40px 0;
-font-size:14px;
-color:#777;
-}
-
-/* WHATSAPP */
-.whatsapp{
+/* WHATSAPP PREMIUM */
+.whatsapp-float{
 position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
+bottom:22px;
+right:22px;
+background:linear-gradient(135deg,#25D366,#128C7E);
 color:#fff;
 width:60px;
 height:60px;
@@ -240,15 +235,26 @@ border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-font-weight:bold;
-font-size:22px;
+font-size:28px;
 box-shadow:0 10px 25px rgba(0,0,0,0.25);
+z-index:999;
+transition:.25s;
+}
+.whatsapp-float:hover{
+transform:scale(1.1);
 }
 
-/* RESPONSIVE */
+/* ANIMATION */
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* MOBILE */
 @media(max-width:900px){
-.products{grid-template-columns:1fr;}
-.why-grid{grid-template-columns:1fr;}
+.feature-grid{grid-template-columns:1fr 1fr;}
+.product-grid{grid-template-columns:1fr;}
+.nav-links{display:none;}
 .hero h1{font-size:36px;}
 }
 </style>
@@ -256,9 +262,10 @@ box-shadow:0 10px 25px rgba(0,0,0,0.25);
 
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
 <div class="container nav-inner">
-<img src="logo-dark.png" height="40">
+<img src="logo-dark.png" height="45">
 <nav class="nav-links">
 <a href="#products">Products</a>
 <a href="#contact">Get Quote</a>
@@ -266,73 +273,91 @@ box-shadow:0 10px 25px rgba(0,0,0,0.25);
 </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-<div class="hero-content fade-up">
-<h1>Corporate Gifting in Nagpur.<br>Premium. Structured. Reliable.</h1>
-<p>Custom branded gifts and bulk corporate solutions for businesses in Nagpur and across India.</p>
-<small>Trusted by growing businesses for professional execution.</small>
+<div class="hero-content">
+<h1>Corporate Gifting in Nagpur.<br>Structured. Reliable. Premium.</h1>
+<p>Serving Nagpur and all India with professional corporate gifting solutions.</p>
 <a href="#contact" class="btn">Request a Quote</a>
 </div>
 </section>
 
-<section id="products" class="section fade-up">
-<div class="container">
-<h2 class="section-title">Corporate Gift Collections</h2>
-<div class="products">
-<div class="product-card"><img src="https://images.unsplash.com/photo-1585386959984-a4155223168c"></div>
-<div class="product-card"><img src="https://images.unsplash.com/photo-1555529771-35a8c4c9c0b6"></div>
-<div class="product-card"><img src="https://images.unsplash.com/photo-1556741533-974f8e62a92d"></div>
-<div class="product-card"><img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48"></div>
-<div class="product-card"><img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da"></div>
-<div class="product-card"><img src="https://images.unsplash.com/photo-1576698483491-8c6b96de6c78"></div>
+<!-- FEATURES -->
+<section class="features">
+<div class="container feature-grid">
+<div class="feature-box">
+<h3>Structured Workflow</h3>
+<p>Execution from requirement mapping to dispatch.</p>
+</div>
+<div class="feature-box">
+<h3>Bulk Order Handling</h3>
+<p>Expertise in managing large corporate quantities.</p>
+</div>
+<div class="feature-box">
+<h3>Quality Assurance</h3>
+<p>Quality checks before final dispatch.</p>
+</div>
+<div class="feature-box">
+<h3>Pan India Delivery</h3>
+<p>Reliable delivery timelines across India.</p>
 </div>
 </div>
 </section>
 
-<section class="section why fade-up">
+<!-- PRODUCTS -->
+<section id="products" class="products">
 <div class="container">
-<h2 class="section-title">Why Choose Boxwish Biz</h2>
-<div class="why-grid">
-<div><h3>Structured Workflow</h3><p>From requirement mapping to dispatch execution.</p></div>
-<div><h3>Bulk Handling</h3><p>Expertise in managing large corporate quantities.</p></div>
-<div><h3>Quality Assurance</h3><p>Strict quality checks before dispatch.</p></div>
-<div><h3>Pan India Delivery</h3><p>Serving Nagpur and across India.</p></div>
+<h2 style="text-align:center;margin-bottom:50px;">Corporate Gift Solutions</h2>
+<div class="product-grid">
+<img src="https://images.unsplash.com/photo-1585386959984-a4155223168c">
+<img src="https://images.unsplash.com/photo-1555529771-35a8c4c9c0b6">
+<img src="https://images.unsplash.com/photo-1556741533-974f8e62a92d">
+<img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da">
+<img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48">
+<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
 </div>
 </div>
 </section>
 
-<section class="testimonial fade-up">
+<!-- CLIENT LOGOS -->
+<section class="client-strip">
 <div class="container">
-<h2 class="section-title">Client Testimonial</h2>
-<div class="testimonial-card">
-“Boxwish Biz handled our 1,000+ festive hampers with flawless execution and timely delivery. Highly professional and structured team.”
-<strong>— Procurement Head, Nagpur Based Manufacturing Company</strong>
+<h3>Trusted by Businesses</h3>
+<div class="client-logos">
+<img src="https://dummyimage.com/140x40/ccc/000&text=Client+1">
+<img src="https://dummyimage.com/140x40/ccc/000&text=Client+2">
+<img src="https://dummyimage.com/140x40/ccc/000&text=Client+3">
+<img src="https://dummyimage.com/140x40/ccc/000&text=Client+4">
+<img src="https://dummyimage.com/140x40/ccc/000&text=Client+5">
 </div>
 </div>
 </section>
 
-<section class="trust fade-up">
+<!-- TESTIMONIAL -->
+<section class="testimonial">
 <div class="container">
-<h4>Trusted by Growing Businesses</h4>
-<div class="trust-logos">
-<span>Tech Solutions Pvt Ltd</span>
-<span>Urban Consulting</span>
-<span>Midland Manufacturing</span>
-<span>NextGen Enterprises</span>
+<h2 style="margin-bottom:20px;">Client Feedback</h2>
+<div class="testimonial-box">
+“Boxwish Biz handled our corporate gifting requirement very professionally with timely delivery.”
 </div>
 </div>
 </section>
 
-<section id="contact" class="contact fade-up">
+<!-- CONTACT -->
+<section id="contact" class="contact">
 <div class="container">
 <h2>Request a Corporate Quote</h2>
-<p>Tell us your requirement. We’ll respond within 24 hours.</p>
-<form action="https://formspree.io/f/mvzbqzbo" method="POST">
+
+<div class="success-message" id="successMsg">
+✅ Thank you! Our team will contact you shortly.
+</div>
+
+<form id="leadForm" action="https://formspree.io/f/mvzbqzbo" method="POST">
 <input type="text" name="company" placeholder="Company Name" required>
 <input type="text" name="name" placeholder="Contact Person" required>
 <input type="email" name="email" placeholder="Email Address" required>
 <input type="tel" name="phone" placeholder="Phone Number" required>
-<textarea name="message" rows="5" placeholder="Project Details" required></textarea>
+<textarea name="message" placeholder="Project Details" rows="5" required></textarea>
 <button type="submit">Submit Inquiry</button>
 </form>
 </div>
@@ -343,18 +368,17 @@ box-shadow:0 10px 25px rgba(0,0,0,0.25);
 <p>© 2026 BOXWISH BIZ. All Rights Reserved.</p>
 </footer>
 
-<a href="https://wa.me/917020470119" class="whatsapp">W</a>
+<!-- PREMIUM WHATSAPP -->
+<a class="whatsapp-float"
+href="https://wa.me/917020470119?text=Hello%20Boxwish%20Biz,%20I%20want%20corporate%20gifting%20quotation."
+target="_blank">💬</a>
 
 <script>
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
-});
-});
-document.querySelectorAll('.fade-up').forEach(el=>{
-observer.observe(el);
+// Success message
+document.getElementById("leadForm").addEventListener("submit", function(){
+setTimeout(()=>{
+document.getElementById("successMsg").style.display="block";
+},800);
 });
 </script>
 
