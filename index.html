@@ -7,6 +7,35 @@
 <title>Corporate Gifting in Nagpur | Boxwish Biz</title>
 <meta name="description" content="Corporate gifting in Nagpur & across India. Bulk corporate gift hampers, branded merchandise and employee kits with reliable execution by Boxwish Biz.">
 
+<link rel="canonical" href="https://www.boxwishbiz.com/">
+
+<!-- Local SEO -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LocalBusiness",
+ "name": "Boxwish Biz",
+ "telephone": "+917020470119",
+ "email": "info@boxwishbiz.com",
+ "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Nagpur",
+   "addressCountry": "IN"
+ },
+ "areaServed": "India",
+ "url": "https://www.boxwishbiz.com/"
+}
+</script>
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNK10DF5K"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KHNK10DF5K');
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -29,7 +58,9 @@ box-shadow:0 2px 15px rgba(0,0,0,0.05);
 .hero{
 margin-top:80px;
 min-height:85vh;
-background:url('hero-boxwish.png') center/cover no-repeat;
+background:
+linear-gradient(rgba(11,26,58,.65),rgba(11,26,58,.65)),
+url('hero-boxwish.png') center/cover no-repeat;
 display:flex;align-items:center;
 }
 .hero-content{max-width:620px;color:#fff;}
@@ -52,13 +83,20 @@ box-shadow:0 10px 25px rgba(0,0,0,0.06);transition:.25s;
 .product-card img{width:100%;height:180px;object-fit:cover;}
 .product-title{text-align:center;padding:14px;font-weight:600;color:#0B1A3A;}
 
-/* WHY CHOOSE */
+/* WHY */
 .why-grid{
 display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center;
 }
 .why-box{
 padding:30px 20px;border-radius:12px;background:#fff;
 box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* SPLIT */
+.split{display:flex;gap:60px;align-items:center;}
+.split img{
+width:100%;border-radius:12px;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
 }
 
 /* CLIENT STRIP */
@@ -82,26 +120,13 @@ background:#25D366;color:#fff;padding:16px;border:none;
 border-radius:8px;font-weight:700;cursor:pointer;
 }
 
-/* PREMIUM FOOTER */
+/* FOOTER */
 .footer{
-background:#07122b;
-color:#cbd5e1;
-padding:50px 0 30px;
-text-align:center;
+background:#07122b;color:#cbd5e1;
+padding:50px 0 30px;text-align:center;
 }
-.footer h3{
-color:#fff;
-margin-bottom:15px;
-}
-.footer p{
-margin-bottom:6px;
-font-size:14px;
-}
-.footer-bottom{
-margin-top:20px;
-font-size:13px;
-opacity:.7;
-}
+.footer h3{color:#fff;margin-bottom:15px;}
+.footer-bottom{margin-top:20px;font-size:13px;opacity:.7;}
 
 /* WHATSAPP */
 .whatsapp-float{
@@ -122,9 +147,28 @@ font-weight:700;text-decoration:none;
 .mobile-cta a:first-child{background:#0B1A3A;color:#fff;}
 .mobile-cta a:last-child{background:#25D366;color:#fff;}
 
+/* EXIT POPUP */
+.exit-popup{
+display:none;position:fixed;inset:0;
+background:rgba(0,0,0,.55);
+justify-content:center;align-items:center;
+z-index:9999;padding:20px;
+}
+.exit-box{
+background:#fff;padding:44px 36px;border-radius:14px;
+max-width:480px;width:100%;text-align:center;
+box-shadow:0 30px 80px rgba(0,0,0,.25);
+}
+.exit-btn{
+display:inline-block;background:#25D366;color:#fff;
+padding:16px 34px;border-radius:8px;font-weight:700;text-decoration:none;
+}
+
+/* RESPONSIVE */
 @media(max-width:992px){
 .product-grid{grid-template-columns:repeat(2,1fr);}
 .why-grid{grid-template-columns:repeat(2,1fr);}
+.split{flex-direction:column;}
 .hero h1{font-size:36px;}
 .mobile-cta{display:flex;}
 body{padding-bottom:80px;}
@@ -134,7 +178,6 @@ body{padding-bottom:80px;}
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
 <div class="container nav-inner">
 <img src="logo-dark.png" height="42">
@@ -145,7 +188,6 @@ body{padding-bottom:80px;}
 </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
 <div class="container">
 <div class="hero-content">
@@ -163,23 +205,68 @@ Professional corporate gifting in Nagpur & across India with reliable bulk execu
 <section id="products" class="section">
 <div class="container">
 <h2 style="text-align:center;margin-bottom:40px;color:#0B1A3A;">Popular Corporate Gifts</h2>
-
 <div class="product-grid">
-<!-- your 10 products remain same -->
+
+<div class="product-card"><img src="product-1.png"><div class="product-title">New Employee Joinee Kit</div></div>
+<div class="product-card"><img src="product-2.png"><div class="product-title">Audio Gifts</div></div>
+<div class="product-card"><img src="product-3.png"><div class="product-title">Bag & Backpack</div></div>
+<div class="product-card"><img src="product-4.png"><div class="product-title">Branded Bottles & Mugs</div></div>
+<div class="product-card"><img src="product-5.png"><div class="product-title">Corporate Gift Hampers</div></div>
+<div class="product-card"><img src="product-6.png"><div class="product-title">Custom Diaries & Journals</div></div>
+<div class="product-card"><img src="product-7.png"><div class="product-title">Tech Gifts</div></div>
+<div class="product-card"><img src="product-8.png"><div class="product-title">Tshirt & Hoodies</div></div>
+<div class="product-card"><img src="product-9.png"><div class="product-title">Desk Organisers</div></div>
+<div class="product-card"><img src="product-10.png"><div class="product-title">Premium Pen & Keychain Sets</div></div>
+
 </div>
 </div>
 </section>
 
-<!-- WHY CHOOSE -->
+<!-- WHY -->
 <section class="section section-light">
 <div class="container">
 <h2 style="text-align:center;margin-bottom:50px;color:#0B1A3A;">Why Businesses Choose Boxwish Biz</h2>
-
 <div class="why-grid">
 <div class="why-box"><h4>Structured Workflow</h4><p>Every order follows a defined professional process.</p></div>
 <div class="why-box"><h4>Bulk Specialists</h4><p>Comfortably handling large corporate quantities.</p></div>
 <div class="why-box"><h4>Reliable Delivery</h4><p>Committed timelines across Nagpur & India.</p></div>
 <div class="why-box"><h4>Quality Checked</h4><p>Products reviewed before final dispatch.</p></div>
+</div>
+</div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="section">
+<div class="container split">
+<div>
+<h2>Custom Branded Corporate Gifts</h2>
+<p>Premium merchandise and logo branding solutions for businesses across India.</p>
+</div>
+<img src="solutions.png">
+</div>
+</section>
+
+<!-- WORKFLOW -->
+<section class="section section-light">
+<div class="container split">
+<img src="workflow.png">
+<div>
+<h2>Bulk Execution with Structured Workflow</h2>
+<p>From requirement mapping to branding approval and quality checks — every order follows a defined execution system ensuring timely delivery.</p>
+</div>
+</div>
+</section>
+
+<!-- CLIENTS -->
+<section class="client-strip section">
+<div class="container">
+<h3>Trusted by Growing Businesses</h3>
+<div class="client-logos">
+<span>Tech Solutions Pvt Ltd</span>
+<span>Urban Consulting Group</span>
+<span>Midland Manufacturing</span>
+<span>Nagpur Industries</span>
+<span>NextGen Enterprises</span>
 </div>
 </div>
 </section>
@@ -199,30 +286,42 @@ Professional corporate gifting in Nagpur & across India with reliable bulk execu
 </div>
 </section>
 
-<!-- ✅ PREMIUM FOOTER ADDED -->
 <footer class="footer">
 <div class="container">
 <h3>Boxwish Biz</h3>
 <p>📍 Nagpur, Maharashtra</p>
 <p>📧 info@boxwishbiz.com</p>
 <p>📱 +91 7020470119</p>
-
-<div class="footer-bottom">
-© 2026 Boxwish Biz. All Rights Reserved.
-</div>
+<div class="footer-bottom">© 2026 Boxwish Biz. All Rights Reserved.</div>
 </div>
 </footer>
 
-<!-- WHATSAPP -->
-<a class="whatsapp-float" href="https://wa.me/917020470119?text=Hi%20Boxwish%20Biz,%20I%20am%20looking%20for%20bulk%20corporate%20gifting.%20Please%20share%20details." target="_blank">
+<a class="whatsapp-float" href="https://wa.me/917020470119?text=Hi%20Boxwish%20Biz,%20I%20am%20looking%20for%20bulk%20corporate%20gifting." target="_blank">
 <img src="whatsapp.png">
 </a>
 
-<!-- MOBILE CTA -->
 <div class="mobile-cta">
 <a href="#contact">Get Quote</a>
 <a href="https://wa.me/917020470119?text=Hi%20Boxwish%20Biz,%20I%20need%20bulk%20corporate%20gifting%20details" target="_blank">WhatsApp</a>
 </div>
+
+<div class="exit-popup" id="exitPopup">
+<div class="exit-box">
+<h3>Before you leave…</h3>
+<p>Get best bulk pricing for your corporate gifting requirement.</p>
+<a href="#contact" class="exit-btn">Get Quick Quote</a>
+</div>
+</div>
+
+<script>
+let shown=false;
+document.addEventListener("mouseout",function(e){
+if(!shown && e.clientY<10){
+document.getElementById("exitPopup").style.display="flex";
+shown=true;
+}
+});
+</script>
 
 </body>
 </html>
