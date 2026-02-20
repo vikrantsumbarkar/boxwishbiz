@@ -24,27 +24,28 @@ gtag('config', 'G-KHNK10DF5K');
   --secondary:#0B1A3A;
   --accent:#25D366;
   --text:#111111;
-  --muted:#6b7280;
-
-  /* Premium spacing scale */
-  --space-xs:8px;
-  --space-sm:16px;
-  --space-md:28px;
-  --space-lg:48px;
   --space-xl:72px;
   --space-xxl:110px;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-
-body{
-  font-family:'Inter',sans-serif;
-  color:var(--text);
-  background:var(--primary);
-  line-height:1.6;
-}
-
+body{font-family:'Inter',sans-serif;color:var(--text);background:#fff}
 .container{width:90%;max-width:1200px;margin:auto}
+
+/* 🔥 STICKY MOBILE CTA */
+.mobile-cta{
+display:none;
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:var(--accent);
+color:#fff;
+text-align:center;
+padding:14px;
+font-weight:700;
+z-index:999;
+}
 
 /* TOP BAR */
 .topbar{
@@ -55,32 +56,18 @@ padding:10px;
 font-size:14px;
 font-weight:600;
 }
-.topbar a{
-color:#fff;
-background:var(--accent);
-padding:6px 14px;
-border-radius:4px;
-margin-left:10px;
-text-decoration:none;
-}
 
 /* NAVBAR */
 .navbar{
 position:sticky;
 top:0;
-width:100%;
 background:#fff;
 padding:18px 0;
 box-shadow:0 2px 20px rgba(0,0,0,.06);
-z-index:999;
+z-index:998;
 }
 .nav-inner{display:flex;justify-content:space-between;align-items:center}
-.nav-links a{
-margin-left:30px;
-font-weight:600;
-color:var(--secondary);
-text-decoration:none;
-}
+.nav-links a{margin-left:30px;font-weight:600;color:var(--secondary);text-decoration:none}
 
 /* HERO */
 .hero{
@@ -90,89 +77,59 @@ display:flex;
 align-items:center;
 }
 .hero-overlay{
-background:linear-gradient(
-  90deg,
-  rgba(11,26,58,0.88),
-  rgba(11,26,58,0.45)
-);
+background:linear-gradient(90deg,rgba(11,26,58,.88),rgba(11,26,58,.45));
 width:100%;
 padding:var(--space-xxl) 0;
 }
 .hero-content{color:#fff;max-width:650px}
-.hero h1{font-size:54px;line-height:1.15;margin-bottom:var(--space-sm)}
-.hero p{font-size:20px;margin-bottom:var(--space-md);opacity:.95}
+.hero h1{font-size:52px;margin-bottom:16px}
+.hero p{font-size:19px;margin-bottom:24px}
 
 .btn{
 display:inline-block;
 background:var(--accent);
 color:#fff;
-padding:15px 34px;
+padding:15px 32px;
 border-radius:6px;
 font-weight:700;
 text-decoration:none;
-transition:.25s ease;
-}
-.btn:hover{
-background:#1ebe5d;
-transform:translateY(-2px);
 }
 
-/* TRUST BADGES */
+/* TRUST STRIP */
 .trust-badges{
 display:flex;
-gap:30px;
-margin-top:var(--space-lg);
+gap:28px;
+margin-top:28px;
 flex-wrap:wrap;
 font-size:14px;
-opacity:.95;
 }
 
 /* SECTION */
-.section{
-padding:var(--space-xxl) 0;
-}
-.section-title{
-text-align:center;
-font-size:36px;
-margin-bottom:var(--space-xl);
-color:var(--secondary);
-letter-spacing:-0.3px;
-}
+.section{padding:var(--space-xxl) 0}
+.section-title{text-align:center;font-size:34px;margin-bottom:60px;color:var(--secondary)}
 
 /* PRODUCTS */
 .products-grid{
 display:grid;
 grid-template-columns:repeat(5,1fr);
-gap:32px;
+gap:30px;
 }
 .product-card{
 background:#fff;
 border-radius:10px;
 overflow:hidden;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.35s;
+transition:.3s;
 }
-.product-card:hover{
-transform:translateY(-8px);
-box-shadow:0 18px 40px rgba(0,0,0,.15);
-}
-.product-card img{
-width:100%;
-height:180px;
-object-fit:cover;
-}
-.product-title{
-padding:18px 14px 20px;
-font-weight:600;
-font-size:14px;
-text-align:center;
-}
+.product-card:hover{transform:translateY(-6px)}
+.product-card img{width:100%;height:180px;object-fit:cover}
+.product-title{text-align:center;padding:16px;font-weight:600;font-size:14px}
 
 /* SPLIT */
 .split{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:80px;
+gap:70px;
 align-items:center;
 }
 .split img{
@@ -180,12 +137,7 @@ width:100%;
 border-radius:10px;
 box-shadow:0 20px 40px rgba(0,0,0,.12);
 }
-.split h2{
-font-size:34px;
-margin-bottom:var(--space-sm);
-color:var(--secondary);
-}
-.split p{color:#555}
+.split h2{font-size:32px;margin-bottom:12px;color:var(--secondary)}
 
 /* CONTACT */
 .contact{
@@ -194,18 +146,12 @@ color:#fff;
 text-align:center;
 padding:var(--space-xxl) 0;
 }
-form{
-max-width:520px;
-margin:auto;
-display:flex;
-flex-direction:column;
-}
+form{max-width:520px;margin:auto;display:flex;flex-direction:column}
 input,textarea{
 padding:16px;
-margin-bottom:16px;
+margin-bottom:14px;
 border:none;
 border-radius:6px;
-font-family:inherit;
 }
 button{
 background:var(--accent);
@@ -215,9 +161,33 @@ border:none;
 border-radius:6px;
 font-weight:700;
 cursor:pointer;
-transition:.25s;
 }
-button:hover{background:#1ebe5d}
+
+/* SUCCESS MESSAGE */
+.success-msg{
+display:none;
+margin-top:12px;
+color:#86efac;
+font-weight:600;
+}
+
+/* EXIT POPUP */
+.popup{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.65);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+.popup-box{
+background:#fff;
+padding:36px;
+border-radius:12px;
+max-width:420px;
+text-align:center;
+}
 
 /* WHATSAPP */
 .whatsapp-float{
@@ -225,58 +195,37 @@ position:fixed;
 right:22px;
 bottom:22px;
 z-index:999;
+animation:pulse 2s infinite;
 }
 .whatsapp-float img{
-width:64px;
-height:64px;
-border-radius:50%;
+width:64px;height:64px;border-radius:50%;
 box-shadow:0 12px 30px rgba(0,0,0,.35);
 }
 
-/* FOOTER */
-footer{
-background:var(--secondary);
-color:#cbd5e1;
-text-align:center;
-padding:30px 0;
-font-size:14px;
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.08)}
+100%{transform:scale(1)}
 }
 
 /* MOBILE */
 @media(max-width:900px){
-
-.products-grid{
-grid-template-columns:repeat(2,1fr);
-gap:18px;
-}
-
-.split{
-grid-template-columns:1fr;
-gap:40px;
-}
-
-.hero h1{
-font-size:34px;
-}
-
-.section{
-padding:var(--space-xl) 0;
-}
-
+.products-grid{grid-template-columns:repeat(2,1fr)}
+.split{grid-template-columns:1fr}
+.mobile-cta{display:block}
+body{padding-bottom:60px}
+.hero h1{font-size:34px}
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-🎁 Bulk Corporate Orders Open for 2026
-<a href="#contact">Get Quote</a>
-</div>
+<div class="topbar">🎁 Bulk Corporate Orders Open for 2026</div>
 
 <header class="navbar">
 <div class="container nav-inner">
-<img src="logo-dark.png" height="45">
+<img src="logo-dark.png" height="44">
 <nav class="nav-links">
 <a href="#products">Products</a>
 <a href="#contact">Get Quote</a>
@@ -289,7 +238,7 @@ padding:var(--space-xl) 0;
 <div class="container">
 <div class="hero-content">
 <h1>Corporate Gifting. Structured. Reliable. Premium.</h1>
-<p>Professional corporate gifting in Nagpur & across India with reliable bulk execution.</p>
+<p>Professional corporate gifting in Nagpur & across India.</p>
 <a href="#contact" class="btn">Request a Quote</a>
 
 <div class="trust-badges">
@@ -319,7 +268,6 @@ padding:var(--space-xl) 0;
 <div class="product-card"><img src="product-9.png"><div class="product-title">Desk Organisers</div></div>
 <div class="product-card"><img src="product-10.png"><div class="product-title">Premium Pen & Keychain Sets</div></div>
 </div>
-
 </div>
 </section>
 
@@ -333,21 +281,11 @@ padding:var(--space-xl) 0;
 </div>
 </section>
 
-<section class="section" style="background:#f6f8fc">
-<div class="container split">
-<img src="workflow.png">
-<div>
-<h2>Bulk Execution with Structured Workflow</h2>
-<p>Every order follows a defined execution system ensuring timely delivery.</p>
-</div>
-</div>
-</section>
-
 <section id="contact" class="contact">
 <div class="container">
 <h2>Request a Corporate Quote</h2>
 
-<form action="https://formspree.io/f/mvzbqzbo" method="POST">
+<form id="leadForm" action="https://formspree.io/f/mvzbqzbo" method="POST">
 <input type="text" name="company" placeholder="Company Name" required>
 <input type="text" name="name" placeholder="Contact Person" required>
 <input type="email" name="email" placeholder="Email Address" required>
@@ -355,6 +293,10 @@ padding:var(--space-xl) 0;
 <textarea name="message" rows="4" placeholder="Requirement Details" required></textarea>
 <button type="submit">Submit Inquiry</button>
 </form>
+
+<div class="success-msg" id="successMsg">
+✅ Thank you! We will contact you shortly.
+</div>
 
 </div>
 </section>
@@ -364,11 +306,43 @@ padding:var(--space-xl) 0;
 <br>© 2026 BOXWISH BIZ. All Rights Reserved.
 </footer>
 
+<!-- WhatsApp -->
 <a class="whatsapp-float"
-href="https://wa.me/917020470119?text=Hello%20Boxwish%20Biz,%20I%20want%20corporate%20gifting%20details."
+href="https://wa.me/917020470119?text=Hi%20Boxwish%20Biz,%20I%20need%20corporate%20gifting%20quotation."
 target="_blank">
-<img src="whatsapp.png" alt="WhatsApp">
+<img src="whatsapp.png">
 </a>
+
+<!-- Sticky Mobile CTA -->
+<a class="mobile-cta"
+href="https://wa.me/917020470119?text=Hi%20Boxwish%20Biz,%20I%20need%20corporate%20gifting%20quotation.">
+📲 Quick WhatsApp Quote
+</a>
+
+<!-- Exit Popup -->
+<div class="popup" id="exitPopup">
+<div class="popup-box">
+<h3>Before you leave…</h3>
+<p>Get best bulk pricing for your corporate gifts.</p>
+<a href="#contact" class="btn">Get Quick Quote</a>
+</div>
+</div>
+
+<script>
+// form success
+document.getElementById("leadForm").addEventListener("submit",function(){
+setTimeout(()=>{document.getElementById("successMsg").style.display="block"},800);
+});
+
+// exit intent
+let shown=false;
+document.addEventListener("mouseout",function(e){
+if(!shown && e.clientY<10){
+document.getElementById("exitPopup").style.display="flex";
+shown=true;
+}
+});
+</script>
 
 </body>
 </html>
