@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Corporate Gifting in Nagpur | Bulk Corporate Gifts India | Boxwish Biz</title>
+<title>Corporate Gifting in Nagpur | Boxwish Biz</title>
 
-<meta name="description" content="Boxwish Biz provides premium corporate gifting in Nagpur & across India. Bulk corporate gifts, employee welcome kits, branded merchandise and festive hampers for businesses.">
+<meta name="description" content="Boxwish Biz provides premium corporate gifting in Nagpur and across India. Custom branded gifts, bulk corporate hampers, employee kits and reliable execution.">
 
-<meta name="keywords" content="corporate gifting in Nagpur, corporate gifts Nagpur, bulk corporate gifts India, employee welcome kit, branded corporate gifts">
+<meta name="keywords" content="corporate gifting in Nagpur, corporate gift suppliers Nagpur, bulk corporate gifts India, employee joining kit Nagpur, branded corporate gifts">
 
 <link rel="canonical" href="https://www.boxwishbiz.com/">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Corporate Gifting in Nagpur | Boxwish Biz">
-<meta property="og:description" content="Premium corporate gifting solutions for businesses across India. Bulk orders handled professionally.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.boxwishbiz.com/">
-<meta property="og:image" content="https://www.boxwishbiz.com/hero-boxwish.png">
+<!-- LOCAL SEO BOOSTER -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LocalBusiness",
+ "name": "Boxwish Biz",
+ "image": "https://www.boxwishbiz.com/logo.png",
+ "telephone": "+917020470119",
+ "email": "info@boxwishbiz.com",
+ "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Nagpur",
+   "addressCountry": "India"
+ },
+ "areaServed": "India",
+ "url": "https://www.boxwishbiz.com/"
+}
+</script>
 
-<!-- GA4 -->
+<!-- GA4 (your ID already added earlier — replace if needed) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNK10DF5K"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -29,212 +40,274 @@ gtag('js', new Date());
 gtag('config', 'G-KHNK10DF5K');
 </script>
 
-<!-- Local Business Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "LocalBusiness",
- "name": "Boxwish Biz",
- "image": "https://www.boxwishbiz.com/logo-dark.png",
- "url": "https://www.boxwishbiz.com/",
- "telephone": "+917020470119",
- "address": {
-   "@type": "PostalAddress",
-   "addressLocality": "Nagpur",
-   "addressCountry": "IN"
- },
- "areaServed": "India",
- "sameAs": []
-}
-</script>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --primary:#ffffff;
-  --secondary:#0B1A3A;
-  --accent:#25D366;
-  --text:#111111;
-  --space-xl:72px;
-  --space-xxl:110px;
+--primary:#0B1A3A;
+--accent:#25D366;
+--light:#f7f9fc;
+--text:#333;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;color:var(--text);background:#fff}
-.container{width:90%;max-width:1200px;margin:auto}
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:var(--text);line-height:1.6;}
+.container{width:90%;max-width:1200px;margin:auto;}
+.section{padding:90px 0;}
+.section-sm{padding:60px 0;}
 
 /* NAVBAR */
 .navbar{
-position:sticky;
-top:0;
+position:fixed;
+top:0;width:100%;
 background:#fff;
 padding:18px 0;
-box-shadow:0 2px 20px rgba(0,0,0,.06);
-z-index:998;
+z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,0.05);
 }
-.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;}
+.nav-links a{margin-left:30px;font-weight:600;color:var(--primary);text-decoration:none;}
 
 /* HERO */
 .hero{
+margin-top:80px;
 min-height:85vh;
 background:url('hero-boxwish.png') center/cover no-repeat;
 display:flex;
 align-items:center;
 }
-.hero-overlay{
-background:linear-gradient(90deg,rgba(11,26,58,.88),rgba(11,26,58,.45));
-width:100%;
-padding:var(--space-xxl) 0;
+.hero-content{
+max-width:620px;
+padding:60px 0;
 }
-.hero-content{color:#fff;max-width:650px}
-.hero h1{font-size:48px;margin-bottom:16px}
-.hero p{font-size:18px;margin-bottom:24px}
-
+.hero h1{
+font-size:56px;
+line-height:1.1;
+color:#fff;
+margin-bottom:20px;
+}
+.hero p{
+color:#eee;
+margin-bottom:30px;
+font-size:18px;
+}
 .btn{
 display:inline-block;
-background:var(--accent);
-color:#fff;
-padding:15px 32px;
+background:#fff;
+color:var(--primary);
+padding:14px 32px;
 border-radius:6px;
 font-weight:700;
 text-decoration:none;
 }
 
 /* PRODUCTS */
-.section{padding:var(--space-xxl) 0}
-.section-title{text-align:center;font-size:34px;margin-bottom:60px;color:var(--secondary)}
-
-.products-grid{
+.products{background:var(--light);}
+.product-grid{
 display:grid;
 grid-template-columns:repeat(5,1fr);
-gap:30px;
+gap:24px;
 }
 .product-card{
 background:#fff;
 border-radius:10px;
 overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+transition:.25s;
 }
+.product-card:hover{transform:translateY(-6px);}
 .product-card img{
 width:100%;
 height:180px;
 object-fit:cover;
 }
-.product-title{
-text-align:center;
+.product-card h4{
 padding:16px;
+font-size:15px;
+color:var(--primary);
+}
+
+/* SPLIT */
+.split{
+display:flex;
+gap:60px;
+align-items:center;
+}
+.split img{
+width:100%;
+border-radius:12px;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* CLIENT STRIP */
+.client-strip{background:#fafafa;text-align:center;}
+.client-logos{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+gap:20px;
+opacity:.6;
 font-weight:600;
-font-size:14px;
 }
 
 /* CONTACT */
-.contact{
-background:var(--secondary);
-color:#fff;
-text-align:center;
-padding:var(--space-xxl) 0;
+.contact{background:var(--primary);color:#fff;text-align:center;}
+form{
+max-width:520px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:14px;
 }
-form{max-width:520px;margin:auto;display:flex;flex-direction:column}
 input,textarea{
-padding:16px;
-margin-bottom:14px;
+padding:14px;
 border:none;
 border-radius:6px;
 }
 button{
-background:var(--accent);
-color:#fff;
-padding:16px;
+background:#fff;
+color:var(--primary);
+padding:14px;
 border:none;
 border-radius:6px;
 font-weight:700;
 cursor:pointer;
 }
 
-/* MOBILE */
+/* WHATSAPP */
+.whatsapp-float{
+position:fixed;
+right:20px;
+bottom:20px;
+width:64px;
+height:64px;
+z-index:999;
+}
+.whatsapp-float img{width:100%;}
+
+/* EXIT POPUP PREMIUM */
+.exit-popup{
+display:none;
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.55);
+justify-content:center;
+align-items:center;
+z-index:9999;
+padding:20px;
+}
+.exit-box{
+background:#fff;
+max-width:480px;
+width:100%;
+padding:44px 36px;
+border-radius:14px;
+text-align:center;
+box-shadow:0 30px 80px rgba(0,0,0,0.25);
+}
+.exit-btn{
+display:inline-block;
+background:#25D366;
+color:#fff;
+padding:16px 34px;
+border-radius:8px;
+font-weight:700;
+text-decoration:none;
+}
+
+/* RESPONSIVE */
 @media(max-width:900px){
-.products-grid{grid-template-columns:repeat(2,1fr)}
-.hero h1{font-size:34px}
+.product-grid{grid-template-columns:repeat(2,1fr);}
+.split{flex-direction:column;}
+.hero h1{font-size:36px;}
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
 <div class="container nav-inner">
-<img src="logo-dark.png" height="44" alt="Boxwish Biz Corporate Gifting Nagpur">
+<img src="logo-dark.png" height="42">
+<nav class="nav-links">
+<a href="#products">Products</a>
+<a href="#contact">Get Quote</a>
+</nav>
 </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-<div class="hero-overlay">
 <div class="container">
 <div class="hero-content">
-
-<h1>Corporate Gifting in Nagpur for Modern Businesses</h1>
-
-<p>
-Boxwish Biz provides structured corporate gifting solutions across Nagpur and India including employee welcome kits, branded merchandise and bulk corporate gifts.
-</p>
-
-<a href="#contact" class="btn">Request Corporate Quote</a>
-
-</div>
+<h1>Corporate Gifting.<br>Structured. Reliable. Premium.</h1>
+<p>Professional corporate gifting in Nagpur & across India with reliable bulk execution.</p>
+<a href="#contact" class="btn">Request a Quote</a>
 </div>
 </div>
 </section>
 
-<section id="products" class="section">
+<!-- PRODUCTS -->
+<section id="products" class="section products">
 <div class="container">
-<h2 class="section-title">Popular Corporate Gifts</h2>
+<h2 style="text-align:center;margin-bottom:40px;">Popular Corporate Gifts</h2>
 
-<div class="products-grid">
+<div class="product-grid">
 
-<div class="product-card">
-<img src="product-1.png" alt="New Employee Joinee Kit Corporate Gifting">
-<div class="product-title">New Employee Joinee Kit</div>
-</div>
-
-<div class="product-card">
-<img src="product-2.png" alt="Audio Corporate Gifts">
-<div class="product-title">Audio Gifts</div>
-</div>
-
-<div class="product-card">
-<img src="product-3.png" alt="Corporate Bags and Backpacks">
-<div class="product-title">Bag & Backpack</div>
-</div>
-
-<div class="product-card">
-<img src="product-4.png" alt="Branded Bottles and Mugs">
-<div class="product-title">Branded Bottles & Mugs</div>
-</div>
-
-<div class="product-card">
-<img src="product-5.png" alt="Corporate Gift Hampers">
-<div class="product-title">Corporate Gift Hampers</div>
-</div>
+<div class="product-card"><img src="product-1.png"><h4>New Employee Joinee Kit</h4></div>
+<div class="product-card"><img src="product-2.png"><h4>Audio Gifts</h4></div>
+<div class="product-card"><img src="product-3.png"><h4>Bag & Backpack</h4></div>
+<div class="product-card"><img src="product-4.png"><h4>Branded Bottles & Mugs</h4></div>
+<div class="product-card"><img src="product-5.png"><h4>Corporate Gift Hampers</h4></div>
+<div class="product-card"><img src="product-6.png"><h4>Custom Diaries & Journals</h4></div>
+<div class="product-card"><img src="product-7.png"><h4>Tech Gifts</h4></div>
+<div class="product-card"><img src="product-8.png"><h4>Tshirt & Hoodies</h4></div>
+<div class="product-card"><img src="product-9.png"><h4>Desk Organisers</h4></div>
+<div class="product-card"><img src="product-10.png"><h4>Premium Pen & Keychain Sets</h4></div>
 
 </div>
 </div>
 </section>
 
-<section id="contact" class="contact">
+<!-- CONTACT -->
+<section id="contact" class="section contact">
 <div class="container">
-<h2>Request Corporate Gifting Quote</h2>
-
+<h2>Request a Corporate Quote</h2>
 <form action="https://formspree.io/f/mvzbqzbo" method="POST">
 <input type="text" name="company" placeholder="Company Name" required>
 <input type="text" name="name" placeholder="Contact Person" required>
 <input type="email" name="email" placeholder="Email Address" required>
 <input type="tel" name="phone" placeholder="Phone Number" required>
-<textarea name="message" rows="4" placeholder="Requirement Details" required></textarea>
+<textarea name="message" rows="4" placeholder="Project Details"></textarea>
 <button type="submit">Submit Inquiry</button>
 </form>
-
 </div>
 </section>
+
+<!-- WHATSAPP -->
+<a class="whatsapp-float" href="https://wa.me/917020470119?text=Hi%20Boxwish%20Biz,%20I%20need%20corporate%20gifting%20details" target="_blank">
+<img src="whatsapp.png" alt="WhatsApp">
+</a>
+
+<!-- EXIT POPUP -->
+<div class="exit-popup" id="exitPopup">
+<div class="exit-box">
+<h3>Before you leave…</h3>
+<p>Get best bulk pricing for your corporate gifting requirement.</p>
+<a href="#contact" class="exit-btn">Get Quick Quote</a>
+</div>
+</div>
+
+<script>
+document.addEventListener("mouseleave", function(e){
+if(e.clientY < 0){
+document.getElementById("exitPopup").style.display="flex";
+}
+});
+</script>
 
 </body>
 </html>
