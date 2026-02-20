@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Corporate Gifting in Nagpur | Boxwish Biz</title>
-<meta name="description" content="Corporate gifting in Nagpur & across India. Bulk corporate gifts, employee kits, tech gifts and premium branded merchandise by Boxwish Biz.">
+<title>Corporate Gifting in Nagpur | Bulk Corporate Gifts India | Boxwish Biz</title>
+
+<meta name="description" content="Boxwish Biz provides premium corporate gifting in Nagpur & across India. Bulk corporate gifts, employee welcome kits, branded merchandise and festive hampers for businesses.">
+
+<meta name="keywords" content="corporate gifting in Nagpur, corporate gifts Nagpur, bulk corporate gifts India, employee welcome kit, branded corporate gifts">
+
+<link rel="canonical" href="https://www.boxwishbiz.com/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Corporate Gifting in Nagpur | Boxwish Biz">
+<meta property="og:description" content="Premium corporate gifting solutions for businesses across India. Bulk orders handled professionally.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.boxwishbiz.com/">
+<meta property="og:image" content="https://www.boxwishbiz.com/hero-boxwish.png">
 
 <!-- GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHNK10DF5K"></script>
@@ -14,6 +27,25 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-KHNK10DF5K');
+</script>
+
+<!-- Local Business Schema -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LocalBusiness",
+ "name": "Boxwish Biz",
+ "image": "https://www.boxwishbiz.com/logo-dark.png",
+ "url": "https://www.boxwishbiz.com/",
+ "telephone": "+917020470119",
+ "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Nagpur",
+   "addressCountry": "IN"
+ },
+ "areaServed": "India",
+ "sameAs": []
+}
 </script>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -27,35 +59,9 @@ gtag('config', 'G-KHNK10DF5K');
   --space-xl:72px;
   --space-xxl:110px;
 }
-
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;color:var(--text);background:#fff}
 .container{width:90%;max-width:1200px;margin:auto}
-
-/* 🔥 STICKY MOBILE CTA */
-.mobile-cta{
-display:none;
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:var(--accent);
-color:#fff;
-text-align:center;
-padding:14px;
-font-weight:700;
-z-index:999;
-}
-
-/* TOP BAR */
-.topbar{
-background:var(--secondary);
-color:#fff;
-text-align:center;
-padding:10px;
-font-size:14px;
-font-weight:600;
-}
 
 /* NAVBAR */
 .navbar{
@@ -67,7 +73,6 @@ box-shadow:0 2px 20px rgba(0,0,0,.06);
 z-index:998;
 }
 .nav-inner{display:flex;justify-content:space-between;align-items:center}
-.nav-links a{margin-left:30px;font-weight:600;color:var(--secondary);text-decoration:none}
 
 /* HERO */
 .hero{
@@ -82,8 +87,8 @@ width:100%;
 padding:var(--space-xxl) 0;
 }
 .hero-content{color:#fff;max-width:650px}
-.hero h1{font-size:52px;margin-bottom:16px}
-.hero p{font-size:19px;margin-bottom:24px}
+.hero h1{font-size:48px;margin-bottom:16px}
+.hero p{font-size:18px;margin-bottom:24px}
 
 .btn{
 display:inline-block;
@@ -95,20 +100,10 @@ font-weight:700;
 text-decoration:none;
 }
 
-/* TRUST STRIP */
-.trust-badges{
-display:flex;
-gap:28px;
-margin-top:28px;
-flex-wrap:wrap;
-font-size:14px;
-}
-
-/* SECTION */
+/* PRODUCTS */
 .section{padding:var(--space-xxl) 0}
 .section-title{text-align:center;font-size:34px;margin-bottom:60px;color:var(--secondary)}
 
-/* PRODUCTS */
 .products-grid{
 display:grid;
 grid-template-columns:repeat(5,1fr);
@@ -119,25 +114,18 @@ background:#fff;
 border-radius:10px;
 overflow:hidden;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
 }
-.product-card:hover{transform:translateY(-6px)}
-.product-card img{width:100%;height:180px;object-fit:cover}
-.product-title{text-align:center;padding:16px;font-weight:600;font-size:14px}
-
-/* SPLIT */
-.split{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:70px;
-align-items:center;
-}
-.split img{
+.product-card img{
 width:100%;
-border-radius:10px;
-box-shadow:0 20px 40px rgba(0,0,0,.12);
+height:180px;
+object-fit:cover;
 }
-.split h2{font-size:32px;margin-bottom:12px;color:var(--secondary)}
+.product-title{
+text-align:center;
+padding:16px;
+font-weight:600;
+font-size:14px;
+}
 
 /* CONTACT */
 .contact{
@@ -163,57 +151,9 @@ font-weight:700;
 cursor:pointer;
 }
 
-/* SUCCESS MESSAGE */
-.success-msg{
-display:none;
-margin-top:12px;
-color:#86efac;
-font-weight:600;
-}
-
-/* EXIT POPUP */
-.popup{
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.65);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:9999;
-}
-.popup-box{
-background:#fff;
-padding:36px;
-border-radius:12px;
-max-width:420px;
-text-align:center;
-}
-
-/* WHATSAPP */
-.whatsapp-float{
-position:fixed;
-right:22px;
-bottom:22px;
-z-index:999;
-animation:pulse 2s infinite;
-}
-.whatsapp-float img{
-width:64px;height:64px;border-radius:50%;
-box-shadow:0 12px 30px rgba(0,0,0,.35);
-}
-
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.08)}
-100%{transform:scale(1)}
-}
-
 /* MOBILE */
 @media(max-width:900px){
 .products-grid{grid-template-columns:repeat(2,1fr)}
-.split{grid-template-columns:1fr}
-.mobile-cta{display:block}
-body{padding-bottom:60px}
 .hero h1{font-size:34px}
 }
 </style>
@@ -221,15 +161,9 @@ body{padding-bottom:60px}
 
 <body>
 
-<div class="topbar">🎁 Bulk Corporate Orders Open for 2026</div>
-
 <header class="navbar">
 <div class="container nav-inner">
-<img src="logo-dark.png" height="44">
-<nav class="nav-links">
-<a href="#products">Products</a>
-<a href="#contact">Get Quote</a>
-</nav>
+<img src="logo-dark.png" height="44" alt="Boxwish Biz Corporate Gifting Nagpur">
 </div>
 </header>
 
@@ -237,15 +171,14 @@ body{padding-bottom:60px}
 <div class="hero-overlay">
 <div class="container">
 <div class="hero-content">
-<h1>Corporate Gifting. Structured. Reliable. Premium.</h1>
-<p>Professional corporate gifting in Nagpur & across India.</p>
-<a href="#contact" class="btn">Request a Quote</a>
 
-<div class="trust-badges">
-<span>✅ Bulk Specialists</span>
-<span>🚚 Pan India Delivery</span>
-<span>🏢 Trusted by Businesses</span>
-</div>
+<h1>Corporate Gifting in Nagpur for Modern Businesses</h1>
+
+<p>
+Boxwish Biz provides structured corporate gifting solutions across Nagpur and India including employee welcome kits, branded merchandise and bulk corporate gifts.
+</p>
+
+<a href="#contact" class="btn">Request Corporate Quote</a>
 
 </div>
 </div>
@@ -257,35 +190,41 @@ body{padding-bottom:60px}
 <h2 class="section-title">Popular Corporate Gifts</h2>
 
 <div class="products-grid">
-<div class="product-card"><img src="product-1.png"><div class="product-title">New Employee Joinee Kit</div></div>
-<div class="product-card"><img src="product-2.png"><div class="product-title">Audio Gifts</div></div>
-<div class="product-card"><img src="product-3.png"><div class="product-title">Bag & Backpack</div></div>
-<div class="product-card"><img src="product-4.png"><div class="product-title">Branded Bottles & Mugs</div></div>
-<div class="product-card"><img src="product-5.png"><div class="product-title">Corporate Gift Hampers</div></div>
-<div class="product-card"><img src="product-6.png"><div class="product-title">Custom Diaries & Journals</div></div>
-<div class="product-card"><img src="product-7.png"><div class="product-title">Tech Gifts</div></div>
-<div class="product-card"><img src="product-8.png"><div class="product-title">Tshirt & Hoodies</div></div>
-<div class="product-card"><img src="product-9.png"><div class="product-title">Desk Organisers</div></div>
-<div class="product-card"><img src="product-10.png"><div class="product-title">Premium Pen & Keychain Sets</div></div>
-</div>
-</div>
-</section>
 
-<section class="section">
-<div class="container split">
-<div>
-<h2>Custom Branded Corporate Gifts</h2>
-<p>Premium merchandise and logo branding solutions for businesses across India.</p>
+<div class="product-card">
+<img src="product-1.png" alt="New Employee Joinee Kit Corporate Gifting">
+<div class="product-title">New Employee Joinee Kit</div>
 </div>
-<img src="solutions.png">
+
+<div class="product-card">
+<img src="product-2.png" alt="Audio Corporate Gifts">
+<div class="product-title">Audio Gifts</div>
+</div>
+
+<div class="product-card">
+<img src="product-3.png" alt="Corporate Bags and Backpacks">
+<div class="product-title">Bag & Backpack</div>
+</div>
+
+<div class="product-card">
+<img src="product-4.png" alt="Branded Bottles and Mugs">
+<div class="product-title">Branded Bottles & Mugs</div>
+</div>
+
+<div class="product-card">
+<img src="product-5.png" alt="Corporate Gift Hampers">
+<div class="product-title">Corporate Gift Hampers</div>
+</div>
+
+</div>
 </div>
 </section>
 
 <section id="contact" class="contact">
 <div class="container">
-<h2>Request a Corporate Quote</h2>
+<h2>Request Corporate Gifting Quote</h2>
 
-<form id="leadForm" action="https://formspree.io/f/mvzbqzbo" method="POST">
+<form action="https://formspree.io/f/mvzbqzbo" method="POST">
 <input type="text" name="company" placeholder="Company Name" required>
 <input type="text" name="name" placeholder="Contact Person" required>
 <input type="email" name="email" placeholder="Email Address" required>
@@ -294,55 +233,8 @@ body{padding-bottom:60px}
 <button type="submit">Submit Inquiry</button>
 </form>
 
-<div class="success-msg" id="successMsg">
-✅ Thank you! We will contact you shortly.
-</div>
-
 </div>
 </section>
-
-<footer>
-📍 Nagpur | 📧 info@boxwishbiz.com | 📱 +91 7020470119  
-<br>© 2026 BOXWISH BIZ. All Rights Reserved.
-</footer>
-
-<!-- WhatsApp -->
-<a class="whatsapp-float"
-href="https://wa.me/917020470119?text=Hi%20Boxwish%20Biz,%20I%20need%20corporate%20gifting%20quotation."
-target="_blank">
-<img src="whatsapp.png">
-</a>
-
-<!-- Sticky Mobile CTA -->
-<a class="mobile-cta"
-href="https://wa.me/917020470119?text=Hi%20Boxwish%20Biz,%20I%20need%20corporate%20gifting%20quotation.">
-📲 Quick WhatsApp Quote
-</a>
-
-<!-- Exit Popup -->
-<div class="popup" id="exitPopup">
-<div class="popup-box">
-<h3>Before you leave…</h3>
-<p>Get best bulk pricing for your corporate gifts.</p>
-<a href="#contact" class="btn">Get Quick Quote</a>
-</div>
-</div>
-
-<script>
-// form success
-document.getElementById("leadForm").addEventListener("submit",function(){
-setTimeout(()=>{document.getElementById("successMsg").style.display="block"},800);
-});
-
-// exit intent
-let shown=false;
-document.addEventListener("mouseout",function(e){
-if(!shown && e.clientY<10){
-document.getElementById("exitPopup").style.display="flex";
-shown=true;
-}
-});
-</script>
 
 </body>
 </html>
