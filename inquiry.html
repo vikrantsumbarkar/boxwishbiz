@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>New Inquiry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
     body {
@@ -11,84 +10,95 @@
       background: #f4f6f9;
       padding: 20px;
     }
-    .form-box {
-      max-width: 500px;
+    .card {
+      max-width: 600px;
       margin: auto;
       background: white;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     }
-    h2 { text-align: center; margin-bottom: 20px; }
-    input, textarea, button {
+    input, textarea {
       width: 100%;
       padding: 12px;
-      margin-bottom: 12px;
-      border-radius: 8px;
+      margin: 8px 0;
+      border-radius: 6px;
       border: 1px solid #ddd;
-      font-size: 14px;
     }
     button {
-      background: #111827;
+      width: 100%;
+      padding: 14px;
+      background: #0b1b2b;
       color: white;
-      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
       cursor: pointer;
     }
-    .success {
-      color: green;
+    button:hover {
+      background: #122b44;
+    }
+    #msg {
+      margin-top: 15px;
+      font-weight: bold;
       text-align: center;
-      margin-top: 10px;
     }
   </style>
 </head>
+
 <body>
 
-  <div class="form-box">
-    <h2>New Inquiry</h2>
+<div class="card">
+  <h2>New Inquiry</h2>
 
-    <form id="inquiryForm">
-      <input type="text" name="clientName" placeholder="Client Name" required />
-      <input type="text" name="companyName" placeholder="Company Name" />
-      <input type="tel" name="phone" placeholder="Phone" />
-      <input type="email" name="email" placeholder="Email" />
-      <input type="text" name="source" placeholder="Inquiry Source" />
-      <input type="text" name="product" placeholder="Product Interest" />
-      <input type="number" name="quantity" placeholder="Quantity" />
-      <input type="text" name="budget" placeholder="Budget" />
-      <input type="date" name="deliveryDate" />
-      <textarea name="notes" placeholder="Notes"></textarea>
+  <form id="inquiryForm">
+    <input name="clientName" placeholder="Client Name" required>
+    <input name="companyName" placeholder="Company Name">
+    <input name="phone" placeholder="Phone">
+    <input name="email" placeholder="Email">
+    <input name="inquirySource" placeholder="Inquiry Source">
+    <input name="productInterest" placeholder="Product Interest">
+    <input name="quantity" placeholder="Quantity">
+    <input name="budget" placeholder="Budget">
+    
+    <!-- Meeting Date -->
+    <input type="date" name="meetingDate">
 
-      <button type="submit">Save Inquiry</button>
-    </form>
+    <textarea name="notes" placeholder="Notes"></textarea>
 
-    <div class="success" id="msg"></div>
-  </div>
+    <button type="submit">Save Inquiry</button>
+  </form>
 
-  <script>
-  const SCRIPT_URL = https://script.google.com/macros/s/AKfycbxiBcV6ZhX2PhHBEjJIGvlOuZZklP2WoOPlYmcsk9chxrwkddCcLsRNqDIpuxNg8JVN/exec;
+  <div id="msg"></div>
+</div>
 
-  document.getElementById("inquiryForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxiBcV6ZhX2PhHBEjJIGvlOuZZklP2WoOPlYmcsk9chxrwkddCcLsRNqDIpuxNg8JVN/exec";
 
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData.entries());
-    data.action = "addInquiry";
+document.getElementById("inquiryForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-    fetch(SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      body: JSON.stringify(data)
-    })
-    .then(() => {
-      document.getElementById("msg").innerText =
-        "✅ Inquiry submitted successfully";
-      document.getElementById("inquiryForm").reset();
-    })
-    .catch(() => {
-      document.getElementById("msg").innerText =
-        "❌ Error submitting inquiry";
-    });
+  const formData = new FormData(this);
+  const data = Object.fromEntries(formData.entries());
+  data.action = "addInquiry";
+
+  fetch(SCRIPT_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(result => {
+    document.getElementById("msg").innerText = "✅ Inquiry saved successfully!";
+    document.getElementById("inquiryForm").reset();
+  })
+  .catch(error => {
+    document.getElementById("msg").innerText = "❌ Error saving inquiry";
+    console.error(error);
   });
+});
 </script>
 
 </body>
