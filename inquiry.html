@@ -51,7 +51,7 @@
 <div class="card">
   <h2>New Inquiry</h2>
 
-  <form id="inquiryForm">
+  <form id="inquiryForm" onsubmit="return false;">
     <input name="clientName" placeholder="Client Name" required>
     <input name="companyName" placeholder="Company Name">
     <input name="phone" placeholder="Phone">
@@ -66,7 +66,7 @@
 
     <textarea name="notes" placeholder="Notes"></textarea>
 
-    <button type="submit">Save Inquiry</button>
+    <button type="button" onclick="submitForm()">Save Inquiry</button>
   </form>
 
   <div id="msg"></div>
@@ -75,30 +75,27 @@
 <script>
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxiBcV6ZhX2PhHBEjJIGvlOuZZklP2WoOPlYmcsk9chxrwkddCcLsRNqDIpuxNg8JVN/exec";
 
-document.getElementById("inquiryForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const formData = new FormData(this);
+function submitForm() {
+  const form = document.getElementById("inquiryForm");
+  const formData = new FormData(form);
   const data = Object.fromEntries(formData.entries());
   data.action = "addInquiry";
 
   fetch(SCRIPT_URL, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
   })
-  .then(response => response.json())
-  .then(result => {
+  .then(res => res.json())
+  .then(() => {
     document.getElementById("msg").innerText = "✅ Inquiry saved successfully!";
-    document.getElementById("inquiryForm").reset();
+    form.reset();
   })
-  .catch(error => {
+  .catch(err => {
     document.getElementById("msg").innerText = "❌ Error saving inquiry";
-    console.error(error);
+    console.error(err);
   });
-});
+}
 </script>
 
 </body>
