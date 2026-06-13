@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Boxwish Biz</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:0;
+    color:#333;
+}
+
+.hero{
+    background:#0b1b2b;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero h1{
+    margin:0;
+    font-size:36px;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:18px;
+}
+
+.container{
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card h2{
+    margin-top:0;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #ddd;
+    border-radius:6px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    background:#0b1b2b;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#122b44;
+}
+
+.whatsapp-btn{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:14px 20px;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.info{
+    line-height:1.9;
+}
+
+.features{
+    max-width:1100px;
+    margin:0 auto 40px;
+    padding:20px;
+}
+
+.features .card{
+    text-align:center;
+}
+
+.footer-note{
+    text-align:center;
+    padding:30px;
+    color:#666;
+}
+
+#msg{
+    margin-top:15px;
+    font-weight:bold;
+    text-align:center;
+}
+
+@media(max-width:768px){
+    .container{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+    <h1>Contact Boxwish Biz</h1>
+    <p>Corporate Gifts • Employee Welcome Kits • Festive Hampers • Promotional Merchandise</p>
+</div>
+
+<div class="container">
+
+```
+<div class="card">
+    <h2>Get a Corporate Quote</h2>
+
+    <form id="contactForm" onsubmit="return false;">
+        <input name="clientName" placeholder="Full Name" required>
+        <input name="companyName" placeholder="Company Name">
+        <input name="phone" placeholder="Mobile Number" required>
+        <input name="email" placeholder="Email Address">
+        <input name="productInterest" placeholder="Gift Requirement">
+        <input name="quantity" placeholder="Approx Quantity">
+        <textarea name="notes" placeholder="Tell us about your requirement"></textarea>
+
+        <button type="button" onclick="submitForm()">Submit Inquiry</button>
+    </form>
+
+    <div id="msg"></div>
+</div>
+
+<div class="card">
+    <h2>Contact Information</h2>
+
+    <div class="info">
+        <strong>Boxwish Biz</strong><br>
+        Corporate Gifting & Promotional Merchandise<br><br>
+
+        📞 +91 7020470119<br>
+        📧 info@boxwishbiz.com<br><br>
+
+        GSTIN:<br>
+        27AAZPU3712E1Z9<br><br>
+
+        Serving Clients Across India
+    </div>
+
+    <br>
+
+    <a class="whatsapp-btn" href="https://wa.me/917020470119" target="_blank">
+        Chat on WhatsApp
+    </a>
+
+    <br><br>
+
+    <h3>Scan & Chat Instantly</h3>
+
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/917020470119"
+         alt="WhatsApp QR Code">
+</div>
+```
+
+</div>
+
+<div class="features">
+    <div class="card">
+        <h2>Why Choose Boxwish Biz?</h2>
+
+```
+    ✓ Customized Branding<br><br>
+    ✓ Bulk Order Pricing<br><br>
+    ✓ PAN India Delivery<br><br>
+    ✓ Employee Welcome Kits<br><br>
+    ✓ Festive Gift Hampers<br><br>
+    ✓ Corporate Merchandise<br><br>
+    ✓ GST Billing Available
+</div>
+```
+
+</div>
+
+<div class="footer-note">
+    We typically respond within 24 business hours.
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxiBcV6ZhX2PhHBEjJIGvlOuZZklP2WoOPlYmcsk9chxrwkddCcLsRNqDIpuxNg8JVN/exec";
+
+function submitForm() {
+
+  const form = document.getElementById("contactForm");
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+
+  data.action = "addInquiry";
+
+  fetch(SCRIPT_URL, {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify(data)
+  })
+  .then(res => res.json())
+  .then(() => {
+      document.getElementById("msg").innerHTML = "✅ Inquiry submitted successfully!";
+      form.reset();
+  })
+  .catch(() => {
+      document.getElementById("msg").innerHTML = "❌ Submission failed. Please WhatsApp us.";
+  });
+}
+</script>
+
+</body>
+</html>
