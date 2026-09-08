@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Boxwish Biz CRM</title>
+  <link rel="icon" href="../favicon.png">
+  <link rel="stylesheet" href="crm.css">
+</head>
+<body>
+  <div id="loginView" class="login-screen">
+    <div class="login-card">
+      <div class="brand-mark">BOXWISH <span>BIZ</span></div>
+      <div class="eyebrow">Business CRM</div>
+      <h1>Welcome back</h1>
+      <p class="muted">Sign in to manage enquiries, quotations, approvals and orders.</p>
+      <form id="loginForm">
+        <label>Employee ID<input id="employeeId" name="employeeId" autocomplete="username" required placeholder="e.g. BW001"></label>
+        <label>Password<input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Password"></label>
+        <button class="btn primary" type="submit">Sign in</button>
+      </form>
+      <p class="login-note">Secure employee authentication will be connected to the CRM backend in the next build step.</p>
+    </div>
+  </div>
+
+  <div id="appView" class="app hidden">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand"><div class="brand-mark">BOXWISH <span>BIZ</span></div><small>CRM</small></div>
+      <nav>
+        <a class="nav-item active" href="#dashboard" data-page="dashboard">⌂ <span>Dashboard</span></a>
+        <a class="nav-item" href="#enquiries" data-page="enquiries">▣ <span>Enquiries</span></a>
+        <a class="nav-item" href="#clients" data-page="clients">♙ <span>Clients</span></a>
+        <a class="nav-item" href="#quotations" data-page="quotations">▤ <span>Quotations</span></a>
+        <a class="nav-item" href="#fir" data-page="fir">◈ <span>FIR</span></a>
+        <a class="nav-item" href="#lpa" data-page="lpa">✓ <span>LPA</span></a>
+        <a class="nav-item" href="#sas" data-page="sas">▧ <span>SAS</span></a>
+        <a class="nav-item" href="#orders" data-page="orders">▦ <span>Orders</span></a>
+        <a class="nav-item" href="#followups" data-page="followups">◷ <span>Follow Ups</span></a>
+        <a class="nav-item" href="#documents" data-page="documents">□ <span>Documents</span></a>
+      </nav>
+      <div class="sidebar-bottom"><a class="nav-item" href="#profile" data-page="profile">⚙ <span>Profile</span></a><button id="logoutBtn" class="logout">Sign out</button></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar"><button id="menuBtn" class="menu-btn" aria-label="Open menu">☰</button><div><div class="eyebrow">Boxwish Biz</div><h2 id="pageTitle">Dashboard</h2></div><div class="user-chip"><span class="avatar">BW</span><div><strong id="userName">Employee</strong><small id="userRole">Sales</small></div></div></header>
+
+      <section id="dashboard" class="page active-page">
+        <div class="page-intro"><div><h1>Good to see you.</h1><p>Here is today's CRM snapshot.</p></div><button class="btn primary" data-action="new-enquiry">+ New Enquiry</button></div>
+        <div class="stats-grid">
+          <article class="stat"><span>Total Enquiries</span><strong>0</strong><small>All active opportunities</small></article>
+          <article class="stat"><span>Open Enquiries</span><strong>0</strong><small>Needs action</small></article>
+          <article class="stat"><span>Follow Ups Today</span><strong>0</strong><small>Scheduled today</small></article>
+          <article class="stat"><span>Pipeline Value</span><strong>₹0</strong><small>Open opportunity value</small></article>
+          <article class="stat"><span>FIR Pending</span><strong>0</strong><small>Final Inquiry Report</small></article>
+          <article class="stat"><span>SAS Pending</span><strong>0</strong><small>Sample approvals</small></article>
+          <article class="stat"><span>Won</span><strong>0</strong><small>Confirmed opportunities</small></article>
+          <article class="stat"><span>Total Revenue</span><strong>₹0</strong><small>Closed orders</small></article>
+        </div>
+        <div class="dashboard-grid"><article class="panel"><div class="panel-head"><div><h3>Recent Enquiries</h3><p>Latest opportunities will appear here.</p></div><a href="#enquiries" data-page="enquiries">View all →</a></div><div class="empty">No enquiries yet.<br><button class="btn secondary" data-action="new-enquiry">Create your first enquiry</button></div></article><article class="panel"><div class="panel-head"><div><h3>Today's Follow Ups</h3><p>Keep every opportunity moving.</p></div><a href="#followups" data-page="followups">View all →</a></div><div class="empty">No follow-ups scheduled today.</div></article></div>
+      </section>
+
+      <section id="enquiries" class="page"><div class="page-intro"><div><h1>Enquiries</h1><p>Central record for every business opportunity.</p></div><button class="btn primary" data-action="new-enquiry">+ New Enquiry</button></div><div class="panel"><div class="toolbar"><input placeholder="Search enquiries…"><select><option>All Statuses</option><option>Open</option><option>Qualified</option><option>Quotation Sent</option><option>Negotiation</option><option>Won</option><option>Lost</option></select></div><div class="table-empty">No enquiry records yet.</div></div></section>
+      <section id="clients" class="page"><div class="page-intro"><div><h1>Clients</h1><p>One master record per client. Other modules will fetch these details automatically.</p></div><button class="btn primary">+ New Client</button></div><div class="panel"><div class="toolbar"><input placeholder="Search company, contact or mobile…"></div><div class="table-empty">No clients yet.</div></div></section>
+      <section id="quotations" class="page"><div class="page-intro"><div><h1>Quotations</h1><p>Create quotations linked to an enquiry and client.</p></div><button class="btn primary">+ New Quotation</button></div><div class="panel"><div class="table-empty">No quotations yet.</div></div></section>
+      <section id="fir" class="page"><div class="page-intro"><div><h1>FIR</h1><p><strong>Final Inquiry Report</strong> — the confirmed commercial and execution brief before LPA.</p></div><button class="btn primary">+ New FIR</button></div><div class="panel"><div class="table-empty">No FIR records yet.</div></div></section>
+      <section id="lpa" class="page"><div class="page-intro"><div><h1>LPA</h1><p>Logo Position Approval — approve branding positions before sampling.</p></div><button class="btn primary">+ New LPA</button></div><div class="panel"><div class="table-empty">No LPA records yet.</div></div></section>
+      <section id="sas" class="page"><div class="page-intro"><div><h1>SAS</h1><p>Sample Approval Sheet — actual branded samples against the approved LPA.</p></div><button class="btn primary">+ New SAS</button></div><div class="panel"><div class="table-empty">No SAS records yet.</div></div></section>
+      <section id="orders" class="page"><div class="page-intro"><div><h1>Orders</h1><p>Production control from PO through closure.</p></div><button class="btn primary">+ New Order</button></div><div class="panel"><div class="table-empty">No orders yet.</div></div></section>
+      <section id="followups" class="page"><div class="page-intro"><div><h1>Follow Ups</h1><p>Never lose the next action on an enquiry.</p></div><button class="btn primary">+ Schedule Follow Up</button></div><div class="panel"><div class="table-empty">No follow-ups yet.</div></div></section>
+      <section id="documents" class="page"><div class="page-intro"><div><h1>Documents</h1><p>Central repository for LPA, SAS, PO, invoice and project documents.</p></div><button class="btn primary">+ Upload Document</button></div><div class="panel"><div class="table-empty">No documents yet.</div></div></section>
+      <section id="profile" class="page"><div class="page-intro"><div><h1>Profile</h1><p>Employee account and CRM access.</p></div></div><div class="panel profile-panel"><div class="profile-row"><span>Employee ID</span><strong id="profileId">—</strong></div><div class="profile-row"><span>Name</span><strong id="profileName">—</strong></div><div class="profile-row"><span>Role</span><strong id="profileRole">Sales</strong></div></div></section>
+    </main>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="crm.js"></script>
+</body>
+</html>
