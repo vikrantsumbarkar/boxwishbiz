@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>New Enquiry — Boxwish Biz CRM</title>
+  <link rel="icon" href="../../favicon.png">
+  <link rel="stylesheet" href="../crm.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand"><div class="brand-mark">BOXWISH <span>BIZ</span></div><small>CRM</small></div>
+      <nav>
+        <a class="nav-item" href="../#dashboard">⌂ <span>Dashboard</span></a>
+        <a class="nav-item active" href="../#enquiries">▣ <span>Enquiries</span></a>
+        <a class="nav-item" href="../#clients">♙ <span>Clients</span></a>
+        <a class="nav-item" href="../#quotations">▤ <span>Quotations</span></a>
+        <a class="nav-item" href="../#fir">◈ <span>FIR</span></a>
+        <a class="nav-item" href="../#lpa">✓ <span>LPA</span></a>
+        <a class="nav-item" href="../#sas">▧ <span>SAS</span></a>
+        <a class="nav-item" href="../#orders">▦ <span>Orders</span></a>
+        <a class="nav-item" href="../#followups">◷ <span>Follow Ups</span></a>
+        <a class="nav-item" href="../#documents">□ <span>Documents</span></a>
+      </nav>
+      <div class="sidebar-bottom"><a class="nav-item" href="../#profile">⚙ <span>Profile</span></a></div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <a href="../#enquiries" class="btn secondary">← Back</a>
+        <div><div class="eyebrow">Boxwish Biz CRM</div><h2>New Enquiry</h2></div>
+        <div class="user-chip"><span class="avatar">BW</span><div><strong>Employee</strong><small>Sales</small></div></div>
+      </header>
+      <section class="page active-page">
+        <div class="page-intro"><div><h1>Create New Enquiry</h1><p>Capture the opportunity once. The client master will be created or updated automatically.</p></div><div class="stat" style="padding:12px 16px"><span>Inquiry ID</span><strong id="inquiryId" style="font-size:18px">Generating…</strong></div></div>
+        <form id="enquiryForm" class="form-grid">
+          <input type="hidden" name="enquiry_id" id="enquiryIdInput">
+          <div class="form-section"><h3>Client Details</h3><div class="form-cols">
+            <label>Company Name *<input name="company" required></label>
+            <label>Contact Person *<input name="contact_person" required></label>
+            <label>Mobile *<input name="mobile" required inputmode="numeric"></label>
+            <label>Email<input type="email" name="email"></label>
+            <label>Designation<input name="designation"></label>
+            <label>Department<input name="department"></label>
+            <label>City<input name="city"></label>
+            <label>Industry<input name="industry"></label>
+          </div></div>
+          <div class="form-section"><h3>Requirement</h3><div class="form-cols">
+            <label>Gifting Type *<select name="gifting_type" required><option>Corporate Gifting</option><option>Wedding Gifting</option><option>Personalised Gifting</option><option>Event Merchandise</option><option>Not sure yet</option></select></label>
+            <label>Product Category *<input name="product_category" required></label>
+            <label>Approx. Quantity<input type="number" min="0" name="approx_quantity"></label>
+            <label>Budget / Piece (₹)<input type="number" min="0" step=".01" name="budget_per_piece"></label>
+            <label>Expected Order Value (₹)<input type="number" min="0" step=".01" name="expected_order_value"></label>
+            <label>Expected Delivery Date<input type="date" name="expected_delivery_date"></label>
+            <label>Branding Required<select name="branding_required"><option>Yes</option><option>No</option><option>To be decided</option></select></label>
+            <label>Lead Source<select name="lead_source"><option>Website</option><option>Referral</option><option>LinkedIn</option><option>Cold Call</option><option>Email Campaign</option><option>Exhibition</option><option>Google Ads</option><option>Social Media</option><option>Other</option></select></label>
+            <label>Priority<select name="priority"><option>Low</option><option selected>Medium</option><option>High</option><option>Urgent</option></select></label>
+            <label>Status<select name="status"><option selected>Open</option><option>Qualified</option><option>Quotation Sent</option><option>Negotiation</option><option>Won</option><option>Lost</option></select></label>
+          </div>
+          <label>Product / Requirement Details<textarea name="product_details" rows="4"></textarea></label>
+          <label>Discussion Notes<textarea name="discussion_notes" rows="4"></textarea></label>
+          </div>
+          <div class="modal-actions"><a href="../#enquiries" class="btn secondary">Cancel</a><button class="btn primary" type="submit">Create Enquiry</button></div>
+        </form>
+      </section>
+    </main>
+  </div>
+  <div id="toast" class="toast"></div>
+<script>
+(function(){
+  const KEY='boxwishCrmEnquiries', CLIENTS='boxwishCrmClients';
+  const read=k=>{try{return JSON.parse(localStorage.getItem(k)||'[]')}catch(e){return[]}};
+  const write=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+  const today=()=>new Date().toISOString().slice(0,10);
+  const now=()=>new Date().toISOString();
+  function makeInquiryId(){const d=today().replaceAll('-','');const a=read(KEY).filter(x=>String(x.enquiry_id||'').startsWith('BW-INQ-'+d+'-'));let n=a.length+1;let used=new Set(a.map(x=>Number(String(x.enquiry_id).split('-').pop())));while(used.has(n))n++;return 'BW-INQ-'+d+'-'+String(n).padStart(3,'0')}
+  const id=makeInquiryId(); document.getElementById('inquiryId').textContent=id;document.getElementById('enquiryIdInput').value=id;
+  document.getElementById('enquiryForm').addEventListener('submit',function(e){
+    e.preventDefault();const o=Object.fromEntries(new FormData(this).entries());o.inquiry_date=today();o.created_at=now();o.updated_at=o.created_at;o.approx_quantity=Number(o.approx_quantity)||0;o.budget_per_piece=Number(o.budget_per_piece)||0;o.expected_order_value=Number(o.expected_order_value)||0;
+    const en=read(KEY);en.unshift(o);write(KEY,en);
+    let clients=read(CLIENTS);let i=clients.findIndex(c=>c.mobile===o.mobile||((c.company||'').toLowerCase()===(o.company||'').toLowerCase()&&(o.email?c.email===o.email:true)));
+    const base={company:o.company,contact_person:o.contact_person,mobile:o.mobile,email:o.email,designation:o.designation,department:o.department,city:o.city,industry:o.industry,updated_at:now(),last_interaction_date:today()};
+    if(i>=0){clients[i]={...clients[i],...base};}else{let max=clients.reduce((m,c)=>{const n=Number(String(c.client_id||'').replace('BW-CLI-',''));return Number.isFinite(n)?Math.max(m,n):m},0);clients.unshift({client_id:'BW-CLI-'+String(max+1).padStart(4,'0'),...base,created_at:now(),total_enquiries:0,total_quotations:0,total_orders:0,total_revenue:0});}
+    clients.forEach(c=>c.total_enquiries=en.filter(q=>q.mobile===c.mobile||((q.company||'').toLowerCase()===(c.company||'').toLowerCase())).length);write(CLIENTS,clients);
+    const t=document.getElementById('toast');t.textContent=id+' created successfully';t.classList.add('show');setTimeout(()=>location.href='../#enquiries',900);
+  });
+})();
+</script>
+</body></html>
