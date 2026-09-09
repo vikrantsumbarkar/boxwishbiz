@@ -1,89 +1,42 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>New Enquiry — Boxwish Biz CRM</title>
-  <link rel="icon" href="../../favicon.png">
-  <link rel="stylesheet" href="../crm.css">
+  <link rel="icon" href="../../favicon.png"><link rel="stylesheet" href="../crm.css">
+  <style>
+    .photo-box{border:1px dashed #cbd3df;border-radius:14px;padding:16px;background:#fafbfc}.photo-actions{display:flex;gap:10px;flex-wrap:wrap}.photo-actions label{margin:0}.photo-actions input{display:none}.photo-help{font-size:12px;color:var(--muted);margin:9px 0 0}.photo-count{font-weight:800;color:var(--navy);margin-top:10px}.photo-grid{display:grid;grid-template-columns:repeat(5,minmax(90px,1fr));gap:10px;margin-top:12px}.photo-thumb{position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;aspect-ratio:1}.photo-thumb img{width:100%;height:100%;object-fit:cover;display:block}.photo-remove{position:absolute;right:5px;top:5px;border:0;border-radius:50%;width:24px;height:24px;background:#fff;cursor:pointer;font-weight:800}.readonly-input{background:#f4f6f8;color:#33415a;font-weight:700}.span-2{grid-column:1/-1}@media(max-width:850px){.photo-grid{grid-template-columns:repeat(3,minmax(80px,1fr))}}
+  </style>
 </head>
 <body>
-  <div class="app">
-    <aside class="sidebar" id="sidebar">
-      <div class="sidebar-brand"><div class="brand-mark">BOXWISH <span>BIZ</span></div><small>CRM</small></div>
-      <nav>
-        <a class="nav-item" href="../#dashboard">⌂ <span>Dashboard</span></a>
-        <a class="nav-item active" href="../#enquiries">▣ <span>Enquiries</span></a>
-        <a class="nav-item" href="../#clients">♙ <span>Clients</span></a>
-        <a class="nav-item" href="../#quotations">▤ <span>Quotations</span></a>
-        <a class="nav-item" href="../#fir">◈ <span>FIR</span></a>
-        <a class="nav-item" href="../#lpa">✓ <span>LPA</span></a>
-        <a class="nav-item" href="../#sas">▧ <span>SAS</span></a>
-        <a class="nav-item" href="../#orders">▦ <span>Orders</span></a>
-        <a class="nav-item" href="../#followups">◷ <span>Follow Ups</span></a>
-        <a class="nav-item" href="../#documents">□ <span>Documents</span></a>
-      </nav>
-      <div class="sidebar-bottom"><a class="nav-item" href="../#profile">⚙ <span>Profile</span></a></div>
-    </aside>
-    <main class="main">
-      <header class="topbar">
-        <a href="../#enquiries" class="btn secondary">← Back</a>
-        <div><div class="eyebrow">Boxwish Biz CRM</div><h2>New Enquiry</h2></div>
-        <div class="user-chip"><span class="avatar">BW</span><div><strong>Employee</strong><small>Sales</small></div></div>
-      </header>
-      <section class="page active-page">
-        <div class="page-intro"><div><h1>Create New Enquiry</h1><p>Capture the opportunity once. The client master will be created or updated automatically.</p></div><div class="stat" style="padding:12px 16px"><span>Inquiry ID</span><strong id="inquiryId" style="font-size:18px">Generating…</strong></div></div>
-        <form id="enquiryForm" class="form-grid">
-          <input type="hidden" name="enquiry_id" id="enquiryIdInput">
-          <div class="form-section"><h3>Client Details</h3><div class="form-cols">
-            <label>Company Name *<input name="company" required></label>
-            <label>Contact Person *<input name="contact_person" required></label>
-            <label>Mobile *<input name="mobile" required inputmode="numeric"></label>
-            <label>Email<input type="email" name="email"></label>
-            <label>Designation<input name="designation"></label>
-            <label>Department<input name="department"></label>
-            <label>City<input name="city"></label>
-            <label>Industry<input name="industry"></label>
-          </div></div>
-          <div class="form-section"><h3>Requirement</h3><div class="form-cols">
-            <label>Gifting Type *<select name="gifting_type" required><option>Corporate Gifting</option><option>Wedding Gifting</option><option>Personalised Gifting</option><option>Event Merchandise</option><option>Not sure yet</option></select></label>
-            <label>Product Category *<input name="product_category" required></label>
-            <label>Approx. Quantity<input type="number" min="0" name="approx_quantity"></label>
-            <label>Budget / Piece (₹)<input type="number" min="0" step=".01" name="budget_per_piece"></label>
-            <label>Expected Order Value (₹)<input type="number" min="0" step=".01" name="expected_order_value"></label>
-            <label>Expected Delivery Date<input type="date" name="expected_delivery_date"></label>
-            <label>Branding Required<select name="branding_required"><option>Yes</option><option>No</option><option>To be decided</option></select></label>
-            <label>Lead Source<select name="lead_source"><option>Website</option><option>Referral</option><option>LinkedIn</option><option>Cold Call</option><option>Email Campaign</option><option>Exhibition</option><option>Google Ads</option><option>Social Media</option><option>Other</option></select></label>
-            <label>Priority<select name="priority"><option>Low</option><option selected>Medium</option><option>High</option><option>Urgent</option></select></label>
-            <label>Status<select name="status"><option selected>Open</option><option>Qualified</option><option>Quotation Sent</option><option>Negotiation</option><option>Won</option><option>Lost</option></select></label>
-          </div>
-          <label>Product / Requirement Details<textarea name="product_details" rows="4"></textarea></label>
-          <label>Discussion Notes<textarea name="discussion_notes" rows="4"></textarea></label>
-          </div>
-          <div class="modal-actions"><a href="../#enquiries" class="btn secondary">Cancel</a><button class="btn primary" type="submit">Create Enquiry</button></div>
-        </form>
-      </section>
-    </main>
-  </div>
-  <div id="toast" class="toast"></div>
+<div class="app">
+<aside class="sidebar" id="sidebar"><div class="sidebar-brand"><div class="brand-mark">BOXWISH <span>BIZ</span></div><small>CRM</small></div><nav>
+<a class="nav-item" href="../#dashboard">⌂ <span>Dashboard</span></a><a class="nav-item active" href="../#enquiries">▣ <span>Enquiries</span></a><a class="nav-item" href="../#clients">♙ <span>Clients</span></a><a class="nav-item" href="../#quotations">▤ <span>Quotations</span></a><a class="nav-item" href="../#fir">◈ <span>FIR</span></a><a class="nav-item" href="../#lpa">✓ <span>LPA</span></a><a class="nav-item" href="../#sas">▧ <span>SAS</span></a><a class="nav-item" href="../#orders">▦ <span>Orders</span></a><a class="nav-item" href="../#followups">◷ <span>Follow Ups</span></a><a class="nav-item" href="../#documents">□ <span>Documents</span></a>
+</nav><div class="sidebar-bottom"><a class="nav-item" href="../#profile">⚙ <span>Profile</span></a></div></aside>
+<main class="main"><header class="topbar"><a href="../#enquiries" class="btn secondary">← Back</a><div><div class="eyebrow">Boxwish Biz CRM</div><h2>New Enquiry</h2></div><div class="user-chip"><span class="avatar" id="userAvatar">BW</span><div><strong id="topUserName">Employee</strong><small id="topUserRole">Sales</small></div></div></header>
+<section class="page active-page"><div class="page-intro"><div><h1>Create New Enquiry</h1><p>Capture the opportunity once. The client master will be created or updated automatically.</p></div><div class="stat" style="padding:12px 16px"><span>Inquiry ID</span><strong id="inquiryId" style="font-size:18px">Generating…</strong></div></div>
+<form id="enquiryForm" class="form-grid"><input type="hidden" name="enquiry_id" id="enquiryIdInput">
+<div class="form-section"><h3>Client Details</h3><div class="form-cols">
+<label>Company Name *<input name="company" required></label><label>Contact Person *<input name="contact_person" required></label><label>Mobile *<input name="mobile" required inputmode="numeric"></label><label>Email<input type="email" name="email"></label><label>Designation<input name="designation"></label><label>Department<input name="department"></label><label>City<input name="city"></label><label>Industry<input name="industry"></label><label>GST Number<input name="gst_number"></label><label class="span-2">Address<textarea name="address" rows="2"></textarea></label>
+</div></div>
+<div class="form-section"><h3>Requirement</h3><div class="form-cols">
+<label>Gifting Type *<select name="gifting_type" required><option>Corporate Gifting</option><option>Wedding Gifting</option><option>Personalised Gifting</option><option>Event Merchandise</option><option>Not sure yet</option></select></label><label>Product Category *<input name="product_category" required></label><label>Approx. Quantity<input type="number" min="0" name="approx_quantity"></label><label>Budget / Piece (₹)<input type="number" min="0" step=".01" name="budget_per_piece"></label><label>Expected Order Value (₹)<input type="number" min="0" step=".01" name="expected_order_value"></label><label>Expected Delivery Date<input type="date" name="expected_delivery_date"></label><label>Branding Required<select name="branding_required"><option>Yes</option><option>No</option><option>To be decided</option></select></label><label>Lead Source<select name="lead_source"><option>Website</option><option>Referral</option><option>LinkedIn</option><option>Cold Call</option><option>Email Campaign</option><option>Exhibition</option><option>Google Ads</option><option>Social Media</option><option>Other</option></select></label><label>Priority<select name="priority"><option>Low</option><option selected>Medium</option><option>High</option><option>Urgent</option></select></label><label>Status<select name="status"><option selected>Open</option><option>Qualified</option><option>Quotation Sent</option><option>Negotiation</option><option>Won</option><option>Lost</option></select></label>
+</div><label>Product / Requirement Details<textarea name="product_details" rows="4"></textarea></label><label>Discussion Notes<textarea name="discussion_notes" rows="4"></textarea></label></div>
+<div class="form-section"><h3>Product Reference Photos</h3><div class="photo-box"><div class="photo-actions"><label class="btn secondary">📷 Take Photo<input id="cameraInput" type="file" accept="image/*" capture="environment"></label><label class="btn secondary">🖼 Choose from Gallery<input id="galleryInput" type="file" accept="image/*" multiple></label></div><div class="photo-help">Upload or capture product/reference photos. Maximum <strong>10 photos</strong> per enquiry.</div><div class="photo-count" id="photoCount">0 / 10 photos</div><div class="photo-grid" id="photoGrid"></div></div></div>
+<div class="form-section"><h3>Assignment</h3><div class="form-cols"><label>Handled / Uploaded By<input id="salespersonDisplay" class="readonly-input" readonly></label><input type="hidden" name="assigned_to" id="assignedTo"><input type="hidden" name="created_by" id="createdBy"></div><p class="photo-help">This enquiry is automatically assigned to the logged-in salesperson. Reassignment can be added later for managers/admins.</p></div>
+<div class="modal-actions"><a href="../#enquiries" class="btn secondary">Cancel</a><button class="btn primary" type="submit">Create Enquiry</button></div>
+</form></section></main></div><div id="toast" class="toast"></div>
 <script>
 (function(){
-  const KEY='boxwishCrmEnquiries', CLIENTS='boxwishCrmClients';
-  const read=k=>{try{return JSON.parse(localStorage.getItem(k)||'[]')}catch(e){return[]}};
-  const write=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
-  const today=()=>new Date().toISOString().slice(0,10);
-  const now=()=>new Date().toISOString();
-  function makeInquiryId(){const d=today().replaceAll('-','');const a=read(KEY).filter(x=>String(x.enquiry_id||'').startsWith('BW-INQ-'+d+'-'));let n=a.length+1;let used=new Set(a.map(x=>Number(String(x.enquiry_id).split('-').pop())));while(used.has(n))n++;return 'BW-INQ-'+d+'-'+String(n).padStart(3,'0')}
-  const id=makeInquiryId(); document.getElementById('inquiryId').textContent=id;document.getElementById('enquiryIdInput').value=id;
-  document.getElementById('enquiryForm').addEventListener('submit',function(e){
-    e.preventDefault();const o=Object.fromEntries(new FormData(this).entries());o.inquiry_date=today();o.created_at=now();o.updated_at=o.created_at;o.approx_quantity=Number(o.approx_quantity)||0;o.budget_per_piece=Number(o.budget_per_piece)||0;o.expected_order_value=Number(o.expected_order_value)||0;
-    const en=read(KEY);en.unshift(o);write(KEY,en);
-    let clients=read(CLIENTS);let i=clients.findIndex(c=>c.mobile===o.mobile||((c.company||'').toLowerCase()===(o.company||'').toLowerCase()&&(o.email?c.email===o.email:true)));
-    const base={company:o.company,contact_person:o.contact_person,mobile:o.mobile,email:o.email,designation:o.designation,department:o.department,city:o.city,industry:o.industry,updated_at:now(),last_interaction_date:today()};
-    if(i>=0){clients[i]={...clients[i],...base};}else{let max=clients.reduce((m,c)=>{const n=Number(String(c.client_id||'').replace('BW-CLI-',''));return Number.isFinite(n)?Math.max(m,n):m},0);clients.unshift({client_id:'BW-CLI-'+String(max+1).padStart(4,'0'),...base,created_at:now(),total_enquiries:0,total_quotations:0,total_orders:0,total_revenue:0});}
-    clients.forEach(c=>c.total_enquiries=en.filter(q=>q.mobile===c.mobile||((q.company||'').toLowerCase()===(c.company||'').toLowerCase())).length);write(CLIENTS,clients);
-    const t=document.getElementById('toast');t.textContent=id+' created successfully';t.classList.add('show');setTimeout(()=>location.href='../#enquiries',900);
-  });
+const KEY='boxwishCrmEnquiries',CLIENTS='boxwishCrmClients';const read=k=>{try{return JSON.parse(localStorage.getItem(k)||'[]')}catch(e){return[]}},write=(k,v)=>localStorage.setItem(k,JSON.stringify(v)),today=()=>new Date().toISOString().slice(0,10),now=()=>new Date().toISOString();
+function makeInquiryId(){const d=today().replaceAll('-','');const a=read(KEY).filter(x=>String(x.enquiry_id||'').startsWith('BW-INQ-'+d+'-'));let n=a.length+1,used=new Set(a.map(x=>Number(String(x.enquiry_id).split('-').pop())));while(used.has(n))n++;return 'BW-INQ-'+d+'-'+String(n).padStart(3,'0')}
+const id=makeInquiryId();document.getElementById('inquiryId').textContent=id;document.getElementById('enquiryIdInput').value=id;
+let user={id:'',name:'Employee',role:'Sales'};try{user=JSON.parse(sessionStorage.getItem('crmDevUser')||'{}')}catch(e){};const salesperson=user.name||user.id||'Employee';document.getElementById('salespersonDisplay').value=salesperson;document.getElementById('assignedTo').value=user.id||salesperson;document.getElementById('createdBy').value=user.id||salesperson;document.getElementById('topUserName').textContent=salesperson;document.getElementById('topUserRole').textContent=user.role||'Sales';
+let photos=[];const camera=document.getElementById('cameraInput'),gallery=document.getElementById('galleryInput'),grid=document.getElementById('photoGrid'),count=document.getElementById('photoCount');
+function renderPhotos(){count.textContent=photos.length+' / 10 photos';grid.innerHTML=photos.map((p,i)=>`<div class="photo-thumb"><img src="${p.data}" alt="Product reference ${i+1}"><button type="button" class="photo-remove" data-i="${i}" aria-label="Remove photo">×</button></div>`).join('');grid.querySelectorAll('.photo-remove').forEach(b=>b.onclick=()=>{photos.splice(Number(b.dataset.i),1);renderPhotos()})}
+function addFiles(files){const incoming=Array.from(files||[]).filter(f=>f.type.startsWith('image/'));if(photos.length+incoming.length>10){alert('Maximum 10 photos are allowed per enquiry.');return}incoming.forEach(file=>{const r=new FileReader();r.onload=()=>{photos.push({name:file.name,data:r.result});renderPhotos()};r.readAsDataURL(file)});}
+camera.addEventListener('change',e=>{addFiles(e.target.files);e.target.value=''});gallery.addEventListener('change',e=>{addFiles(e.target.files);e.target.value=''});
+document.getElementById('enquiryForm').addEventListener('submit',function(e){e.preventDefault();const o=Object.fromEntries(new FormData(this).entries());o.inquiry_date=today();o.created_at=now();o.updated_at=o.created_at;o.approx_quantity=Number(o.approx_quantity)||0;o.budget_per_piece=Number(o.budget_per_piece)||0;o.expected_order_value=Number(o.expected_order_value)||0;o.product_images=photos;const en=read(KEY);en.unshift(o);write(KEY,en);
+let clients=read(CLIENTS),i=clients.findIndex(c=>c.mobile===o.mobile||((c.company||'').toLowerCase()===(o.company||'').toLowerCase()&&(o.email?c.email===o.email:true)));const base={company:o.company,contact_person:o.contact_person,mobile:o.mobile,email:o.email,designation:o.designation,department:o.department,city:o.city,industry:o.industry,gst_number:o.gst_number,address:o.address,updated_at:now(),last_interaction_date:today()};if(i>=0)clients[i]={...clients[i],...base};else{let max=clients.reduce((m,c)=>{const n=Number(String(c.client_id||'').replace('BW-CLI-',''));return Number.isFinite(n)?Math.max(m,n):m},0);clients.unshift({client_id:'BW-CLI-'+String(max+1).padStart(4,'0'),...base,created_at:now(),total_enquiries:0,total_quotations:0,total_orders:0,total_revenue:0});}clients.forEach(c=>c.total_enquiries=en.filter(q=>q.mobile===c.mobile||((q.company||'').toLowerCase()===(c.company||'').toLowerCase())).length);write(CLIENTS,clients);const t=document.getElementById('toast');t.textContent=id+' created successfully';t.classList.add('show');setTimeout(()=>location.href='../#enquiries',900)});
 })();
-</script>
-</body></html>
+</script></body></html>
