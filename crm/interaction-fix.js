@@ -5,7 +5,12 @@
     if(!b)return;
     const a=b.dataset.action,id=b.dataset.id;
     try{
-      if(a==='new-enquiry'){e.preventDefault();window.openEnquiryForm&&window.openEnquiryForm();return;}
+      if(a==='new-enquiry'){
+        e.preventDefault();
+        const p=location.pathname.replace(/\/crm\/?$/,'/crm/enquiries/new.html');
+        location.assign(location.origin+p);
+        return;
+      }
       if(a==='edit-enquiry'){e.preventDefault();window.openEnquiryForm&&window.openEnquiryForm(id);return;}
       if(a==='delete-enquiry'){e.preventDefault();window.deleteEnquiry&&window.deleteEnquiry(id);return;}
       if(a==='new-client'){e.preventDefault();window.openClientForm&&window.openClientForm();return;}
