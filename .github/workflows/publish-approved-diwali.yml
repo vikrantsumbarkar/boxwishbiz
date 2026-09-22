@@ -1,0 +1,34 @@
+name: Publish approved Diwali Preview
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Copy approved Diwali files from Preview
+        run: |
+          set -e
+          base="https://raw.githubusercontent.com/vikrantsumbarkar/boxwishbiz-preview/main"
+          for f in diwali-corporate-gift-ideas.html styles.css diwali-hero-clean.jpg diwali-hamper-01.jpg diwali-hamper-gadgets.jpg diwali-gift-box-open.jpeg diwali-laxmi-gift-set.jpg diwali-bottle-tumbler-set.jpg diwali-jute-hamper.jpg diwali-coffee-hamper.jpg diwali-premium-mens-hamper.jpg; do
+            curl -L --fail --silent --show-error "$base/$f" -o "$f"
+          done
+
+      - name: Commit published files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add diwali-corporate-gift-ideas.html styles.css diwali-hero-clean.jpg diwali-hamper-01.jpg diwali-hamper-gadgets.jpg diwali-gift-box-open.jpeg diwali-laxmi-gift-set.jpg diwali-bottle-tumbler-set.jpg diwali-jute-hamper.jpg diwali-coffee-hamper.jpg diwali-premium-mens-hamper.jpg
+          if git diff --cached --quiet; then
+            echo "No Diwali changes to publish."
+          else
+            git commit -m "Publish approved Diwali gifting updates"
+            git push
+          fi
