@@ -1,0 +1,29 @@
+name: Sync Diwali Gadget Image
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download new Diwali gadget image
+        run: |
+          curl -L --fail --retry 3 "https://vikrantsumbarkar.github.io/boxwishbiz-preview/diwali-hamper-gadgets.jpg?v=2" -o diwali-hamper-gadgets.jpg
+      - name: Commit image if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add diwali-hamper-gadgets.jpg
+          if git diff --cached --quiet; then
+            echo "Image already matches."
+          else
+            git commit -m "Sync Diwali gadget image [skip ci]"
+            git push
+          fi
